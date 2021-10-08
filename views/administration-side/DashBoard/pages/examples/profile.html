@@ -962,7 +962,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#settings" data-toggle="tab"
-                          >Enviar Mensaje</a
+                          >Amigos</a
                         >
                       </li>
                       <li class="nav-item">
@@ -972,6 +972,7 @@
                       </li>
                     </ul>
                   </div>
+
                   <!-- /.card-header -->
                   <div class="card-body">
                     <div class="tab-content">
@@ -1280,173 +1281,6 @@
                             </div>
                           </div>
                         </div>
-                        <!-- ESTADISTICAS PRIMERAS -->
-                        <section class="content">
-                          <div class="container-fluid">
-                            <div class="row">
-                              <div class="col-12">
-                                <!-- interactive chart -->
-
-                                <div id="interactive"></div>
-
-                                <!-- /.card -->
-                              </div>
-                              <!-- /.col -->
-                            </div>
-                            <!-- /.row -->
-
-                            <div class="row">
-                              <div class="col-md-6">
-                                <!-- Line chart -->
-                                <div class="card card-primary card-outline">
-                                  <div class="card-header">
-                                    <h3 class="card-title">
-                                      <i class="far fa-chart-bar"></i>
-                                      Line Chart
-                                    </h3>
-
-                                    <div class="card-tools">
-                                      <button
-                                        type="button"
-                                        class="btn btn-tool"
-                                        data-card-widget="collapse"
-                                      >
-                                        <i class="fas fa-minus"></i>
-                                      </button>
-                                      <button
-                                        type="button"
-                                        class="btn btn-tool"
-                                        data-card-widget="remove"
-                                      >
-                                        <i class="fas fa-times"></i>
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <div class="card-body">
-                                    <div
-                                      id="line-chart"
-                                      style="height: 300px"
-                                    ></div>
-                                  </div>
-                                  <!-- /.card-body-->
-                                </div>
-                                <!-- /.card -->
-
-                                <!-- Area chart -->
-                                <div class="card card-primary card-outline">
-                                  <div class="card-header">
-                                    <h3 class="card-title">
-                                      <i class="far fa-chart-bar"></i>
-                                      Area Chart
-                                    </h3>
-
-                                    <div class="card-tools">
-                                      <button
-                                        type="button"
-                                        class="btn btn-tool"
-                                        data-card-widget="collapse"
-                                      >
-                                        <i class="fas fa-minus"></i>
-                                      </button>
-                                      <button
-                                        type="button"
-                                        class="btn btn-tool"
-                                        data-card-widget="remove"
-                                      >
-                                        <i class="fas fa-times"></i>
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <div class="card-body">
-                                    <div
-                                      id="area-chart"
-                                      style="height: 338px"
-                                      class="full-width-chart"
-                                    ></div>
-                                  </div>
-                                  <!-- /.card-body-->
-                                </div>
-                                <!-- /.card -->
-                              </div>
-                              <!-- /.col -->
-
-                              <div class="col-md-6">
-                                <!-- Bar chart -->
-                                <div class="card card-primary card-outline">
-                                  <div class="card-header">
-                                    <h3 class="card-title">
-                                      <i class="far fa-chart-bar"></i>
-                                      Bar Chart
-                                    </h3>
-
-                                    <div class="card-tools">
-                                      <button
-                                        type="button"
-                                        class="btn btn-tool"
-                                        data-card-widget="collapse"
-                                      >
-                                        <i class="fas fa-minus"></i>
-                                      </button>
-                                      <button
-                                        type="button"
-                                        class="btn btn-tool"
-                                        data-card-widget="remove"
-                                      >
-                                        <i class="fas fa-times"></i>
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <div class="card-body">
-                                    <div
-                                      id="bar-chart"
-                                      style="height: 300px"
-                                    ></div>
-                                  </div>
-                                  <!-- /.card-body-->
-                                </div>
-                                <!-- /.card -->
-
-                                <!-- Donut chart -->
-                                <div class="card card-primary card-outline">
-                                  <div class="card-header">
-                                    <h3 class="card-title">
-                                      <i class="far fa-chart-bar"></i>
-                                      Donut Chart
-                                    </h3>
-
-                                    <div class="card-tools">
-                                      <button
-                                        type="button"
-                                        class="btn btn-tool"
-                                        data-card-widget="collapse"
-                                      >
-                                        <i class="fas fa-minus"></i>
-                                      </button>
-                                      <button
-                                        type="button"
-                                        class="btn btn-tool"
-                                        data-card-widget="remove"
-                                      >
-                                        <i class="fas fa-times"></i>
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <div class="card-body">
-                                    <div
-                                      id="donut-chart"
-                                      style="height: 300px"
-                                    ></div>
-                                  </div>
-                                  <!-- /.card-body-->
-                                </div>
-                                <!-- /.card -->
-                              </div>
-                              <!-- /.col -->
-                            </div>
-                            <!-- /.row -->
-                          </div>
-                          <!-- /.container-fluid -->
-                        </section>
 
                         <!-- OTRAS ESTADISTICAS  -->
                         <section class="content">
@@ -1803,53 +1637,799 @@
                           </div>
                           <!-- /.container-fluid -->
                         </section>
+                        <!-- ESTADISTICAS PRIMERAS -->
+                        <section class="content">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-12">
+                                <!-- interactive chart -->
+
+                                <div id="interactive"></div>
+
+                                <!-- /.card -->
+                              </div>
+                              <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                              <div class="col-md-6">
+                                <!-- Line chart -->
+                                <div class="card card-primary card-outline">
+                                  <div class="card-header">
+                                    <h3 class="card-title">
+                                      <i class="far fa-chart-bar"></i>
+                                      Line Chart
+                                    </h3>
+
+                                    <div class="card-tools">
+                                      <button
+                                        type="button"
+                                        class="btn btn-tool"
+                                        data-card-widget="collapse"
+                                      >
+                                        <i class="fas fa-minus"></i>
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="btn btn-tool"
+                                        data-card-widget="remove"
+                                      >
+                                        <i class="fas fa-times"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div
+                                      id="line-chart"
+                                      style="height: 300px"
+                                    ></div>
+                                  </div>
+                                  <!-- /.card-body-->
+                                </div>
+                                <!-- /.card -->
+
+                                <!-- Area chart -->
+                                <div class="card card-primary card-outline">
+                                  <div class="card-header">
+                                    <h3 class="card-title">
+                                      <i class="far fa-chart-bar"></i>
+                                      Area Chart
+                                    </h3>
+
+                                    <div class="card-tools">
+                                      <button
+                                        type="button"
+                                        class="btn btn-tool"
+                                        data-card-widget="collapse"
+                                      >
+                                        <i class="fas fa-minus"></i>
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="btn btn-tool"
+                                        data-card-widget="remove"
+                                      >
+                                        <i class="fas fa-times"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div
+                                      id="area-chart"
+                                      style="height: 338px"
+                                      class="full-width-chart"
+                                    ></div>
+                                  </div>
+                                  <!-- /.card-body-->
+                                </div>
+                                <!-- /.card -->
+                              </div>
+                              <!-- /.col -->
+
+                              <div class="col-md-6">
+                                <!-- Bar chart -->
+                                <div class="card card-primary card-outline">
+                                  <div class="card-header">
+                                    <h3 class="card-title">
+                                      <i class="far fa-chart-bar"></i>
+                                      Bar Chart
+                                    </h3>
+
+                                    <div class="card-tools">
+                                      <button
+                                        type="button"
+                                        class="btn btn-tool"
+                                        data-card-widget="collapse"
+                                      >
+                                        <i class="fas fa-minus"></i>
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="btn btn-tool"
+                                        data-card-widget="remove"
+                                      >
+                                        <i class="fas fa-times"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div
+                                      id="bar-chart"
+                                      style="height: 300px"
+                                    ></div>
+                                  </div>
+                                  <!-- /.card-body-->
+                                </div>
+                                <!-- /.card -->
+
+                                <!-- Donut chart -->
+                                <div class="card card-primary card-outline">
+                                  <div class="card-header">
+                                    <h3 class="card-title">
+                                      <i class="far fa-chart-bar"></i>
+                                      Donut Chart
+                                    </h3>
+
+                                    <div class="card-tools">
+                                      <button
+                                        type="button"
+                                        class="btn btn-tool"
+                                        data-card-widget="collapse"
+                                      >
+                                        <i class="fas fa-minus"></i>
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="btn btn-tool"
+                                        data-card-widget="remove"
+                                      >
+                                        <i class="fas fa-times"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div
+                                      id="donut-chart"
+                                      style="height: 300px"
+                                    ></div>
+                                  </div>
+                                  <!-- /.card-body-->
+                                </div>
+                                <!-- /.card -->
+                              </div>
+                              <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                          </div>
+                          <!-- /.container-fluid -->
+                        </section>
                       </div>
 
                       <!-- FIN PARTE PERFIL -->
                       <!-- /.tab-pane -->
 
                       <div class="tab-pane" id="settings">
-                        <form class="form-horizontal">
-                          <div class="form-group row">
-                            <label
-                              for="inputSkills"
-                              class="col-sm-2 col-form-label"
-                              >Asunto</label
-                            >
-                            <div class="col-sm-10">
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="inputSkills"
-                                placeholder="Asunto"
-                              />
+                        <section class="content">
+                          <!-- Default box -->
+                          <div class="card card-solid">
+                            <div class="card-body pb-0">
+                              <div class="row">
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small">
+                                              <span class="fa-li"
+                                                ><i
+                                                  class="fas fa-lg fa-building"
+                                                ></i
+                                              ></span>
+                                              Address: Chia, Cundinamarca
+                                            </li>
+                                            <li class="small"></li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../../dist/img/user1-128x128.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small">
+                                              <span class="fa-li"
+                                                ><i
+                                                  class="fas fa-lg fa-building"
+                                                ></i
+                                              ></span>
+                                              Address: Chia, Cundinamarca
+                                            </li>
+                                            <li class="small"></li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../../dist/img/user2-160x160.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small">
+                                              <span class="fa-li"
+                                                ><i
+                                                  class="fas fa-lg fa-building"
+                                                ></i
+                                              ></span>
+                                              Address: Chia, Cundinamarca
+                                            </li>
+                                            <li class="small"></li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../../dist/img/user1-128x128.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small">
+                                              <span class="fa-li"
+                                                ><i
+                                                  class="fas fa-lg fa-building"
+                                                ></i
+                                              ></span>
+                                              Address: Chia, Cundinamarca
+                                            </li>
+                                            <li class="small"></li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../../dist/img/user2-160x160.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small"></li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../../dist/img/user1-128x128.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small">
+                                              <span class="fa-li"
+                                                ><i
+                                                  class="fas fa-lg fa-building"
+                                                ></i
+                                              ></span>
+                                              Address: Chia, Cundinamarca
+                                            </li>
+                                            <li class="small"></li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../../dist/img/user1-128x128.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small">
+                                              <span class="fa-li"
+                                                ><i
+                                                  class="fas fa-lg fa-building"
+                                                ></i
+                                              ></span>
+                                              Address: Chia, Cundinamarca
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../../dist/img/user1-128x128.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small">
+                                              <span class="fa-li"
+                                                ><i
+                                                  class="fas fa-lg fa-building"
+                                                ></i
+                                              ></span>
+                                              Address: Chia, Cundinamarca
+                                            </li>
+                                            <li class="small"></li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../../dist/img/user1-128x128.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small">
+                                              <span class="fa-li"
+                                                ><i
+                                                  class="fas fa-lg fa-building"
+                                                ></i
+                                              ></span>
+                                              Address: Chia, Cundinamarca
+                                            </li>
+                                            <li class="small"></li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../../dist/img/user2-160x160.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="form-group row">
-                            <label
-                              for="inputExperience"
-                              class="col-sm-2 col-form-label"
-                              >Descripción</label
-                            >
-                            <div class="col-sm-10">
-                              <textarea
-                                class="form-control"
-                                id="inputExperience"
-                                placeholder=""
-                              >
-Descripción</textarea
-                              >
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <nav aria-label="Contacts Page Navigation">
+                                <ul
+                                  class="pagination justify-content-center m-0"
+                                >
+                                  <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">4</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">5</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">6</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">7</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">8</a>
+                                  </li>
+                                </ul>
+                              </nav>
                             </div>
+                            <!-- /.card-footer -->
                           </div>
-
-                          <div class="form-group row">
-                            <div class="offset-sm-2 col-sm-10">
-                              <button type="submit" class="btn btn-danger">
-                                Enviar
-                              </button>
-                            </div>
-                          </div>
-                        </form>
+                          <!-- /.card -->
+                        </section>
                       </div>
                       <!-- /.tab-pane -->
                     </div>
