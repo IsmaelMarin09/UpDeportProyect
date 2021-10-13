@@ -27,12 +27,12 @@
       crossorigin="anonymous"
     />
     <!-- Theme style -->
-    <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="../DashBoard/dist/css/adminlte.min.css" />
   </head>
   <body class="hold-transition register-page ">
     <div class="box-m">
       <div class="register-logo">
-        <a href="../../index2.html"><b>UP</b>DEPORT</a>
+        <a href="../../index.html"><b>UP</b>DEPORT</a>
       </div>
 
       <div class="card">
@@ -156,7 +156,7 @@
             <p>- OR -</p>
           </div>
 
-          <a href="login.html" class="text-center">Ya tengo una cuenta</a>
+          <a href="login.php" class="text-center">Ya tengo una cuenta</a>
         </div>
         <!-- /.form-box -->
       </div>

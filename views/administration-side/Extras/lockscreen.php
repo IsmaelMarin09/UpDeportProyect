@@ -10,13 +10,13 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../DashBoard/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition lockscreen">
 <!-- Automatic element centering -->
 <div class="lockscreen-wrapper">
   <div class="lockscreen-logo">
-    <a href="../../index.html"><b>Up</b>Deport</a>
+    <a href="../DashBoard/index.html"><b>Up</b>Deport</a>
   </div>
   <!-- User name -->
   <div class="lockscreen-name">John Doe</div>
@@ -25,7 +25,7 @@
   <div class="lockscreen-item">
     <!-- lockscreen image -->
     <div class="lockscreen-image">
-      <img src="../../dist/img/user1-128x128.jpg" alt="User Image">
+      <img src="../DashBoard/dist/img/user1-128x128.jpg" alt="User Image">
     </div>
     <!-- /.lockscreen-image -->
 

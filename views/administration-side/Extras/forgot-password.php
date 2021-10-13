@@ -12,7 +12,7 @@
   <!-- icheck bootstrap -->
   <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../DashBoard/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page" id="reesContr">
 <div class="login-box">
@@ -24,7 +24,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">¿Olvidaste tu contraseña?,Escribe tu correo, te enviaremos un link para poder reestablecer tu contraseña.</p>
 
-      <form action="recover-password.html" method="post">
+      <form action="recover-password.php" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -42,10 +42,10 @@
       </form>
 
       <p class="mt-3 mb-1" id="centr">
-        <a href="login.html">Ingresar</a>
+        <a href="login.php">Ingresar</a>
       </p>
       <p class="mb-0" id="centr">
-        <a href="register.html" class="text-center">Registrarme como un nuevo miembro</a>
+        <a href="register.php" class="text-center">Registrarme como un nuevo miembro</a>
       </p>
     </div>
     <!-- /.login-card-body -->

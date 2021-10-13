@@ -12,7 +12,7 @@
   <!-- icheck bootstrap -->
   <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../DashBoard/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page" id="login">
 <div class="login-box">
@@ -24,7 +24,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Inicia sesion para acceder</p>
 
-      <form action="../../index3.html" method="post">
+      <form action="../../index.html" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -62,10 +62,10 @@
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="forgot-password.html">¿Olvidaste tu contraseña?</a>
+        <a href="forgot-password.php">¿Olvidaste tu contraseña?</a>
       </p>
       <p class="mb-0">
-        <a href="register.html" class="text-center">Registrarse</a>
+        <a href="register.php" class="text-center">Registrarse</a>
       </p>
     </div>
     <!-- /.login-card-body -->
