@@ -1,3 +1,28 @@
+<?php
+
+require_once('Class.conexion.php');
+
+  session_start();
+  $rows=null;
+  $modelo= new Conexion();
+  $conexion=  $modelo->get_conexion();
+  $id="%".$_SESSION['id']."%";
+  $sql="select * FROM users where id like :id";
+  $statement= $conexion-> prepare($sql);
+  $statement->bindParam(":id", $id);
+  $statement -> execute();
+  while ($result= $statement->fetch()) {
+    $rows[]=$result;
+  }
+  foreach ($rows as $row){
+    $nombre=$row['nombre'];
+  }
+ 
+  
+
+  
+
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -273,7 +298,7 @@
               />
             </div>
             <div class="info">
-              <a href="#" class="d-block">Ismael Marin</a>
+              <a href="#" class="d-block"><?php echo $nombre ?></a>
             </div>
           </div>
 
@@ -324,6 +349,16 @@
                     </a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="pages/tables/simple.html"
+                  id="menu-m"
+                  class="nav-link"
+                >
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Simple Tables</p>
+                </a>
               </li>
 
               <li class="nav-item">

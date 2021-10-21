@@ -1,7 +1,10 @@
 <?php
+
     $correo=$_POST['correo'];
     $clave=$_POST['clave'];
+
     
+   
     require("conexion.php");
     $consulta="SELECT * FROM  users WHERE correo='$correo'";
     $resultado= $mysqli -> query($consulta);
@@ -17,8 +20,10 @@
             else{
                 echo'<script>alert("Usted es entrenador")</script>';
             }
+            echo "<script>location.href='../Dashboard/index.php'</script>";
+
  
-            echo "<script>location.href='../Dashboard/pages/examples/profile.html'</script>";
+            //echo "<script>location.href='../Dashboard/pages/examples/profile.html'</script>";
              
          }
          else{
