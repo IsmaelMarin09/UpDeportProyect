@@ -1,28 +1,4 @@
-<?php
 
-require_once('Class.conexion.php');
-
-  session_start();
-  $rows=null;
-  $modelo= new Conexion();
-  $conexion=  $modelo->get_conexion();
-  $id="%".$_SESSION['id']."%";
-  $sql="select * FROM users where id like :id";
-  $statement= $conexion-> prepare($sql);
-  $statement->bindParam(":id", $id);
-  $statement -> execute();
-  $result= $statement->fetch();
-  $rows[]=$result;
-  
-  foreach ($rows as $row){
-    $nombre=$row['nombre'];
-  }
- 
-  
-
-  
-
-?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -36,7 +12,7 @@ require_once('Class.conexion.php');
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
     />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="../Assets/plugins/fontawesome-free/css/all.min.css" />
     <!-- Ionicons -->
     <link
       rel="stylesheet"
@@ -45,26 +21,26 @@ require_once('Class.conexion.php');
     <!-- Tempusdominus Bootstrap 4 -->
     <link
       rel="stylesheet"
-      href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+      href="../Assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
     />
     <!-- iCheck  HOLA ESTO ES UN CAMBIO -->
     <link
       rel="stylesheet"
-      href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+      href="../Assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
     />
     <!-- JQVMap -->
-    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css" />
+    <link rel="stylesheet" href="../Assets/plugins/jqvmap/jqvmap.min.css" />
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="../Assets/css/adminlte.min.css" />
     <!-- overlayScrollbars -->
     <link
       rel="stylesheet"
-      href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+      href="../Assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
     />
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="../Assets/plugins/daterangepicker/daterangepicker.css" />
     <!-- summernote -->
-    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
+    <link rel="stylesheet" href="../Assets/plugins/summernote/summernote-bs4.min.css" />
   </head>
   <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -73,7 +49,7 @@ require_once('Class.conexion.php');
       >
         <img
           class="animation__shake"
-          src="dist/img/AdminLTELogo.png"
+          src="../Assets/img/AdminLTELogo.png"
           alt="AdminLTELogo"
           height="60"
           width="60"
@@ -149,7 +125,7 @@ require_once('Class.conexion.php');
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="dist/img/user1-128x128.jpg"
+                    src="../Assets/img/user1-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 mr-3 img-circle"
                   />
@@ -173,7 +149,7 @@ require_once('Class.conexion.php');
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="dist/img/user8-128x128.jpg"
+                    src="../Assets/img/user8-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -197,7 +173,7 @@ require_once('Class.conexion.php');
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="dist/img/user3-128x128.jpg"
+                    src="../Assets/img/user3-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -278,7 +254,7 @@ require_once('Class.conexion.php');
         <!-- Brand Logo -->
         <a href="index.html" class="brand-link">
           <img
-            src="./dist/img/AdminLTELogo.png"
+            src="./../Assets/img/AdminLTELogo.png"
             alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3"
             style="opacity: 0.8"
@@ -292,7 +268,7 @@ require_once('Class.conexion.php');
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
               <img
-                src="dist/img/user2-160x160.jpg"
+                src="../Assets/img/user2-160x160.jpg"
                 class="img-circle elevation-2"
                 alt="User Image"
               />
@@ -539,7 +515,7 @@ require_once('Class.conexion.php');
             <div class="chat-history">
               <div class="chat-message clearfix">
                 <img
-                  src="./dist/img/photo2.png"
+                  src="./../Assets/img/photo2.png"
                   alt=""
                   width="32"
                   height="32"
@@ -563,7 +539,7 @@ require_once('Class.conexion.php');
 
               <div class="chat-message clearfix">
                 <img
-                  src="./dist/img/alejandro.png"
+                  src="./../Assets/img/alejandro.png"
                   alt=""
                   width="32"
                   height="32"
@@ -588,7 +564,7 @@ require_once('Class.conexion.php');
 
               <div class="chat-message clearfix">
                 <img
-                  src="./dist/img/alejandro.png"
+                  src="./../Assets/img/alejandro.png"
                   alt=""
                   width="32"
                   height="32"
@@ -848,7 +824,7 @@ require_once('Class.conexion.php');
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="dist/img/user1-128x128.jpg"
+                          src="../Assets/img/user1-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -872,7 +848,7 @@ require_once('Class.conexion.php');
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="dist/img/user3-128x128.jpg"
+                          src="../Assets/img/user3-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -896,7 +872,7 @@ require_once('Class.conexion.php');
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="dist/img/user1-128x128.jpg"
+                          src="../Assets/img/user1-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -920,7 +896,7 @@ require_once('Class.conexion.php');
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="dist/img/user3-128x128.jpg"
+                          src="../Assets/img/user3-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -938,7 +914,7 @@ require_once('Class.conexion.php');
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="dist/img/user1-128x128.jpg"
+                              src="../Assets/img/user1-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -961,7 +937,7 @@ require_once('Class.conexion.php');
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="dist/img/user7-128x128.jpg"
+                              src="../Assets/img/user7-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -984,7 +960,7 @@ require_once('Class.conexion.php');
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="dist/img/user3-128x128.jpg"
+                              src="../Assets/img/user3-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -1007,7 +983,7 @@ require_once('Class.conexion.php');
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="dist/img/user5-128x128.jpg"
+                              src="../Assets/img/user5-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -1030,7 +1006,7 @@ require_once('Class.conexion.php');
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="dist/img/user6-128x128.jpg"
+                              src="../Assets/img/user6-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -1053,7 +1029,7 @@ require_once('Class.conexion.php');
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="dist/img/user8-128x128.jpg"
+                              src="../Assets/img/user8-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -1517,40 +1493,40 @@ require_once('Class.conexion.php');
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="../Assets/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Assets/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
       $.widget.bridge("uibutton", $.ui.button);
     </script>
     <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
+    <script src="../Assets/plugins/chart.js/Chart.min.js"></script>
     <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
+    <script src="../Assets/plugins/sparklines/sparkline.js"></script>
     <!-- JQVMap -->
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <script src="../Assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../Assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
     <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="../Assets/plugins/jquery-knob/jquery.knob.min.js"></script>
     <!-- daterangepicker -->
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../Assets/plugins/moment/moment.min.js"></script>
+    <script src="../Assets/plugins/daterangepicker/daterangepicker.js"></script>
     <!-- Tempusdominus Bootstrap 4 -->
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="../Assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="../Assets/plugins/summernote/summernote-bs4.min.js"></script>
     <!-- overlayScrollbars -->
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="../Assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.js"></script>
+    <script src="../Assets/js/adminlte.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+    <script src="../Assets/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
+    <script src="../Assets/js/pages/dashboard.js"></script>
     <!-- Chat ventana flotante -->
-    <script src="dist/js/asdasdasd.js"></script>
+    <script src="../Assets/js/asdasdasd.js"></script>
   </body>
 </html>
