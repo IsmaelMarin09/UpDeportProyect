@@ -8,13 +8,13 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../Assets/plugins/fontawesome-free/css/all.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../Assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../Assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../Assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../Assets/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -26,7 +26,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index.html" class="nav-link">Home</a>
+        <a href="../index.php" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -67,7 +67,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="../../Assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -83,7 +83,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../../Assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -99,7 +99,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../../Assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -159,9 +159,9 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4" id="barra-m">
     <!-- Brand Logo -->
-    <a href="index.html" class="brand-link">
+    <a href="index.php" class="brand-link">
       <img
-        src="../../dist/img/AdminLTELogo.png"
+        src="../../Assets/img/AdminLTELogo.png"
         alt="AdminLTE Logo"
         class="brand-image img-circle elevation-3"
         style="opacity: 0.8"
@@ -175,7 +175,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img
-            src="../../dist/img/user2-160x160.jpg"
+            src="../../Assets/img/user2-160x160.jpg"
             class="img-circle elevation-2"
             alt="User Image"
           />
@@ -215,7 +215,7 @@
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../index.html" class="nav-link" id="menu-m">
+                <a href="../../index.php" class="nav-link" id="menu-m">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Inicio</p>
                 </a>
@@ -234,7 +234,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a
-                  href="pages/charts/chartjs.html"
+                  href="pages/charts/chartjs.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -244,7 +244,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="pages/charts/flot.html"
+                  href="pages/charts/flot.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -254,7 +254,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="pages/charts/inline.html"
+                  href="pages/charts/inline.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -277,7 +277,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a
-                  href="simple.html"
+                  href="simple.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -287,7 +287,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="data.html"
+                  href="data.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -300,7 +300,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="pages/calendar.html" id="menu-m" class="nav-link">
+            <a href="pages/calendar.php" id="menu-m" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Calendario
@@ -309,7 +309,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" id="menu-m" class="nav-link">
+            <a href="pages/gallery.php" id="menu-m" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>Gallery</p>
             </a>
@@ -326,7 +326,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a
-                  href="pages/mailbox/mailbox.html"
+                  href="pages/mailbox/mailbox.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -336,7 +336,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="pages/mailbox/compose.html"
+                  href="pages/mailbox/compose.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -358,7 +358,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a
-                  href="pages/examples/invoice.html"
+                  href="pages/examples/invoice.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -368,7 +368,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="pages/examples/profile.html"
+                  href="pages/examples/profile.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -378,7 +378,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="pages/examples/e-commerce.html"
+                  href="pages/examples/e-commerce.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -387,7 +387,7 @@
                 </a>
               <li class="nav-item">
                 <a
-                  href="pages/examples/contacts.html"
+                  href="pages/examples/contacts.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -397,7 +397,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="pages/examples/faq.html"
+                  href="pages/examples/faq.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -407,7 +407,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="pages/examples/contact-us.html"
+                  href="pages/examples/contact-us.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -437,7 +437,7 @@
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a
-                      href="pages/examples/login.html"
+                      href="pages/examples/login.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -447,7 +447,7 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      href="pages/examples/register.html"
+                      href="pages/examples/register.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -457,7 +457,7 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      href="pages/examples/forgot-password.html"
+                      href="pages/examples/forgot-password.php"
                       class="nav-link"
                       id="menu-m"
                     >
@@ -467,7 +467,7 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      href="pages/examples/recover-password.html"
+                      href="pages/examples/recover-password.php"
                       class="nav-link"
                       id="menu-m"
                     >
@@ -480,7 +480,7 @@
 
               <li class="nav-item">
                 <a
-                  href="pages/examples/lockscreen.html"
+                  href="pages/examples/lockscreen.php"
                   class="nav-link"
                   id="menu-m"
                 >
@@ -491,7 +491,7 @@
 
               <li class="nav-item">
                 <a
-                  href="pages/examples/404.html"
+                  href="pages/examples/404.php"
                   class="nav-link"
                   id="menu-m"
                 >
@@ -501,7 +501,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="pages/examples/500.html"
+                  href="pages/examples/500.php"
                   class="nav-link"
                   id="menu-m"
                 >
@@ -512,7 +512,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/search/enhanced.html" class="nav-link" id="menu-m">
+            <a href="pages/search/enhanced.php" class="nav-link" id="menu-m">
               <i class="nav-icon fas fa-search"></i>
               <p>
                 Busqueda Avanzada
@@ -537,7 +537,7 @@
         <div class="chat-history">
           <div class="chat-message clearfix">
             <img
-              src="./dist/img/photo2.png"
+              src="./Assets/img/photo2.png"
               alt=""
               width="32"
               height="32"
@@ -561,7 +561,7 @@
 
           <div class="chat-message clearfix">
             <img
-              src="./dist/img/alejandro.png"
+              src="./Assets/img/alejandro.png"
               alt=""
               width="32"
               height="32"
@@ -586,7 +586,7 @@
 
           <div class="chat-message clearfix">
             <img
-              src="../../dist/img/alejandro.png"
+              src="../../Assets/img/alejandro.png"
               alt=""
               width="32"
               height="32"
@@ -1551,26 +1551,26 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="../../Assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->
-<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="../../plugins/jszip/jszip.min.js"></script>
-<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
-<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="../../Assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../Assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../Assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../Assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../Assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../Assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../Assets/plugins/jszip/jszip.min.js"></script>
+<script src="../../Assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../Assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../Assets/plugins/datatables-buttons/js/buttons.php5.min.js"></script>
+<script src="../../Assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../Assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="../../Assets/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="../../Assets/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
   $(function () {
@@ -1590,6 +1590,6 @@
   });
 </script>
 <!-- Chat ventana flotante -->
-<script src="../../dist/js/asdasdasd.js"></script>
+<script src="../../Assets/js/asdasdasd.js"></script>
 </body>
 </html>

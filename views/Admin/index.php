@@ -69,7 +69,7 @@
             ></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.php" class="nav-link">Home</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
@@ -83,7 +83,7 @@
             <a
               class="nav-link"
              
-              href="/views/administration-side/DashBoard/pages/search/enhanced.html"
+              href="/views/administration-side/DashBoard//search/enhanced.php"
               role="button"
             >
               <i class="fas fa-search"></i>
@@ -99,7 +99,7 @@
                   />
                   <div class="input-group-append">
                     <button class="btn btn-navbar" type="submit">
-                      <i class="fas fa-search" href="pages/search/enhanced.html"></i>
+                      <i class="fas fa-search" href="/search/enhanced.php"></i>
                     </button>
                     <button
                       class="btn btn-navbar"
@@ -252,7 +252,7 @@
       <!-- Main Sidebar Container -->
       <aside class="main-sidebar sidebar-dark-primary elevation-4" id="barra-m">
         <!-- Brand Logo -->
-        <a href="index.html" class="brand-link">
+        <a href="index.php" class="brand-link">
           <img
             src="./../Assets/img/AdminLTELogo.png"
             alt="AdminLTE Logo"
@@ -293,7 +293,7 @@
               <li class="nav-item menu-open">
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="./index.html" class="nav-link" id="menu-m">
+                    <a href="index.php" class="nav-link" id="menu-m">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Inicio</p>
                     </a>
@@ -316,7 +316,7 @@
                   
                   <li class="nav-item">
                     <a
-                      href="pages/tables/data.html"
+                      href="tables/data.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -328,7 +328,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="pages/tables/simple.html"
+                  href="tables/simple.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -338,7 +338,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="pages/calendar.html" id="menu-m" class="nav-link">
+                <a href="examples/calendar.php" id="menu-m" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>
                     Calendario
@@ -360,7 +360,7 @@
                   
                   <li class="nav-item">
                     <a
-                      href="pages/examples/profile.html"
+                      href="examples/profile.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -372,7 +372,7 @@
 
                   <li class="nav-item">
                     <a
-                      href="pages/examples/contacts.html"
+                      href="examples/contacts.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -382,7 +382,7 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      href="pages/examples/faq.html"
+                      href="examples/faq.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -392,7 +392,7 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      href="pages/examples/contact-us.html"
+                      href="examples/contact-us.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -422,7 +422,7 @@
                     <ul class="nav nav-treeview">
                       <li class="nav-item">
                         <a
-                          href="../Extras/login.html"
+                          href="../Extras/login.php"
                           id="menu-m"
                           class="nav-link"
                         >
@@ -432,7 +432,7 @@
                       </li>
                       <li class="nav-item">
                         <a
-                          href="../Extras/register.html"
+                          href="../Extras/register.php"
                           id="menu-m"
                           class="nav-link"
                         >
@@ -442,7 +442,7 @@
                       </li>
                       <li class="nav-item">
                         <a
-                          href="../Extras/forgot-password.html"
+                          href="../Extras/forgot-password.php"
                           class="nav-link"
                           id="menu-m"
                         >
@@ -452,7 +452,7 @@
                       </li>
                       <li class="nav-item">
                         <a
-                          href="../Extras/recover-password.html"
+                          href="../Extras/recover-password.php"
                           class="nav-link"
                           id="menu-m"
                         >
@@ -465,7 +465,7 @@
 
                   <li class="nav-item">
                     <a
-                      href="../Extras/lockscreen.html"
+                      href="../Extras/lockscreen.php"
                       class="nav-link"
                       id="menu-m"
                     >
@@ -1525,7 +1525,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../Assets/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="../Assets/js/pages/dashboard.js"></script>
+    <script src="../Assets/js//dashboard.js"></script>
     <!-- Chat ventana flotante -->
     <script src="../Assets/js/asdasdasd.js"></script>
   </body>

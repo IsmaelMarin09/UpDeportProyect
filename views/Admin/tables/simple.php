@@ -8,9 +8,9 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../Assets/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../Assets/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -63,7 +63,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="../../Assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -79,7 +79,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../../Assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -95,7 +95,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../../Assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -157,7 +157,7 @@
     <!-- Brand Logo -->
     <a href="index.html" class="brand-link">
       <img
-        src="../../dist/img/AdminLTELogo.png"
+        src="../../Assets/img/AdminLTELogo.png"
         alt="AdminLTE Logo"
         class="brand-image img-circle elevation-3"
         style="opacity: 0.8"
@@ -171,7 +171,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img
-            src="../../dist/img/user2-160x160.jpg"
+            src="../../Assets/img/user2-160x160.jpg"
             class="img-circle elevation-2"
             alt="User Image"
           />
@@ -528,7 +528,7 @@
         <div class="chat-history">
           <div class="chat-message clearfix">
             <img
-              src="./dist/img/photo2.png"
+              src="./Assets/img/photo2.png"
               alt=""
               width="32"
               height="32"
@@ -552,7 +552,7 @@
 
           <div class="chat-message clearfix">
             <img
-              src="./dist/img/alejandro.png"
+              src="./Assets/img/alejandro.png"
               alt=""
               width="32"
               height="32"
@@ -577,7 +577,7 @@
 
           <div class="chat-message clearfix">
             <img
-              src="../../dist/img/alejandro.png"
+              src="../../Assets/img/alejandro.png"
               alt=""
               width="32"
               height="32"
@@ -1218,14 +1218,14 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="../../Assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="../../Assets/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="../../Assets/js/demo.js"></script>
  <!-- Chat ventana flotante -->
-<script src="../../dist/js/asdasdasd.js"></script>
+<script src="../../Assets/js/asdasdasd.js"></script>
 </body>
 </html>
