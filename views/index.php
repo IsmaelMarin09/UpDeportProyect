@@ -1,28 +1,4 @@
-<?php
 
-require_once('class.conexion.php');
-
-  session_start();
-  $rows=null;
-  $modelo= new Conexion();
-  $conexion=  $modelo->get_conexion();
-  $id="%".$_SESSION['id']."%";
-  $sql="select * FROM users where id like :id";
-  $statement= $conexion-> prepare($sql);
-  $statement->bindParam(":id", $id);
-  $statement -> execute();
-  $result= $statement->fetch();
-  $rows[]=$result;
-  
-  foreach ($rows as $row){
-    $nombre=$row['nombre'];
-  }
- 
-  
-
-  
-
-?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
