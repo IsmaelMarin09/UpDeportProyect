@@ -12,7 +12,7 @@
   <!-- icheck bootstrap -->
   <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../DashBoard/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../assets/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page" id="login">
 <div class="login-box">

@@ -27,7 +27,7 @@
       crossorigin="anonymous"
     />
     <!-- Theme style -->
-    <link rel="stylesheet" href="../DashBoard/dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="../assets/css/adminlte.min.css" />
   </head>
   <body class="hold-transition register-page ">
     <div class="box-m">

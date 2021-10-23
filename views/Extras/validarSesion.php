@@ -5,7 +5,7 @@
 
     
    
-    require("conexion.php");
+    require("../../controller/conexion.php");
     $consulta="SELECT * FROM  users WHERE correo='$correo'";
     $resultado= $mysqli -> query($consulta);
     // se valido el correo, si no funciona no hay arreglo
@@ -20,7 +20,7 @@
             else{
                 echo'<script>alert("Usted es entrenador")</script>';
             }
-            echo "<script>location.href='../Dashboard/index.php'</script>";
+            echo "<script>location.href='../Admin/index.php'</script>";
 
  
             //echo "<script>location.href='../Dashboard/pages/examples/profile.html'</script>";
@@ -38,7 +38,7 @@
         
     }else{
         echo '<script>alert("Datos de usuario Incorrectos")</script>';
-        echo "<script>location.href='index.php'</script>";
+        echo "<script>location.href='login.php'</script>";
     }
 
 
