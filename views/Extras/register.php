@@ -13,12 +13,12 @@
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="../../plugins/fontawesome-free/css/all.min.css"
+      href="../Assets/plugins/fontawesome-free/css/all.min.css"
     />
     <!-- icheck bootstrap -->
     <link
       rel="stylesheet"
-      href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+      href="../Assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
@@ -1293,9 +1293,9 @@
     <!-- /.register-box -->
 
     <!-- jQuery -->
-    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <script src="../Assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
       integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"

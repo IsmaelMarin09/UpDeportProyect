@@ -13,10 +13,10 @@
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="../../Assets/plugins/fontawesome-free/css/all.min.css"
+      href="../Assets/plugins/fontawesome-free/css/all.min.css"
     />
     <!-- Theme style -->
-    <link rel="stylesheet" href="../../Assets/css/adminlte.min.css" />
+    <link rel="stylesheet" href="../Assets/css/adminlte.min.css" />
   </head>
   <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -86,7 +86,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="../../Assets/img/user1-128x128.jpg"
+                    src="../Assets/img/user1-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 mr-3 img-circle"
                   />
@@ -110,7 +110,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="../../Assets/img/user8-128x128.jpg"
+                    src="../Assets/img/user8-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -134,7 +134,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="../../Assets/img/user3-128x128.jpg"
+                    src="../Assets/img/user3-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -215,7 +215,7 @@
         <!-- Brand Logo -->
         <a href="../../index3.html" class="brand-link">
           <img
-            src="../../Assets/img/AdminLTELogo.png"
+            src="../Assets/img/AdminLTELogo.png"
             alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3"
             style="opacity: 0.8"
@@ -229,7 +229,7 @@
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
               <img
-                src="../../Assets/img/user2-160x160.jpg"
+                src="../Assets/img/user2-160x160.jpg"
                 class="img-circle elevation-2"
                 alt="User Image"
               />
@@ -982,7 +982,7 @@
                           <div class="user-block">
                             <img
                               class="img-circle img-bordered-sm"
-                              src="../../Assets/img/user1-128x128.jpg"
+                              src="../Assets/img/user1-128x128.jpg"
                               alt="user image"
                             />
                             <span class="username">
@@ -1033,7 +1033,7 @@
                           <div class="user-block">
                             <img
                               class="img-circle img-bordered-sm"
-                              src="../../Assets/img/user7-128x128.jpg"
+                              src="../Assets/img/user7-128x128.jpg"
                               alt="User Image"
                             />
                             <span class="username">
@@ -1077,7 +1077,7 @@
                           <div class="user-block">
                             <img
                               class="img-circle img-bordered-sm"
-                              src="../../Assets/img/user6-128x128.jpg"
+                              src="../Assets/img/user6-128x128.jpg"
                               alt="User Image"
                             />
                             <span class="username">
@@ -1095,7 +1095,7 @@
                             <div class="col-sm-6">
                               <img
                                 class="img-fluid"
-                                src="../../Assets/img/photo1.png"
+                                src="../Assets/img/photo1.png"
                                 alt="Photo"
                               />
                             </div>
@@ -1105,12 +1105,12 @@
                                 <div class="col-sm-6">
                                   <img
                                     class="img-fluid mb-3"
-                                    src="../../Assets/img/photo2.png"
+                                    src="../Assets/img/photo2.png"
                                     alt="Photo"
                                   />
                                   <img
                                     class="img-fluid"
-                                    src="../../Assets/img/photo3.jpg"
+                                    src="../Assets/img/photo3.jpg"
                                     alt="Photo"
                                   />
                                 </div>
@@ -1118,12 +1118,12 @@
                                 <div class="col-sm-6">
                                   <img
                                     class="img-fluid mb-3"
-                                    src="../../Assets/img/photo4.jpg"
+                                    src="../Assets/img/photo4.jpg"
                                     alt="Photo"
                                   />
                                   <img
                                     class="img-fluid"
-                                    src="../../Assets/img/photo1.png"
+                                    src="../Assets/img/photo1.png"
                                     alt="Photo"
                                   />
                                 </div>
@@ -1174,7 +1174,7 @@
                                         profile-user-img
                                         img-fluid img-circle
                                       "
-                                      src="../../Assets/img/alejandro.png"
+                                      src="../Assets/img/alejandro.png"
                                       alt="User profile picture"
                                     />
                                   </div>
@@ -1857,7 +1857,7 @@
                                         </div>
                                         <div class="col-5 text-center">
                                           <img
-                                            src="../../Assets/img/user1-128x128.jpg"
+                                            src="../Assets/img/user1-128x128.jpg"
                                             alt="user-avatar"
                                             class="img-circle img-fluid"
                                           />
@@ -1922,7 +1922,7 @@
                                         </div>
                                         <div class="col-5 text-center">
                                           <img
-                                            src="../../Assets/img/user2-160x160.jpg"
+                                            src="../Assets/img/user2-160x160.jpg"
                                             alt="user-avatar"
                                             class="img-circle img-fluid"
                                           />
@@ -1987,7 +1987,7 @@
                                         </div>
                                         <div class="col-5 text-center">
                                           <img
-                                            src="../../Assets/img/user1-128x128.jpg"
+                                            src="../Assets/img/user1-128x128.jpg"
                                             alt="user-avatar"
                                             class="img-circle img-fluid"
                                           />
@@ -2052,7 +2052,7 @@
                                         </div>
                                         <div class="col-5 text-center">
                                           <img
-                                            src="../../Assets/img/user2-160x160.jpg"
+                                            src="../Assets/img/user2-160x160.jpg"
                                             alt="user-avatar"
                                             class="img-circle img-fluid"
                                           />
@@ -2109,7 +2109,7 @@
                                         </div>
                                         <div class="col-5 text-center">
                                           <img
-                                            src="../../Assets/img/user1-128x128.jpg"
+                                            src="../Assets/img/user1-128x128.jpg"
                                             alt="user-avatar"
                                             class="img-circle img-fluid"
                                           />
@@ -2174,7 +2174,7 @@
                                         </div>
                                         <div class="col-5 text-center">
                                           <img
-                                            src="../../Assets/img/user1-128x128.jpg"
+                                            src="../Assets/img/user1-128x128.jpg"
                                             alt="user-avatar"
                                             class="img-circle img-fluid"
                                           />
@@ -2238,72 +2238,7 @@
                                         </div>
                                         <div class="col-5 text-center">
                                           <img
-                                            src="../../Assets/img/user1-128x128.jpg"
-                                            alt="user-avatar"
-                                            class="img-circle img-fluid"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="card-footer">
-                                      <div class="text-right">
-                                        <a href="#" class="btn btn-sm bg-teal">
-                                          <i class="fas fa-comments"></i>
-                                        </a>
-                                        <a
-                                          href="#"
-                                          class="btn btn-sm btn-primary"
-                                        >
-                                          <i class="fas fa-user"></i> View
-                                          Profile
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="
-                                    col-12 col-sm-6 col-md-4
-                                    d-flex
-                                    align-items-stretch
-                                    flex-column
-                                  "
-                                >
-                                  <div class="card bg-light d-flex flex-fill">
-                                    <div
-                                      class="
-                                        card-header
-                                        text-muted
-                                        border-bottom-0
-                                      "
-                                    ></div>
-                                    <div class="card-body pt-0">
-                                      <div class="row">
-                                        <div class="col-7">
-                                          <h2 class="lead">
-                                            <b>Nicole Pearson</b>
-                                          </h2>
-                                          <p class="text-muted text-sm">
-                                            <b>About: </b> Web Designer / UX /
-                                            Graphic Artist / Coffee Lover
-                                          </p>
-                                          <ul
-                                            class="ml-4 mb-0 fa-ul text-muted"
-                                          >
-                                            <li class="small">
-                                              <span class="fa-li"
-                                                ><i
-                                                  class="fas fa-lg fa-building"
-                                                ></i
-                                              ></span>
-                                              Address: Chia, Cundinamarca
-                                            </li>
-                                            <li class="small"></li>
-                                          </ul>
-                                        </div>
-                                        <div class="col-5 text-center">
-                                          <img
-                                            src="../../Assets/img/user1-128x128.jpg"
+                                            src="../Assets/img/user1-128x128.jpg"
                                             alt="user-avatar"
                                             class="img-circle img-fluid"
                                           />
@@ -2368,7 +2303,72 @@
                                         </div>
                                         <div class="col-5 text-center">
                                           <img
-                                            src="../../Assets/img/user2-160x160.jpg"
+                                            src="../Assets/img/user1-128x128.jpg"
+                                            alt="user-avatar"
+                                            class="img-circle img-fluid"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        <a href="#" class="btn btn-sm bg-teal">
+                                          <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a
+                                          href="#"
+                                          class="btn btn-sm btn-primary"
+                                        >
+                                          <i class="fas fa-user"></i> View
+                                          Profile
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="
+                                    col-12 col-sm-6 col-md-4
+                                    d-flex
+                                    align-items-stretch
+                                    flex-column
+                                  "
+                                >
+                                  <div class="card bg-light d-flex flex-fill">
+                                    <div
+                                      class="
+                                        card-header
+                                        text-muted
+                                        border-bottom-0
+                                      "
+                                    ></div>
+                                    <div class="card-body pt-0">
+                                      <div class="row">
+                                        <div class="col-7">
+                                          <h2 class="lead">
+                                            <b>Nicole Pearson</b>
+                                          </h2>
+                                          <p class="text-muted text-sm">
+                                            <b>About: </b> Web Designer / UX /
+                                            Graphic Artist / Coffee Lover
+                                          </p>
+                                          <ul
+                                            class="ml-4 mb-0 fa-ul text-muted"
+                                          >
+                                            <li class="small">
+                                              <span class="fa-li"
+                                                ><i
+                                                  class="fas fa-lg fa-building"
+                                                ></i
+                                              ></span>
+                                              Address: Chia, Cundinamarca
+                                            </li>
+                                            <li class="small"></li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                          <img
+                                            src="../Assets/img/user2-160x160.jpg"
                                             alt="user-avatar"
                                             class="img-circle img-fluid"
                                           />
@@ -2466,27 +2466,27 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="../../Assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../Assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="../../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="../../Assets/js/adminlte.min.js"></script>
+    <script src="../Assets/js/adminlte.min.js"></script>
     <!-- jQuery Knob -->
-    <script src="../../Assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="../Assets/plugins/jquery-knob/jquery.knob.min.js"></script>
     <!-- Sparkline -->
-    <script src="../../Assets/plugins/sparklines/sparkline.js"></script>
+    <script src="../Assets/plugins/sparklines/sparkline.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="../../Assets/js/demo.js"></script>
+    <script src="../Assets/js/demo.js"></script>
 
     <!-- SCRIPT PRIMERAS ESTADITICAS -->
     <!-- FLOT CHARTS -->
-    <script src="../../Assets/plugins/flot/jquery.flot.js"></script>
+    <script src="../Assets/plugins/flot/jquery.flot.js"></script>
     <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
-    <script src="../../Assets/plugins/flot/Assets/plugins/jquery.flot.resize.js"></script>
+    <script src="../Assets/plugins/flAssets/plugins/jquery.flot.resize.js"></script>
     <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
-    <script src="../../Assets/plugins/flot/Assets/plugins/jquery.flot.pie.js"></script>
+    <script src="../Assets/plugins/flAssets/plugins/jquery.flot.pie.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="../../Assets/js/demo.js"></script>
+    <script src="../Assets/js/demo.js"></script>
     <script>
       $(function () {
         /*

@@ -8,13 +8,13 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../Assets/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../Assets/plugins/fontawesome-free/css/all.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="../../Assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="../../Assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="../../Assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="../Assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../Assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../Assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../Assets/css/adminlte.min.css">
+  <link rel="stylesheet" href="../Assets/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -67,7 +67,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../Assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="../Assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -83,7 +83,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../Assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../Assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -99,7 +99,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../Assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../Assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -161,7 +161,7 @@
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link">
       <img
-        src="../../Assets/img/AdminLTELogo.png"
+        src="../Assets/img/AdminLTELogo.png"
         alt="AdminLTE Logo"
         class="brand-image img-circle elevation-3"
         style="opacity: 0.8"
@@ -175,7 +175,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img
-            src="../../Assets/img/user2-160x160.jpg"
+            src="../Assets/img/user2-160x160.jpg"
             class="img-circle elevation-2"
             alt="User Image"
           />
@@ -537,7 +537,7 @@
         <div class="chat-history">
           <div class="chat-message clearfix">
             <img
-              src="./Assets/img/photo2.png"
+              src=Assets/img/photo2.png"
               alt=""
               width="32"
               height="32"
@@ -561,7 +561,7 @@
 
           <div class="chat-message clearfix">
             <img
-              src="./Assets/img/alejandro.png"
+              src=Assets/img/alejandro.png"
               alt=""
               width="32"
               height="32"
@@ -586,7 +586,7 @@
 
           <div class="chat-message clearfix">
             <img
-              src="../../Assets/img/alejandro.png"
+              src="../Assets/img/alejandro.png"
               alt=""
               width="32"
               height="32"
@@ -1551,26 +1551,26 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../Assets/plugins/jquery/jquery.min.js"></script>
+<script src="../Assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->
-<script src="../../Assets/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../Assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="../../Assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../Assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="../../Assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="../../Assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="../../Assets/plugins/jszip/jszip.min.js"></script>
-<script src="../../Assets/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="../../Assets/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="../../Assets/plugins/datatables-buttons/js/buttons.php5.min.js"></script>
-<script src="../../Assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="../../Assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="../Assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../Assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../Assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../Assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../Assets/plugins/jszip/jszip.min.js"></script>
+<script src="../Assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../Assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/buttons.php5.min.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../Assets/js/adminlte.min.js"></script>
+<script src="../Assets/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../Assets/js/demo.js"></script>
+<script src="../Assets/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
   $(function () {
@@ -1590,6 +1590,6 @@
   });
 </script>
 <!-- Chat ventana flotante -->
-<script src="../../Assets/js/asdasdasd.js"></script>
+<script src="../Assets/js/asdasdasd.js"></script>
 </body>
 </html>

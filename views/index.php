@@ -1,3 +1,8 @@
+<?php
+  include "db.php";
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -12,7 +17,7 @@
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
     />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../Assets/plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="Assets/plugins/fontawesome-free/css/all.min.css" />
     <!-- Ionicons -->
     <link
       rel="stylesheet"
@@ -21,35 +26,55 @@
     <!-- Tempusdominus Bootstrap 4 -->
     <link
       rel="stylesheet"
-      href="../Assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+      href="Assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
     />
     <!-- iCheck  HOLA ESTO ES UN CAMBIO -->
     <link
       rel="stylesheet"
-      href="../Assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+      href="Assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
     />
     <!-- JQVMap -->
-    <link rel="stylesheet" href="../Assets/plugins/jqvmap/jqvmap.min.css" />
+    <link rel="stylesheet" href="Assets/plugins/jqvmap/jqvmap.min.css" />
     <!-- Theme style -->
-    <link rel="stylesheet" href="../Assets/css/adminlte.min.css" />
+    <link rel="stylesheet" href="Assets/css/adminlte.min.css" />
     <!-- overlayScrollbars -->
     <link
       rel="stylesheet"
-      href="../Assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+      href="Assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
     />
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="../Assets/plugins/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="Assets/plugins/daterangepicker/daterangepicker.css" />
     <!-- summernote -->
-    <link rel="stylesheet" href="../Assets/plugins/summernote/summernote-bs4.min.css" />
+    <link rel="stylesheet" href="Assets/plugins/summernote/summernote-bs4.min.css" />
+
+
+    <script type="text/javascript">
+    function ajax(){
+        var req= new XMLHttpRequest();
+        req. onreadystatechange=function(){
+            if(req.readyState ==4 && req.status==200){
+                document.getElementById('chat').innerHTML=req.responseText;
+            }
+        }
+        req.open('GET','chat.php',true);
+        req.send();
+    }
+
+
+    setInterval(function(){ajax();},1000);
+
+</script>
+
+
   </head>
-  <body class="hold-transition sidebar-mini layout-fixed">
+  <body class="hold-transition sidebar-mini layout-fixed"  onload="ajax();">
     <div class="wrapper">
       <div
-        class="preloader flex-column justify-content-center align-items-center"
+        class="flex-column justify-content-center align-items-center"
       >
         <img
           class="animation__shake"
-          src="../Assets/img/AdminLTELogo.png"
+          src="Assets/img/AdminLTELogo.png"
           alt="AdminLTELogo"
           height="60"
           width="60"
@@ -125,7 +150,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="../Assets/img/user1-128x128.jpg"
+                    src="Assets/img/user1-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 mr-3 img-circle"
                   />
@@ -149,7 +174,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="../Assets/img/user8-128x128.jpg"
+                    src="Assets/img/user8-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -173,7 +198,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="../Assets/img/user3-128x128.jpg"
+                    src="Assets/img/user3-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -254,7 +279,7 @@
         <!-- Brand Logo -->
         <a href="index.php" class="brand-link">
           <img
-            src="./../Assets/img/AdminLTELogo.png"
+            src="./Assets/img/AdminLTELogo.png"
             alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3"
             style="opacity: 0.8"
@@ -268,7 +293,7 @@
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
               <img
-                src="../Assets/img/user2-160x160.jpg"
+                src="Assets/img/user2-160x160.jpg"
                 class="img-circle elevation-2"
                 alt="User Image"
               />
@@ -316,7 +341,7 @@
                   
                   <li class="nav-item">
                     <a
-                      href="tables/data.php"
+                      href="Admin/data.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -328,7 +353,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="tables/simple.php"
+                  href="Admin/simple.php"
                   id="menu-m"
                   class="nav-link"
                 >
@@ -338,7 +363,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="examples/calendar.php" id="menu-m" class="nav-link">
+                <a href="Admin/calendar.php" id="menu-m" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>
                     Calendario
@@ -360,7 +385,7 @@
                   
                   <li class="nav-item">
                     <a
-                      href="examples/profile.php"
+                      href="Admin/profile.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -372,7 +397,7 @@
 
                   <li class="nav-item">
                     <a
-                      href="examples/contacts.php"
+                      href="Admin/contacts.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -382,7 +407,7 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      href="examples/faq.php"
+                      href="Admin/faq.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -392,7 +417,7 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      href="examples/contact-us.php"
+                      href="Admin/contact-us.php"
                       id="menu-m"
                       class="nav-link"
                     >
@@ -422,7 +447,7 @@
                     <ul class="nav nav-treeview">
                       <li class="nav-item">
                         <a
-                          href="../Extras/login.php"
+                          href="Extras/login.php"
                           id="menu-m"
                           class="nav-link"
                         >
@@ -432,7 +457,7 @@
                       </li>
                       <li class="nav-item">
                         <a
-                          href="../Extras/register.php"
+                          href="Extras/register.php"
                           id="menu-m"
                           class="nav-link"
                         >
@@ -442,7 +467,7 @@
                       </li>
                       <li class="nav-item">
                         <a
-                          href="../Extras/forgot-password.php"
+                          href="Extras/forgot-password.php"
                           class="nav-link"
                           id="menu-m"
                         >
@@ -452,7 +477,7 @@
                       </li>
                       <li class="nav-item">
                         <a
-                          href="../Extras/recover-password.php"
+                          href="Extras/recover-password.php"
                           class="nav-link"
                           id="menu-m"
                         >
@@ -465,7 +490,7 @@
 
                   <li class="nav-item">
                     <a
-                      href="../Extras/lockscreen.php"
+                      href="Extras/lockscreen.php"
                       class="nav-link"
                       id="menu-m"
                     >
@@ -476,7 +501,7 @@
 
                   <li class="nav-item">
                     <a
-                      href="../Extras/404.html"
+                      href="Extras/404.html"
                       class="nav-link"
                       id="menu-m"
                     >
@@ -486,7 +511,7 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      href="../Extras/500.html"
+                      href="Extras/500.html"
                       class="nav-link"
                       id="menu-m"
                     >
@@ -512,87 +537,31 @@
           </header>
 
           <div class="chat">
-            <div class="chat-history">
-              <div class="chat-message clearfix">
-                <img
-                  src="./../Assets/img/photo2.png"
-                  alt=""
-                  width="32"
-                  height="32"
-                />
-
-                <div class="chat-message-content clearfix">
-                  <span class="chat-time">13:35</span>
-
-                  <h5>John Doe</h5>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Error, explicabo quasi ratione odio dolorum harum.
-                  </p>
-                </div>
-                <!-- end chat-message-content -->
-              </div>
-              <!-- end chat-message -->
-
-              <hr />
-
-              <div class="chat-message clearfix">
-                <img
-                  src="./../Assets/img/alejandro.png"
-                  alt=""
-                  width="32"
-                  height="32"
-                />
-
-                <div class="chat-message-content clearfix">
-                  <span class="chat-time">13:37</span>
-
-                  <h5>Marco Biedermann</h5>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Blanditiis, nulla accusamus magni vel debitis numquam qui
-                    tempora rem voluptatem delectus!
-                  </p>
-                </div>
-                <!-- end chat-message-content -->
-              </div>
-              <!-- end chat-message -->
-
-              <hr />
-
-              <div class="chat-message clearfix">
-                <img
-                  src="./../Assets/img/alejandro.png"
-                  alt=""
-                  width="32"
-                  height="32"
-                />
-
-                <div class="chat-message-content clearfix">
-                  <span class="chat-time">13:38</span>
-
-                  <h5>John Doe</h5>
-
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                </div>
-                <!-- end chat-message-content -->
-              </div>
-              <!-- end chat-message -->
-
-              <hr />
+            <div id="chat" class="chat-history">
+            
+              
+         
             </div>
             <!-- end chat-history -->
 
-            <p class="chat-feedback">Yazıyor..</p>
 
-            <form action="#" method="post">
-              <fieldset>
-                <input type="text" placeholder="Mesajınızı Yazın" autofocus />
-                <input type="hidden" />
-              </fieldset>
+            <form action="index.php" method="post">
+              
+                <input type="text" placeholder="ingresar mensaje" name="mensaje" />
+                <input type="submit" name="enviar" value="enviar" />
+              
             </form>
+
+            <?php 
+            if (isset ($_POST['enviar'])) {
+              $mensaje=$_POST['mensaje'];
+
+              $consulta="INSERT INTO chat (mensaje) VALUES ('$mensaje')";
+              $ejecutar=$conexion ->query($consulta);
+              
+            }
+            
+            ?>
           </div>
           <!-- end chat -->
         </div>
@@ -824,7 +793,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="../Assets/img/user1-128x128.jpg"
+                          src="Assets/img/user1-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -848,7 +817,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="../Assets/img/user3-128x128.jpg"
+                          src="Assets/img/user3-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -872,7 +841,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="../Assets/img/user1-128x128.jpg"
+                          src="Assets/img/user1-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -896,7 +865,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="../Assets/img/user3-128x128.jpg"
+                          src="Assets/img/user3-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -914,7 +883,7 @@
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="../Assets/img/user1-128x128.jpg"
+                              src="Assets/img/user1-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -937,7 +906,7 @@
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="../Assets/img/user7-128x128.jpg"
+                              src="Assets/img/user7-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -960,7 +929,7 @@
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="../Assets/img/user3-128x128.jpg"
+                              src="Assets/img/user3-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -983,7 +952,7 @@
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="../Assets/img/user5-128x128.jpg"
+                              src="Assets/img/user5-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -1006,7 +975,7 @@
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="../Assets/img/user6-128x128.jpg"
+                              src="Assets/img/user6-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -1029,7 +998,7 @@
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="../Assets/img/user8-128x128.jpg"
+                              src="Assets/img/user8-128x128.jpg"
                               alt="User Avatar"
                             />
 
@@ -1493,40 +1462,40 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="../Assets/plugins/jquery/jquery.min.js"></script>
+    <script src="Assets/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
-    <script src="../Assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="Assets/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
       $.widget.bridge("uibutton", $.ui.button);
     </script>
     <!-- Bootstrap 4 -->
-    <script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- ChartJS -->
-    <script src="../Assets/plugins/chart.js/Chart.min.js"></script>
+    <script src="Assets/plugins/chart.js/Chart.min.js"></script>
     <!-- Sparkline -->
-    <script src="../Assets/plugins/sparklines/sparkline.js"></script>
+    <script src="Assets/plugins/sparklines/sparkline.js"></script>
     <!-- JQVMap -->
-    <script src="../Assets/plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="../Assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <script src="Assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="Assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
     <!-- jQuery Knob Chart -->
-    <script src="../Assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="Assets/plugins/jquery-knob/jquery.knob.min.js"></script>
     <!-- daterangepicker -->
-    <script src="../Assets/plugins/moment/moment.min.js"></script>
-    <script src="../Assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="Assets/plugins/moment/moment.min.js"></script>
+    <script src="Assets/plugins/daterangepicker/daterangepicker.js"></script>
     <!-- Tempusdominus Bootstrap 4 -->
-    <script src="../Assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="Assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Summernote -->
-    <script src="../Assets/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="Assets/plugins/summernote/summernote-bs4.min.js"></script>
     <!-- overlayScrollbars -->
-    <script src="../Assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="Assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="../Assets/js/adminlte.js"></script>
+    <script src="Assets/js/adminlte.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="../Assets/js/demo.js"></script>
+    <script src="Assets/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="../Assets/js//dashboard.js"></script>
+    <script src="Assets/js//dashboard.js"></script>
     <!-- Chat ventana flotante -->
-    <script src="../Assets/js/asdasdasd.js"></script>
+    <script src="Assets/js/asdasdasd.js"></script>
   </body>
 </html>
