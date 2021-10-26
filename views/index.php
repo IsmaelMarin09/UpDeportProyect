@@ -46,9 +46,11 @@
     <link rel="stylesheet" href="Assets/plugins/daterangepicker/daterangepicker.css" />
     <!-- summernote -->
     <link rel="stylesheet" href="Assets/plugins/summernote/summernote-bs4.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 
     <script type="text/javascript">
+    
     function ajax(){
         var req= new XMLHttpRequest();
         req. onreadystatechange=function(){
@@ -57,11 +59,17 @@
             }
         }
         req.open('GET','chat.php',true);
+        
         req.send();
+      
+        
+        
     }
 
 
     setInterval(function(){ajax();},1000);
+    
+    
 
 </script>
 
@@ -536,32 +544,35 @@
             <span class="chat-message-counter">3</span>
           </header>
 
-          <div class="chat">
-            <div id="chat" class="chat-history">
-            
-              
-         
+          <div class="chat" >
+            <div id="chat" class="chat-history" >
+       
             </div>
             <!-- end chat-history -->
+           
 
-
-            <form action="index.php" method="post">
+            <form  method="post"  id='submit-form'>
               
                 <input type="text" placeholder="ingresar mensaje" name="mensaje" />
-                <input type="submit" name="enviar" value="enviar" />
-              
+                <input type="submit" name="enviar" value="enviar" >
+               
+               
             </form>
-
+           
             <?php 
+           
             if (isset ($_POST['enviar'])) {
+             
               $mensaje=$_POST['mensaje'];
 
               $consulta="INSERT INTO chat (mensaje) VALUES ('$mensaje')";
               $ejecutar=$conexion ->query($consulta);
+
               
             }
             
             ?>
+           
           </div>
           <!-- end chat -->
         </div>

@@ -2,8 +2,11 @@
 $servidor="localhost";
 $user="root";
 $password="";
-$bd="appchat2";
+$bd="updeport";
 
 $conexion=new mysqli($servidor,$user,$password,$bd);
+function formatearFecha($fecha){
+    return date('g:i a', strtotime($fecha));
+}
 
 ?>

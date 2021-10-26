@@ -9,7 +9,8 @@
 
 ?>
 <div id="datos-chat">
-  <span ><?php echo $fila['mensaje']; ?> </span>
-  <span ><?php echo  $fila['fecha'];?> </span>
+  <span  ><?php echo $fila['mensaje']; ?> </span>
+  <span ><?php echo formatearFecha($fila['fecha']) ;?> </span>
+ 
 </div>
 <?php  endwhile; ?>
