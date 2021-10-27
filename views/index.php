@@ -1,6 +1,11 @@
 <?php
   include "db.php";
+  session_start();
+  if(!isset($_SESSION['unique_Id'])){
+    header("location:Extras2Prueba/login.php");
+  }
 ?>
+
 
 
 
@@ -76,6 +81,14 @@
 
   </head>
   <body class="hold-transition sidebar-mini layout-fixed"  onload="ajax();">
+  <?php
+   include_once "db.php";
+   $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_Id = {$_SESSION['unique_Id']}");
+   if(mysqli_num_rows($sql) > 0){
+     $row = mysqli_fetch_assoc($sql);
+   }
+   
+?>
     <div class="wrapper">
       <div
         class="flex-column justify-content-center align-items-center"
@@ -301,13 +314,13 @@
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
               <img
-                src="Assets/img/user2-160x160.jpg"
+                src="Assets/img/perfil_img/<?php echo $row['img']?>"
                 class="img-circle elevation-2"
                 alt="User Image"
               />
             </div>
             <div class="info">
-              <a href="#" class="d-block"><?php echo $nombre ?></a>
+              <a href="#" class="d-block"><?php echo $row['nombre'] ?></a>
             </div>
           </div>
 
@@ -554,7 +567,10 @@
             <form  method="post"  id='submit-form'>
               
                 <input type="text" placeholder="ingresar mensaje" name="mensaje" />
-                <input type="submit" name="enviar" value="enviar" >
+                <div class="button">
+                    <input type="submit" name="enviar" value="enviar" >
+                </div>
+             
                
                
             </form>
@@ -1505,8 +1521,9 @@
     <!-- AdminLTE for demo purposes -->
     <script src="Assets/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="Assets/js//dashboard.js"></script>
+    <script src="Assets/js/dashboard.js"></script>
     <!-- Chat ventana flotante -->
     <script src="Assets/js/asdasdasd.js"></script>
+    <script src="cancelLoad.js"></script>
   </body>
 </html>
