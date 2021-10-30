@@ -124,6 +124,17 @@
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a
+              class="nav-link"
+             
+              href="../Controller/logout.php?logout_id=<?php echo $row['unique_Id']; ?>"
+              role="button"
+            >
+              <i class="fas ion-android-exit"></i>
+            </a>
+            
+          </li>
           <!-- Navbar Search -->
           <li class="nav-item">
             <a
@@ -147,6 +158,7 @@
                     <button class="btn btn-navbar" type="submit">
                       <i class="fas fa-search" href="/search/enhanced.php"></i>
                     </button>
+                    
                     <button
                       class="btn btn-navbar"
                       type="button"
@@ -154,6 +166,7 @@
                     >
                       <i class="fas fa-times"></i>
                     </button>
+                  
                   </div>
                 </div>
               </form>
@@ -166,6 +179,7 @@
               <i class="far fa-comments"></i>
               <span class="badge badge-danger navbar-badge">3</span>
             </a>
+
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
               <a href="#" class="dropdown-item">
                 <!-- Message Start -->
