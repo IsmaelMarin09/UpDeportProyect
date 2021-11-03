@@ -1,18 +1,4 @@
-<?php
-  include "db.php";
-  session_start();
-  if(!isset($_SESSION['unique_Id'])){
-    header("location:Extras2Prueba/login.php");
-  }
-?>
-<?php
-   include_once "db.php";
-   $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_Id = {$_SESSION['unique_Id']}");
-   if(mysqli_num_rows($sql) > 0){
-     $row = mysqli_fetch_assoc($sql);
-   }
-   
-?>
+
 
 
 

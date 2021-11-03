@@ -1,10 +1,15 @@
 <?php
-    $mysqli= new mysqli('localhost','root','','updeport');
-    if($mysqli->connect_errno) {
-        echo"Lo sentimos este sitio web presenta problemas de conectividad";
-    }
-    else{
+class conexion{
+    public function get_conexion(){
+        $user="root";
+        $pass="";
+        $host="localhost";
+        $db="updeport";
 
-       
+        $conexion =new PDO("mysql:host= $host; dbname= $db;", $user, $pass);
+
+        return $conexion;
+
     }
+}
 ?>
