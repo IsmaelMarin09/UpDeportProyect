@@ -4,7 +4,7 @@ require_once("conexion.php");
      public function listarUsers(){
          $f=null;
 
-         $objetoConexion=new conexion();
+         $objetoConexion= new conexion();
          $conexion=$objetoConexion->get_conexion();
 
 
