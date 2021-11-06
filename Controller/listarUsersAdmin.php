@@ -41,8 +41,8 @@
             echo "<td>" .$f['municipio']."</td>";
             echo "<td>" .$f['genero']."</td>";
             echo "<td>" .$f['estado']."</td>";
-            echo " <td><a href='../Controlador/eliminar.php?id_producto=".$f['id']."'>Deshabilitar </td>";
-            echo " <td><a href='../Controlador/modificar.php?id_producto=".$f['id']."'>Modificar </td>";
+            echo " <td><a href='eliminar.php?id_eliminar=".$f['id']."'>Eliminar </td>";
+            echo " <td><a href='modificarUser.php?id_modificar=".$f['id']."'>Modificar </td>";
             echo "</tr>";
 
 

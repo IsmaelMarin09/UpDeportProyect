@@ -1,4 +1,8 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" id="barra-m">
+<?php
+$objetoConsultas= new consultasAsideUsuarios;
+//$resut=$objetoConsultas->listarUserAside();
+
+    echo '<aside class="main-sidebar sidebar-dark-primary elevation-4" id="barra-m">
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link">
       <img
@@ -21,9 +25,10 @@
             alt="User Image"
           />
         </div>
-        <div class="info">
-          <a href="#" class="d-block">Ismael Marin</a>
-        </div>
+        <div class="info">';
+         echo "<a> ismael</a>";
+      echo'  
+      </div>
       </div>
 
       <!-- SidebarSearch Form -->
@@ -367,4 +372,5 @@
     <!-- /.sidebar -->
     
     <!-- end live-chat -->
-  </aside>
+  </aside>'
+?>

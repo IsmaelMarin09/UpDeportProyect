@@ -3,6 +3,7 @@
 require_once ("../../Model/conexion.php");
 require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
+require_once ("../../Controller/modificarUser.php");
 require_once ("../../Controller/listarUsersAdmin.php");
 session_start();
 $id=$_SESSION['unique_Id'];
@@ -14,7 +15,7 @@ $id=$_SESSION['unique_Id'];
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | DataTables</title>
+  <title>Modificar</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -182,7 +183,7 @@ $id=$_SESSION['unique_Id'];
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Home Admin</h1>
+            <h1>Moficar</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -201,13 +202,14 @@ $id=$_SESSION['unique_Id'];
           <div class="col-12">
           <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title">Modificar Usuario</h3>
+                <h4 class="card-title">Tenga en cuenta que al actualizar, no hay vuelta atras.</h4>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                  <?php
-                 cargarUsers();
+                 cargarUser();
 
                  ?>
                 
