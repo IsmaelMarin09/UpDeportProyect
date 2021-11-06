@@ -3,7 +3,8 @@ require_once("conexion.php");
  class consultasAdmin{
       public function listarUsers(){     
          $f=null;
-         $objetoConexion=new conexion();
+
+         $objetoConexion= new conexion();
          $conexion=$objetoConexion->get_conexion();
          $listar="SELECT * FROM  users";
          $statement=$conexion->prepare ($listar);

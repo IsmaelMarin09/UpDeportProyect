@@ -2,7 +2,7 @@
 
   function cargarUsers(){
       $objetoConsultas= new consultasAdmin();
-      $resut=$objetoConsultas->listarUsers();
+      $result=$objetoConsultas->listarUsers();
 
       if (!isset($result)) {
         echo '
