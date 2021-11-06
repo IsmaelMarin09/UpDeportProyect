@@ -1,15 +1,14 @@
 <?php
-class conexion{
-    public function get_conexion(){
-        $user="root";
-        $pass="";
-        $host="localhost";
+    class Conexion{
+        public function get_conexion(){ 
+        $user = "root";
+        $pass = "";
+        $host ="localhost";
         $db="updeport";
-
-        $conexion =new PDO("mysql:host= $host; dbname= $db;", $user, $pass);
-
+        
+        $conexion=new PDO("mysql:host=$host;dbname=$db;",$user,$pass);
         return $conexion;
+        } 
 
     }
-}
 ?>
