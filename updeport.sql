@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-10-2021 a las 02:34:54
+-- Tiempo de generación: 06-11-2021 a las 21:26:25
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -233,7 +233,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `unique_Id`, `nombre`, `email`, `clave`, `img`, `rol`, `deporte`, `fNacimiento`, `municipio`, `genero`, `estado`) VALUES
 (1, 123456789, 'Juan Pablo Cifuentes', 'juan@cifuentes.com', '12345', 'pablo.jpg', 'Administrador', 'Volleiball', '1999-06-06', 'Zipaquira', 'Masculino', 'Habilitado'),
 (2, 234567891, 'Ismael Marin', 'ismael@marin.com', '12345', 'ismael.jpg', 'Administrador', 'Futbol', '2001-05-01', 'Chia', 'Masculino', 'Habilitado'),
-(3, 345678912, 'Esteban Lizaraso', 'esteban@lizaraso.com', '12345', 'esteban.jpg', 'Administrador', 'Futbol', '2002-09-30', 'Chia', 'Masculino', 'Habilitado');
+(3, 345678912, 'Esteban Lizaraso', 'esteban@lizaraso.com', '12345', 'esteban.jpg', 'Administrador', 'Futbol', '2002-09-30', 'Chia', 'Masculino', 'Habilitado'),
+(4, 456789123, 'prueba Admin', 'admin@gmail.com', '12345', 'asdasd.jpg', 'Admin', 'beisbol', '2021-11-10', 'choconta', 'Masculino', 'Habilitado');
 
 --
 -- Índices para tablas volcadas
@@ -278,7 +279,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
