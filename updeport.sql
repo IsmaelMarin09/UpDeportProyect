@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2021 a las 21:26:25
+-- Tiempo de generación: 08-11-2021 a las 03:01:13
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -208,6 +208,53 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tablaprofile`
+--
+
+CREATE TABLE `tablaprofile` (
+  `unique_Id` int(9) NOT NULL,
+  `seguidores` int(6) NOT NULL,
+  `seguidos` int(6) NOT NULL,
+  `desarrollo` text NOT NULL,
+  `reconocimientos` varchar(150) NOT NULL,
+  `descripcion` varchar(241) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tablaprofile`
+--
+
+INSERT INTO `tablaprofile` (`unique_Id`, `seguidores`, `seguidos`, `desarrollo`, `reconocimientos`, `descripcion`) VALUES
+(123456789, 0, 0, 'Soy un joven que le apasiona el tema de desarrollo.', 'Uno de los mejores del grupo :v. soy hiperactivo, tengo conocimiento variado en pocos lenguajes', 'Tengo 22 años y mi idea es terminar esta pinche pagina :) y que quede bien hecha para así poder hacer las practicas sin problema'),
+(234567891, 0, 0, 'ME gusta la rpogramación y estudio dos carreras de programción, psdt soy todo un papucho', 'soy uno de los mejores del curso, cuandos e trata de programar y seguir adelante', 'tengo 19 años, y quiero vivir de esto hasta que sea viejo'),
+(345678912, 0, 0, 'Me gusta el desarrollo de sistemas', 'soy uno de los mejores y soy bien crack aguebo', 'me gusta todo el mundo de la programacion');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tablaseguimiento`
+--
+
+CREATE TABLE `tablaseguimiento` (
+  `id` int(11) NOT NULL,
+  `unique_IdA` int(9) NOT NULL,
+  `unique_IdB` int(9) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tablaseguimiento`
+--
+
+INSERT INTO `tablaseguimiento` (`id`, `unique_IdA`, `unique_IdB`) VALUES
+(1, 234567891, 123456789),
+(2, 345678912, 123456789),
+(7, 234567891, 123456789),
+(8, 123456789, 345678912),
+(11, 123456789, 234567891);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `users`
 --
 
@@ -231,10 +278,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `unique_Id`, `nombre`, `email`, `clave`, `img`, `rol`, `deporte`, `fNacimiento`, `municipio`, `genero`, `estado`) VALUES
+(16, 120710809, 'zapato t42', 'juanpacifuzdsfentes1999@gmail.com', '12345', 'user.jpg', 'Hunter', 'Patinaje', '2021-11-18', 'Cubará', 'Femenino', 'Habilitado'),
 (1, 123456789, 'Juan Pablo Cifuentes', 'juan@cifuentes.com', '12345', 'pablo.jpg', 'Administrador', 'Volleiball', '1999-06-06', 'Zipaquira', 'Masculino', 'Habilitado'),
 (2, 234567891, 'Ismael Marin', 'ismael@marin.com', '12345', 'ismael.jpg', 'Administrador', 'Futbol', '2001-05-01', 'Chia', 'Masculino', 'Habilitado'),
+(12, 257263670, 'Adrian Cifuentes', 'adrian@cifuentes.com', '12345', 'user.jpg', 'Deportista', 'Ciclismo', '2021-11-27', 'Albania', 'Masculino', 'Habilitado'),
 (3, 345678912, 'Esteban Lizaraso', 'esteban@lizaraso.com', '12345', 'esteban.jpg', 'Administrador', 'Futbol', '2002-09-30', 'Chia', 'Masculino', 'Habilitado'),
-(4, 456789123, 'prueba Admin', 'admin@gmail.com', '12345', 'asdasd.jpg', 'Admin', 'beisbol', '2021-11-10', 'choconta', 'Masculino', 'Habilitado');
+(15, 510014068, 'zapato t40', 'juanpacifudsfentes1999@gmail.com', '12345', 'user.jpg', 'Deportista', 'Futbol', '2021-11-18', 'Cácota', 'Femenino', 'Habilitado'),
+(17, 510339014, 'el crack alias el pacho', 'el@pacho.com', '12345', 'user.jpg', 'Hunter', 'Patinaje', '2021-11-05', 'Carepa', 'Femenino', 'Deshabilitado'),
+(13, 813887107, 'daniela Cifuentes', 'daniela@cifuentes.com', '12345', 'user.jpg', 'Deportista', 'Baloncesto', '2021-11-11', 'Albán', 'Femenino', 'Habilitado'),
+(14, 871857633, 'Andres Duarte', 'Andres@Duarte.com', '12345', 'user.jpg', 'Deportista', 'Ciclismo', '2021-09-09', 'Boavita', 'Masculino', 'Habilitado');
 
 --
 -- Índices para tablas volcadas
@@ -251,6 +303,12 @@ ALTER TABLE `chat`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`msg_id`);
+
+--
+-- Indices de la tabla `tablaseguimiento`
+--
+ALTER TABLE `tablaseguimiento`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `users`
@@ -276,10 +334,16 @@ ALTER TABLE `messages`
   MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `tablaseguimiento`
+--
+ALTER TABLE `tablaseguimiento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

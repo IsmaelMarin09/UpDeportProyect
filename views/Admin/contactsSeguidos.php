@@ -3,8 +3,7 @@
 require_once ("../../Model/conexion.php");
 require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
-require_once ("../../Controller/listarUsersAdmin.php");
-require_once ("../../Controller/profileAdmin.php");
+require_once ("../../Controller/cargarSeguidos.php");
 
 session_start();
 
@@ -16,7 +15,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Perfil</title>
+  <title>Mis seguidores</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -47,12 +46,12 @@ session_start();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>PERFIL</h1>
+            <h1>Personas a quien sigo</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Mi perfil</li>
+              <li class="breadcrumb-item active">Seguidos</li>
             </ol>
           </div>
         </div>
@@ -66,15 +65,46 @@ session_start();
           <div class="col-12">
           <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Bienvenido Admin</h3>
+                <h3 class="card-title">Seguidos</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <?php
-                  profileAdmin();
-                
-                ?>
-                
+              <section class="content">
+
+<!-- Default box -->
+<div class="card card-solid">
+<div class="card-body d-flex" style="flex-wrap:wrap;" >
+  <?php
+  
+  
+  
+  cargarSeguidos();
+  ?>
+  </div>
+  <!-- /.card-body -->
+  <div class="card-footer">
+    <nav aria-label="Contacts Page Navigation">
+      <ul class="pagination justify-content-center m-0">
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item"><a class="page-link" href="#">6</a></li>
+        <li class="page-item"><a class="page-link" href="#">7</a></li>
+        <li class="page-item"><a class="page-link" href="#">8</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- /.card-footer -->
+</div>
+<!-- /.card -->
+
+</section>
+
+
+
+
               </div>
               <!-- /.card-body -->
             </div>
@@ -103,7 +133,7 @@ session_start();
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-<script src="../Assets/js/btnSeguir.js"></script>
+
 <!-- jQuery -->
 <script src="../Assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -145,6 +175,5 @@ session_start();
 </script>
 <!-- Chat ventana flotante -->
 <script src="../Assets/js/asdasdasd.js"></script>
-
 </body>
 </html>

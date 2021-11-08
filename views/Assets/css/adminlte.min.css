@@ -58730,4 +58730,10 @@ a.text-muted:hover {
 #centr {
   text-align: center;
 }
+#imgProfile{
+  height:230px !important;
+}
+.content div form .btnDisplay{
+  display:none !important;
+}
 /* Fin Juan Pablo*/

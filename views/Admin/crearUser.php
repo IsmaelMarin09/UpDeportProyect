@@ -3,8 +3,7 @@
 require_once ("../../Model/conexion.php");
 require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
-require_once ("../../Controller/listarUsersAdmin.php");
-require_once ("../../Controller/profileAdmin.php");
+require_once ("../../Controller/crearUser.php");
 
 session_start();
 
@@ -16,7 +15,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Perfil</title>
+  <title>Crear Usuario</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -47,12 +46,12 @@ session_start();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>PERFIL</h1>
+            <h1>Crear Usuario</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Mi perfil</li>
+              <li class="breadcrumb-item active">crear Usuario</li>
             </ol>
           </div>
         </div>
@@ -66,15 +65,14 @@ session_start();
           <div class="col-12">
           <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Bienvenido Admin</h3>
+                <h3 class="card-title">Crear Usuario</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+                
                 <?php
-                  profileAdmin();
-                
+                  crearUser();
                 ?>
-                
               </div>
               <!-- /.card-body -->
             </div>
@@ -103,7 +101,7 @@ session_start();
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-<script src="../Assets/js/btnSeguir.js"></script>
+
 <!-- jQuery -->
 <script src="../Assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -145,6 +143,5 @@ session_start();
 </script>
 <!-- Chat ventana flotante -->
 <script src="../Assets/js/asdasdasd.js"></script>
-
 </body>
 </html>
