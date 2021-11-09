@@ -29,9 +29,27 @@ require_once("conexion.php");
         return $f;
 
     }
-     public function actualizarrUsers(){
-         
-
+     public function actualizarrUsers($id, $unique_id,$nombre,$email,$rol,$deporte,$fNacimiento,$municipio,$genero,$estado){
+        $objetoConexion=new conexion();
+        $conexion=$objetoConexion->get_conexion();
+        $actualizar= "UPDATE users SET id=:id, unique_id=:unique_id, nombre=:nombre,email=:email,clave=:clave,rol=:rol,deporte=:deporte,fNacimiento=:fNacimineto, municipio=:municipio, genero=:genero,estado=:estado WHERE id=:id";
+        $statement= $conexion->prepare($actualizar);
+        $statement->bindParam(':id',$id);
+        $statement->bindParam(':unique_id',$unique_id);
+        $statement->bindParam(':nombre',$nombre);
+        $statement->bindParam(':email',$email);
+        $statement->bindParam(':rol',$rol);
+        $statement->bindParam(':deporte',$deporte);
+        $statement->bindParam(':fNacimiento',$fNacimiento);
+        $statement->bindParam(':municipio',$municipio);
+        $statement->bindParam(':genero',$genero);
+        $statement->bindParam(':estado',$estado);
+        
+        if (!$statement) {
+            echo '<script>alert("ERRORRRR") </script>';
+        }else
+        echo "<script>alert('USUARIO ACTUALIZADO')  </script> ";
+        echo "<script>location.href='../views/Admin/modificarUser.php </script>" ;
     }
     public function eliminarUsers(){
          

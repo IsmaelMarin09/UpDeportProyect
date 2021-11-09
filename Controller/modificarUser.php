@@ -6,36 +6,80 @@ function cargarUser(){
         $result=$objetoconsulta->listarUser($id_modificar);
         foreach($result as $f){
             echo '
-            <form action="#" method="POST">
-            <div class="container">
-			
-            <input  name="ido"  readonly="readonly" value="'.$f['id'].'" >
-            <input  name="ido"  readonly="readonly" value="'.$f['unique_Id'].'" ><br>	
-            
+            <div class="card">
+        <div class="card-body register-card-body">
+          <p class="login-box-msg">Crea una cuenta!</p>
 
-            <label>NOMBRE</label>
-            <input type="text" name="nombre" placeholder="Nombre del producto" value="'.$f['nombre'].'" class="form-control">
+          <form action="../../Controller/actualizarUserAdmin.php" method="POST">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    readonly
+                    name="id"
+                    value="'.$f['id'].'"
+                    readonly="readonly"
+                  />
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-user"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nombre"
+                    name="uid"
+                    readonly
+                    value="'.$f['unique_Id'].'"
 
-            <label>Email</label>
-            <input type="text" name="email" placeholder="Nombre del producto" value="'.$f['email'].'" class="form-control">
+                  />
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-user"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nombre"
+                    name="nombre"
+                    
+                    value="'.$f['nombre'].'" 
 
-            <label>deporte</label>
-            <input type="text" name="deporte" value="'.$f['deporte'].'" placeholder="Categoria" class="form-control">
-
-            <label>rol</label>
-            <input type="text" name="rol" value="'.$f['rol'].'" placeholder="Valor neto" class="form-control">
-            <label>estado</label>
-            <select class="form-control" id="city" required name="municipio">
-                                            <option value="'.$f['estado'].'">'.$f['estado'].'</option>
-                                            <option value="Habilitado">Habilitado</option>
-                                            <option value="Deshabilitado">Deshabilitado</option>
-                                        </select>
-
-        
-            
-            <label>Lugar</label> 
-            <select class="form-control" id="city" required name="municipio">
-                                            <option value="'.$f['municipio'].'">'.$f['municipio'].'</option>
+                  />
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-user"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    name="email"
+                    value="'.$f['email'].'"
+                  />
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-envelope"></span>
+                    </div>
+                  </div>
+                </div>
+           
+                  <div class="input-group mb-3">
+                  
+                                      <select class="form-control" id="city" required name="municipio">
+                                      <option value="'.$f['municipio'].'">'.$f['municipio'].'</option>
+                                            <option value="">Municipio</option>
                                             <option value="Abejorral">Abejorral</option>
                                             <option value="Abrego">Abrego</option>
                                             <option value="Abriaquí">Abriaquí</option>
@@ -1157,21 +1201,81 @@ function cargarUser(){
                                             <option value="Zona Bananera">Zona Bananera</option>
                                         </select>
 
-             
-            <label>Fecha De Nacimiento</label>
-            <input type="date" name="estado" value="'.$f['fNacimiento'].'" placeholder="Valor neto" class="form-control">
-            <label>Genero</label>
-            <select class="form-control" id="city" required name="municipio">
+                  </div>
+                  
+                
+              
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group mb-3">
+                  <input value="'.$f['fNacimiento'].'" type="date" class="form-control"  name="fNacimiento" />
+                </div>
+            <select
+                  class="form-select mb-3 form-control"
+                  id="op-m"
+                  aria-label="Default select example"
+                  name="genero"
+                >
                 <option value="'.$f['genero'].'">'.$f['genero'].'</option>
-                <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Otro">Otro</option>
             </select>
+                <select
+                  class="form-select mb-3 form-control form-control"
+                  id="op-m"
+                  aria-label="Default select example"
+                  name="deporte"
+                >
+                  <option  value="'.$f['deporte'].'" >'.$f['deporte'].'</option>
+                  <option value="futbol">futbol</option>
+                  <option value="basketball">basketball</option>
+                  <option value="voleiball">voleiball</option>
+                </select>
+                <select
+                  class="form-select mb-3 form-control"
+                  id="op-m"
+                  aria-label="Default select example"
+                  name="rol"
+                >
+                  
+                  <option value="'.$f['rol'].'">'.$f['rol'].'</option>
+                  <option value="Deportista">Deportista</option>
+                  <option value="Entranador">Entranador</option>
+                  <option value="Hunter">Hunter</option>
+                </select>
+                <select
+                  class="form-select mb-3 form-control form-control"
+                  id="op-m"
+                  aria-label="Default select example"
+                  name="estado"
+                >
+                  <option  value="'.$f['estado'].'" >'.$f['estado'].'</option>
+                  <option value="futbol">Activo</option>
+                  <option value="basketball">Inactivo</option>
+                  
+                </select>
+              </div>
+            </div>
 
+            <div class="row">
+              <div class="col-7">
+              
+              <div class="col-5">
+                <button type="submit" class="btn btn-primary btn-block">
+                  Modificar
+                </button>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
 
-            <br><button type="submit" class="btn btn-success">modificar</button>	
+          
 
+         
         </div>
-            </form>
+        <!-- /.form-box -->
+      </div>
         
             ';
 
