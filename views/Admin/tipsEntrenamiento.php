@@ -3,9 +3,9 @@
 require_once ("../../Model/conexion.php");
 require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
-require_once ("../../Controller/modificarUser.php");
 require_once ("../../Controller/listarUsersAdmin.php");
 
+session_start();
 
 ?>
 
@@ -15,7 +15,7 @@ require_once ("../../Controller/listarUsersAdmin.php");
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modificar User</title>
+  <title>Entrenamiento</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -30,8 +30,7 @@ require_once ("../../Controller/listarUsersAdmin.php");
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-
-
+ 
   <!-- Main Sidebar Container -->
   <?php
     include'../../controller/asideAdmin.php'
@@ -47,12 +46,12 @@ require_once ("../../Controller/listarUsersAdmin.php");
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Modificar</h1>
+            <h1>Tips de Entrenamiento</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Modificar</li>
+              <li class="breadcrumb-item active">Tips de entrenamiento</li>
             </ol>
           </div>
         </div>
@@ -66,14 +65,13 @@ require_once ("../../Controller/listarUsersAdmin.php");
           <div class="col-12">
           <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Modificar Usuario</h3>
-                <h4 class="card-title">Tenga en cuenta que al actualizar, no hay vuelta atras.</h4>
+                <h3 class="card-title">Cree una recomendación para los deportistas</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                  <?php
-                 cargarUser();
+                 cargarUsers();
 
                  ?>
                 
@@ -96,9 +94,9 @@ require_once ("../../Controller/listarUsersAdmin.php");
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-     
+      <b>Version</b> 3.1.0
     </div>
-    <strong>Copyright &copy; 2021 <a href="">UpDeport</a>.</strong> 
+    <strong>Copyright &copy; 2021 <a href="">UpDeport</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->
