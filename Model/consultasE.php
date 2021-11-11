@@ -3,44 +3,44 @@
 
 class consultasE {
 
-        public function registraUsersE($nombre, $email, $clavemd, $municipio, $fNacimiento, $genero, $deporte, $rol, $estado){
+        public function registraUsersE($unique_Id, $nombre, $email, $clavemd, $img, $rol, $deporte, $fNacimiento, $municipio, $genero, $estado){
 
         $objetoconexion = new conexion ();    
         $conexion = $objetoconexion->get_conexion();
 
-        $consulta = "SELECT * FROM usersr WHERE email=:email ";
+        $consulta = "SELECT * FROM users WHERE email=:email";
         $result = $conexion->prepare($consulta);
-        $result->bindParam(':email', $email);
+        $result->bindParam(':email',$email);
 
         $result->execute(); 
 
         $array = $result->fetch(); 
     
-        if ($array  ) {
+        if ($array) {
             echo '<script>alert("Su email ya esta registrado , Porfavor verifique su información")</script>';
             echo "<script>location.href='../views/extras/register.php'</script>";
         }
         else {
-            $objetoconexion = new conexion ();    
-            $conexion = $objetoconexion->get_conexion();
-
-            $insertarUser = "INSERT INTO usersr (nombre, email, clave, municipio, fNacimiento, genero, deporte, rol, estado) 
-            values (:nombre, :email, :clavemd, :municipio, :fNacimiento, :genero, :deporte, :rol, :estado)"; 
-            $statement = $conexion->prepare($insertarUser); 
-            $statement->bindParam(':nombre', $nombre);
-            $statement->bindParam(':email', $email);
-            $statement->bindParam(':clave', $clavemd);
-            $statement->bindParam(':municipio', $municipio);
-            $statement->bindParam(':fNacimiento', $fNacimiento);
-            $statement->bindParam(':genero', $genero);
-            $statement->bindParam(':deporte', $deporte);
-            $statement->bindParam(':rol', $rol);
-            $statement->bindParam(':estado', $estado); 
+            $objetoConexion=new conexion();
+            $conexion=$objetoConexion->get_conexion();
+            $sql="insert into users (unique_Id,nombre,email,clave,img,rol,deporte,fNacimiento,municipio,genero,estado) values(:unique_Id,:nombre,:email,:clave,:img,:rol,:deporte,:fNacimiento,:municipio,:genero,:estado)";
+            $statement =$conexion->prepare($sql);
+            $statement-> bindParam(':unique_Id', $unique_Id);
+            $statement-> bindParam(':nombre', $nombre);
+            $statement-> bindParam(':email', $email);
+            $statement-> bindParam(':clave', $clavemd);
+            $statement-> bindParam(':img', $img);
+            $statement-> bindParam(':rol', $rol);
+            $statement-> bindParam(':deporte', $deporte);
+            $statement-> bindParam(':fNacimiento', $fNacimiento);
+            $statement-> bindParam(':municipio', $municipio);
+            $statement-> bindParam(':genero', $genero);
+            $statement-> bindParam(':estado', $estado); 
             if (!$statement) {
                 echo '<script>alert("Error en los datos del sistema ")</script>';
                 echo "<script>location.href='../views/extras/register.php'</script>";
             }else{
-                $statement->execute ();
+                $statement->execute();
                 echo '<script>alert("Usuario registrado con exito")</script>';
                 echo "<script>location.href='../views/extras/login.php'</script>";
             }
@@ -48,6 +48,32 @@ class consultasE {
 
     }
 
+
+public function crearUser2($unique_Id){
+    $seguidores="0";
+    $seguidos="0";
+    $desarrollo="Escribe sobre tu desarrollo";
+    $reconocimientos="Relaciona acá tus reconocimientos";
+    $descripcion="Escribe acá una pequeña descripción para que todos puedan conocerte";
+    $objetoConexion=new conexion();
+    $conexion=$objetoConexion->get_conexion();
+    $sql="insert into tablaprofile (unique_Id,seguidores,seguidos,desarrollo,reconocimientos,descripcion) values(:unique_Id,:seguidores,:seguidos,:desarrollo,:reconocimientos,:descripcion)";
+    $statement =$conexion->prepare($sql);
+    $statement-> bindParam(':unique_Id', $unique_Id);
+    $statement-> bindParam(':seguidores', $seguidores);
+    $statement-> bindParam(':seguidos', $seguidos);
+    $statement-> bindParam(':desarrollo', $desarrollo);
+    $statement-> bindParam(':reconocimientos', $reconocimientos);
+    $statement-> bindParam(':descripcion', $descripcion);
+    if (!$statement) {
+        $mensaje="Error en crear el registro";
+        return $mensaje ;         
+    }else{
+        $statement-> execute();
+        $mensaje= "Se creo el registro con exito";
+        return $mensaje ;
+    }
+}
 }
 
 

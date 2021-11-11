@@ -39,7 +39,7 @@
         <div class="card-body register-card-body">
           <p class="login-box-msg">Crea una cuenta!</p>
 
-          <form action="registrarUser.php" method="POST">
+          <form action="../../Controller/insertarUserE.php" method="POST">
             <div class="row">
               <div class="col-sm-6">
                 <div class="input-group mb-3">
@@ -59,8 +59,8 @@
                   <input
                     type="email"
                     class="form-control"
-                    placeholder="Email"
-                    name="correo"
+                    placeholder="Correo"
+                    name="email"
                   />
                   <div class="input-group-append">
                     <div class="input-group-text">
@@ -75,8 +75,10 @@
                     placeholder="Password"
                     name="clave"
                   />
-                  <div class="input-group mb-3">
                   
+                  
+                </div>
+                <div class="input-group mb-3"> 
                                       <select class="form-control" id="city" required name="municipio">
                                             <option value="">Municipio</option>
                                             <option value="Abejorral">Abejorral</option>
@@ -1200,25 +1202,15 @@
                                             <option value="Zona Bananera">Zona Bananera</option>
                                         </select>
 
-                  </div>
-                  
                 </div>
-                <div class="input-group mb-3">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Retype password"
-                  />
-                  <div class="input-group-append">
-                    <div class="input-group-text">
-                      <span class="fas fa-lock"></span>
-                    </div>
-                  </div>
+                <div class="input-group mb-6" style="padding-left: 75px;">
+                  <input  type="file" 
+                  name="imagen">
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="input-group mb-3">
-                  <input type="date" class="form-control" placeholder="Email" name="fNacimiento" />
+                  <input type="date" class="form-control" placeholder="fecha de nacimieto" name="fNacimiento" />
                 </div>
                 <select
                   class="form-select mb-3"
@@ -1251,7 +1243,7 @@
                   <option selected>Rol</option>
                   <option value="Deportista">Deportista</option>
                   <option value="Entranador">Entranador</option>
-                  <option value="Hunter">Hunter</option>
+                  
                 </select>
               </div>
             </div>
@@ -1280,9 +1272,7 @@
             </div>
           </form>
 
-          <div class="social-auth-links text-center">
-            <p>- OR -</p>
-          </div>
+         
 
           <a href="login.php" class="text-center">Ya tengo una cuenta</a>
         </div>
