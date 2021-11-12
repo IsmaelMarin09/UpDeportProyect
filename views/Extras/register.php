@@ -39,7 +39,7 @@
         <div class="card-body register-card-body">
           <p class="login-box-msg">Crea una cuenta!</p>
 
-          <form action="../../Controller/insertarUserE.php" method="POST">
+          <form action="../../Controller/insertarUserE.php" method="POST" enctype="multipart/form-data">
             <div class="row">
               <div class="col-sm-6">
                 <div class="input-group mb-3">
@@ -1205,7 +1205,7 @@
                 </div>
                 <div class="input-group mb-6" style="padding-left: 75px;">
                   <input  type="file" 
-                  name="imagen">
+                  name="imagen" accept=".jpg, .png, .gif, .jpeg"> 
                 </div>
               </div>
               <div class="col-lg-6">

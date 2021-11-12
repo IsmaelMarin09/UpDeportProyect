@@ -9,48 +9,43 @@
     $email=$_POST['email'];
     $clave=$_POST['clave'];
     $municipio=$_POST['municipio'];
-    $imagen=$_POST['imagen'];
     $fNacimiento=$_POST['fNacimiento'];
     $genero=$_POST['genero'];
     $deporte=$_POST['deporte'];
     $rol=$_POST['rol'];
     $estado="Habilitado"; 
 
-    if (strlen ($nombre)>0 && strlen ($email)>0 && strlen ($clave)>0 && strlen ($municipio)>0 && strlen ($fNacimiento)>0 && strlen ($genero)>0 && strlen ($deporte)>0 && strlen($rol)>0) {
-        if(isset($_FILES['image'])){
-            $img_name = $_FILES['image']['name'];
-            $img_type = $_FILES['image']['type'];
-            $tmp_name = $_FILES['image']['tmp_name'];
-            
-            $img_explode = explode('.',$img_name);
-            $img_ext = end($img_explode);
+        define('LIMITE', 2000);
+        define('ARREGLO', serialize(array('image/jpg', 'image/png', 'image/gif', 'image/jpeg')));
+        $PERMITIDOS = unserialize(ARREGLO);
 
-            $extensions = ["jpeg", "png", "jpg"];
-            if(in_array($img_ext, $extensions) === true){
-                $types = ["image/jpeg", "image/jpg", "image/png"];
-                if(in_array($img_type, $types) === true){
-                    $time = time();
-                    $new_img_name = $time.$img_name;
-                    if(move_uploaded_file($tmp_name,"/views/Assets/img/perfil_img".$new_img_name)){
-                    }
-                }else{
+        if ($_FILES['imagen']["error"] > 0) {
+            $new_img_name = "user.jpg";
+        }else { 
+            $_FILES['imagen']['name']=$numero.".jpg";  
+            if (in_array($_FILES['imagen']['type'], $PERMITIDOS) ) {
+                $imagen = "../views/Assets/img/perfil_img/" . $_FILES['imagen']['name'];
 
+                if (!file_exists($imagen)) {
+                    $new_img_name = move_uploaded_file($_FILES["imagen"]["tmp_name"], $imagen); 
+                    $new_img_name = $_FILES['imagen']['name'];
+
+                    
+                       
+
+                 
                 }
             }else{
-                echo "Please upload an image file - jpeg, png, jpg";
+                echo "error araid"; 
             }
         }
-        else{
-            $new_img_name="user.jpg";
-        }
         $clavemd=md5($clave);
-       $objetoConsultas = new consultasE();
-       $result = $objetoConsultas->registraUsersE($numero, $nombre, $email, $clavemd, $new_img_name, $rol, $deporte, $fNacimiento, $municipio, $genero, $estado);
-       $result2 = $objetoConsultas->crearUser2($numero);
-    }else {
-        echo '<script>alert("porfavor llene todos los campos del formulario")</script>';
-        echo "<script>location.href='../views/extras/register.php'</script>";
-    }
+                    $objetoConsultas = new consultasE();
+                    $result = $objetoConsultas->registraUsersE($numero, $nombre, $email, $clavemd, $new_img_name, $rol, $deporte, $fNacimiento, $municipio, $genero, $estado);
+                    $result2 = $objetoConsultas->crearUser2($numero);
+                    echo "se creo usuario";
+
+
 
 
 

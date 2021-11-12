@@ -21,7 +21,8 @@
                 }else{
                     $estado=0;
                 }
-            }if ($estado==1) {
+            }
+            if ($estado==1) {
                 session_start();
                 $_SESSION['unique_Id']=$f1['unique_Id'];
                 echo "<script>location.href='../Admin/profile.php'</script>";
