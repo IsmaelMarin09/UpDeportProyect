@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AdminLTE 3 | User Profile</title>
 
+    <!-- vamos a conectar con la base de datos para jalar todas las publicaciones-->
+
+    <?php
+
+        require "conexion.php"
+
+        $sqlA = $mysqli->query("SELECT * FROM publicaciones ORDER BY id DESC");
+        while ($rowA = $sqlA->fech_array()) {
+            $sqlB = $ mysqli->query("SELECT * FROM users WHERE id = '",$rowA['user']."'" );
+                $rowB = $sqlB->fech_array(); 
+
+        }
+
+
+
+    ?>
+
     <!-- Google Font: Source Sans Pro -->
     <link
       rel="stylesheet"
@@ -986,7 +1003,7 @@
                               alt="user image"
                             />
                             <span class="username">
-                              <a href="#">Jonathan Burke Jr.</a>
+                              <a href="#"><?php  echo $rowB['nombre']?></a>
                               <a href="#" class="float-right btn-tool"
                                 ><i class="fas fa-times"></i
                               ></a>
