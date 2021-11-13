@@ -65,46 +65,49 @@ session_start();
         <div class="row">
           <div class="col-12">
           <div class="card">
-              
-              <!-- /.card-header -->
-              <div class="card-body">
+              <div class="card-header">
                 <div class="wrapper">
-                  <section class="users">
+                  <section class="chat-area">
+                    <header>
                     <?php 
-                    include_once "../../Model/config.php";
-                    $sql=mysqli_query($conn,"SELECT * FROM users WHERE unique_Id={$_SESSION['unique_Id']}");
-                    if (mysqli_num_rows($sql)> 0) {
-                      $row=mysqli_fetch_assoc($sql);
-                    }
+                      include_once "../../Model/config.php";
+                      $id =mysqli_real_escape_string($conn, $_GET['id']);
+                      $sql=mysqli_query($conn,"SELECT * FROM users WHERE unique_Id={$id}");
+                      if (mysqli_num_rows($sql) > 0) {
+                          $row = mysqli_fetch_assoc($sql);
+                      }
 
                     
+
+                  
+                        
                     ?>
-                    <header>
-                      <div class="content">
-                        <img src="../Assets/img/perfil_img/<?php echo $row['img']?>" alt="">
-                        <div class="details">
-                          <span> <?php echo $row['nombre']?></span>
-                          <p><?php echo $row['online']?></p>
-                        </div>
+                      <a href="../Admin/crearPublicacion.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+                      <img src="../Assets/img/perfil_img/<?php echo $row['img']?>" alt="">
+                      <div class="details">
+                        <span> <?php echo $row['nombre']?></span>
+                        <p><?php echo $row['online']?></p>
                       </div>
-                      <a href="php/logout.php?logout_id=<?php echo $row['unique_Id'] ?>"class="logout">logout</a>
                     </header>
-                    <div class="search">
-                      <span class="text">Seleccina un usuario</span>
-                      <input type="text" placeholder="Ingresa el nombre de tu amigo">
-                      <button><i class="fas fa-search"></i></button>
-                    </div>
-                    <div class="users-list">
-                     
-                    
+                    <div class="chat-box">
                       
+                        
                     </div>
+                    <form action="" class="typing-area" autocomplete="off">
+                      <input type="text" name="outgoing_id" value="  <?php echo $_SESSION['unique_Id']; ?>   "hidden>
+                      <input type="text" name="incoming_id"   value="  <?php echo $id; ?>   "hidden>
+                      <input type="text" name="message" class="input-field" placeholder="Escribe un mensaje">
+                      <button><i class="fab fa-telegram-plane"></i></button>
+
+                    </form>
                   </section>
                 </div>
-
-
                 
+
+
               </div>
+              <!-- /.card-header -->
+              
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
@@ -138,7 +141,7 @@ session_start();
 <!-- Bootstrap 4 -->
 <script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->
-<script src="../Assets/js/users.js"></script>
+<script src="../Assets/js/chat.js"></script>
 <script src="../Assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../Assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="../Assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
