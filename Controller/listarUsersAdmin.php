@@ -25,8 +25,10 @@
       <th>lugar</th>
       <th>Genero</th>
       <th>Estado</th>
-      <th>Deshabilitar</th>
       <th>Modificar</th>
+      <th>Ver Perfil</th>
+      <th>Deshabilitar</th>
+  
     </tr>
     </thead>
 
@@ -49,7 +51,9 @@
         echo "<td>" .$f['genero']."</td>";
         echo "<td>" .$f['estado']."</td>";
         echo " <td><a href='modificarUser.php?id_modificar=".$f['id']."'>Modificar </td>";
-        echo " <td><a href='../../Controller/eliminarUser.php?id_eliminar=".$f['id']."'>Eliminar </td>";
+        echo " <td><a href='profile.php?id_user2=".$f['unique_Id']."'>Ver perfil </td>";
+        echo " <td><a href='../../Controller/eliminarUser.php?id_eliminar=".$f['unique_Id']."'>Eliminar </td>";
+       
         echo "</tr>";
 
 

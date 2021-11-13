@@ -5,7 +5,8 @@
     if(isset($_GET['id_eliminar'])){
         $id_eliminar=$_GET['id_eliminar'];
         $consultas= new  consultasAdmin();
-        $mensaje=$consultas->eliminarUser($id_eliminar);
+        $mensaje=$consultas->eliminarUser($id_eliminar,"users");
+        $mensaje=$consultas->eliminarUser($id_eliminar,"tablaprofile");
         
         echo "<script>location.href='../views/Admin/data.php'</script>";
 

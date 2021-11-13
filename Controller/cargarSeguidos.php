@@ -1,7 +1,17 @@
 <?php
     function cargarSeguidos(){
+
+        if (isset($_GET['id_user2'])) {
+            $id=($_GET['id_user2']);
+          
+            
+          }else{
+            $id=($_SESSION['unique_Id']);   
+          
+          }
+
         $objetoConsultas= new consultasAdmin();
-        $id=$_SESSION['unique_Id'];
+     
         $result=$objetoConsultas->listarSeguidores($id,"tablaseguimiento","unique_IdA");
         //verifica si sigo a alguien y si es asi carga sus unique_id
   

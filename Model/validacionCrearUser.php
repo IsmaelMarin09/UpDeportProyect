@@ -17,6 +17,8 @@ $genero= $_POST['genero'];
 if((strlen($nombre)>0) && (strlen($email)>0)&&  strlen($deporte)>0 && strlen($deporte)>0 && strlen($municipio)>0 && strlen($fNacimiento)>0 && strlen($genero)>0){
     $consultas= new consultasAdmin();
     $mensaje= $consultas->crearUser($numero,$nombre,$email,$fUser,$rol,$deporte,$fNacimiento,$municipio,$genero,$estado);
+    $mensaje2= $consultas->crearUser2($numero);
+
     echo "<script type='text/javascript'>alert('$mensaje');window.location.href ='../views/Admin/crearUser.php'</script>";
 
 }else{

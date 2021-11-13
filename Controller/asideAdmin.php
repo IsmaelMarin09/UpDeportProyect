@@ -1,6 +1,7 @@
 <?php
+ 
   if(!isset($_SESSION['unique_Id'])){
-    header("location:../Extras2Prueba/login.php");
+    header("location:../Extras/login.php");
   }else{
     $objetoConsultas= new consultasAsideUsuarios;
   $id=($_SESSION['unique_Id']);

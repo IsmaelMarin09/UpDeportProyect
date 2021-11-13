@@ -5,6 +5,8 @@ require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
 require_once ("../../Controller/listarUsersAdmin.php");
 
+session_start();
+
 ?>
 
 

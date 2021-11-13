@@ -1,18 +1,28 @@
 <?php 
 
   function profileAdmin(){
-      if (isset($_GET['id_user2'])) {
+      if (isset($_GET['id_user2'])&& ($_GET['id_user2']!=$_SESSION['unique_Id'])) {
         $id=($_GET['id_user2']);
         $varseg="Seguir";
         $classDisplay=null;
+        $classDisplayNoGet="none";
+        $objetoConsultas= new consultasAdmin;
+        $result3=$objetoConsultas-> verificacionSeg($_SESSION['unique_Id'],$id);
+  
+        
       }else{
         $id=($_SESSION['unique_Id']);
         $varseg="miPerfil";
         $classDisplay="none";
+        $classDisplayNoGet=null;
+        $result3=null;
       }
       $objetoConsultas= new consultasAdmin;
       $result=$objetoConsultas->selecUser($id,"users");
       $result2=$objetoConsultas->selecUser($id,"tablaprofile");
+     
+
+
       foreach($result2 as $f2 ){
         foreach($result as $f ){
           echo '
@@ -271,20 +281,30 @@
                                             mb-3
                                           "
                                         >
-                                          <li class="list-group-item">
-                                            <a href="contactsSeguidores.php">Seguidores</a>
-                                            <a class="float-right"  id="aSeguidores"> '.$f2['seguidores'].'</a>
+                                          <li class="list-group-item">';
+
+                                          echo'  <a href="contactsSeguidores.php" style="display:'.$classDisplayNoGet.'">Seguidores</a>';
+                                          echo " <a  style='display:".$classDisplay."' href='contactsSeguidores.php?id_user2=".$f2['unique_Id']."'>Seguidores"; 
+                                          echo'  <a class="float-right"  id="aSeguidores"> '.$f2['seguidores'].'</a>
                                           </li>
-                                          <li class="list-group-item">
-                                          <a href="contactsSeguidos.php">Seguidos</a>
-                                            <a class="float-right"> '.$f2['seguidos'].'</a>
+                                          <li class="list-group-item">';
+                                        
+                                          echo " <a  style='display:".$classDisplay."' href='contactsSeguidos.php?id_user2=".$f2['unique_Id']."'>Seguidos";
+                                          echo'  <a href="contactsSeguidos.php" style="display:'.$classDisplayNoGet.'">Seguidos</a>';
+                                          
+                                          echo '<a class="float-right"  id="aSeguidos"> '.$f2['seguidos'].'</a> 
+                                          
                                           </li>
                                           
                                           
                                         </ul>
                                       
-                                        <form action="modificarSeguir()" method="POST" >
-                                        <button id="btnSeguir" class="btn btn-primary " style="display:'.$classDisplay.'">'.$varseg.'</button>
+                                        <form action="../../Model/consultasBtnSeg.php" method="POST">
+                                        <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
+                                        
+                                        <input name="id_Usr2" style="display:none;" value="'.$id.'" >
+
+                                        <button  class="btn btn-primary " style="display:'.$classDisplay.'">'.$result3.'</button>
                                         
                                         </form>
                                        
@@ -295,8 +315,12 @@
                                     <!-- /.card -->
                                   </div>
                                   <div class="card card-primary col-md-6">
-                                    <div class="card-header">
+                                    <div class="card-header" style="display:block">
                                       <h3 class="card-title">Sobre Mi</h3>
+                                      <form action="profileMod.php" method="POST" style="position:relative; right:-60%;>
+                                      <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
+                                      <button  class="btn btn-primary"  ><img src="../Assets/img/perfil_img/lapiz.png" alt="MDN"></button>    
+                                      </form>
                                     </div>
                                     <!-- /.card-header -->
                                     <div class="card-body">

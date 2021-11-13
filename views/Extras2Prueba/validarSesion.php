@@ -14,7 +14,7 @@
     if ($arreglo=mysqli_fetch_array($resultado)) {
         session_start();
         $_SESSION['unique_Id']=$arreglo['unique_Id'];
-        echo "<script>location.href='../index.php'</script>"  ;  
+        echo "<script>location.href='../Admin/index.php'</script>"  ;  
           
         
     }else{

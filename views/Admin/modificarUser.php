@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 require_once ("../../Model/conexion.php");
 require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
