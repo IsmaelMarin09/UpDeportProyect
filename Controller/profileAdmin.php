@@ -2,20 +2,20 @@
 
   function profileAdmin(){
       if (isset($_GET['id_user2'])&& ($_GET['id_user2']!=$_SESSION['unique_Id'])) {
-        $id=($_GET['id_user2']);
-        $varseg="Seguir";
-        $classDisplay=null;
-        $classDisplayNoGet="none";
-        $objetoConsultas= new consultasAdmin;
-        $result3=$objetoConsultas-> verificacionSeg($_SESSION['unique_Id'],$id);
-  
+          $id=($_GET['id_user2']);
+          $varseg="Seguir";
+          $classDisplay=null;
+          $classDisplayNoGet="none";
+          $objetoConsultas= new consultasAdmin;
+          $result3=$objetoConsultas-> verificacionSeg($_SESSION['unique_Id'],$id);
+    
         
       }else{
-        $id=($_SESSION['unique_Id']);
-        $varseg="miPerfil";
-        $classDisplay="none";
-        $classDisplayNoGet=null;
-        $result3=null;
+          $id=($_SESSION['unique_Id']);
+          $varseg="miPerfil";
+          $classDisplay="none";
+          $classDisplayNoGet=null;
+          $result3=null;
       }
       $objetoConsultas= new consultasAdmin;
       $result=$objetoConsultas->selecUser($id,"users");
@@ -317,7 +317,7 @@
                                   <div class="card card-primary col-md-6">
                                     <div class="card-header" style="display:block">
                                       <h3 class="card-title">Sobre Mi</h3>
-                                      <form action="profileMod.php" method="POST" style="position:relative; right:-60%;>
+                                      <form action="profileMod.php" method="POST" style="position:relative; right:-60%;display:'.$classDisplayNoGet.';">
                                       <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
                                       <button  class="btn btn-primary"  ><img src="../Assets/img/perfil_img/lapiz.png" alt="MDN"></button>    
                                       </form>
@@ -336,8 +336,7 @@
                                       <hr />
 
                                       <strong
-                                        ><i class="fas fa-map-marker-alt mr-1"></i>me
-                                        localizo</strong
+                                        ><i class="fas fa-map-marker-alt mr-1"></i>ME LOCALIZO</strong
                                       >
 
                                       <p class="text-muted"> '.$f['municipio'].'</p>

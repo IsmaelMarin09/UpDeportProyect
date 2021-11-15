@@ -49,8 +49,8 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <div class="text-right">
-                                <a href="#" class="btn btn-sm bg-teal">
+                                <div class="text-right">';
+                                echo'<a href="chat.php?id='.$f2["unique_Id"].'" class="btn btn-sm bg-teal">
                                     <i class="fas fa-comments"></i>
                                 </a>';
                                 echo " <a href='profile.php?id_user2=".$f2['unique_Id']."'>Ver Perfil";

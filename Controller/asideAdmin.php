@@ -278,6 +278,17 @@ foreach($result as $f){
                   id="menu-m"
                   class="nav-link"
                 >
+                  <i class="far fa-comments nav-icon"></i>
+                  <p>Mensajes</p>
+                </a>
+              </li>
+          <li class="nav-item">
+          <li class="nav-item">
+                <a
+                  href="#"
+                  id="menu-m"
+                  class="nav-link"
+                >
                   <i class="fas fa-keyboard nav-icon"></i>
                   <p>Crear Publicación</p>
                 </a>
@@ -302,6 +313,17 @@ foreach($result as $f){
                 >
                   <i class="fas fa-running nav-icon"></i>
                   <p>Tips de Entrenamiento</p>
+                </a>
+              </li>
+          <li class="nav-item">
+          <li class="nav-item">
+                <a
+                  href="conoserUsers.php"
+                  id="menu-m"
+                  class="nav-link"
+                >
+                  <i class="fas fa-user-plus nav-icon"></i>
+                  <p>Conocer Usuarios</p>
                 </a>
               </li>
           <li class="nav-item">
