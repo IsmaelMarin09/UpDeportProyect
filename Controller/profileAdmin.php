@@ -336,7 +336,8 @@
                                       <hr />
 
                                       <strong
-                                        ><i class="fas fa-map-marker-alt mr-1"></i>ME LOCALIZO</strong
+                                        ><i class="fas fa-map-marker-alt mr-1"></i>me
+                                        localizo</strong
                                       >
 
                                       <p class="text-muted"> '.$f['municipio'].'</p>

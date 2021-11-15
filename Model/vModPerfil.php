@@ -2,16 +2,56 @@
 
 require_once ("conexion.php");
 require_once ("consutasAdmin.php");
+$consultas= new consultasAdmin();
+
 $unique_Id= $_POST['idEnviar'];
 $desarrollo= $_POST['desarrollo'];
 $municipio= $_POST['municipio'];
 $reconocimientos= $_POST['reconocimientos'];
 $descripcion= $_POST['descripcion'];
+$infoComparar= $consultas->selecUserP($unique_Id,"users");
+define('LIMITE', 2000);
+define('ARREGLO', serialize(array('image/jpg', 'image/png', 'image/gif', 'image/jpeg')));
+$PERMITIDOS = unserialize(ARREGLO);
+function traerImg($infoComparar){
+    foreach ($infoComparar as $f) {
+        $new_img_name1 = $f['img'];
+        return  $new_img_name1;
+    }
+}
+$traerImg=traerImg($infoComparar);
+
+if ($_FILES['imagen']["error"] > 0) {
+
+    $new_img_name = $traerImg;
+    
+   
+}else { 
+    $_FILES['imagen']['name']=$unique_Id.".jpg";
+    if ($traerImg=="user.jpg") {
+        $new_img_name = $traerImg;    
+    }else{
+       
+        unlink("../views/Assets/img/perfil_img/".$_FILES['imagen']['name']);
+    }
+    echo($traerImg.$_FILES['imagen']['name']);
+    if ($traerImg=="user.jpg") {
+        if (in_array($_FILES['imagen']['type'], $PERMITIDOS) ) {
+            $imagen = "../views/Assets/img/perfil_img/" . $_FILES['imagen']['name'];
+            if (!file_exists($imagen)) {
+                $new_img_name = move_uploaded_file($_FILES["imagen"]["tmp_name"], $imagen); 
+                $new_img_name = $_FILES['imagen']['name'];}
+        }else{echo "error araid"; }
+    }
+    
+    
+}
 
 if((strlen($unique_Id)>0) && (strlen($desarrollo)>0)&&  strlen($municipio)>0 && strlen($reconocimientos)>0 && strlen($descripcion)>0){
-    $consultas= new consultasAdmin();
+    
     $mensaje= $consultas->ModInfoPerfil("desarrollo",$desarrollo,$unique_Id,"tablaprofile");
     $mensaje= $consultas->ModInfoPerfil("municipio",$municipio,$unique_Id,"users");
+    $mensaje= $consultas->ModInfoPerfil("img",$new_img_name,$unique_Id,"users");
     $mensaje= $consultas->ModInfoPerfil("reconocimientos",$reconocimientos,$unique_Id,"tablaprofile");
     $mensaje= $consultas->ModInfoPerfil("descripcion",$descripcion,$unique_Id,"tablaprofile");
   

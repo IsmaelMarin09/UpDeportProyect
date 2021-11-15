@@ -104,7 +104,8 @@ require_once("conexion.php");
         return $f2;
     }
     public function crearUser($unique_Id,$nombre,$email,$img,$rol,$deporte,$fNacimiento,$municipio,$genero,$estado){
-        $clave="12345";
+        $claveSMd="12345";
+        $clave=md5($claveSMd);
         $objetoConexion=new conexion();
         $conexion=$objetoConexion->get_conexion();
         $sql="insert into users (unique_Id,nombre,email,clave,img,rol,deporte,fNacimiento,municipio,genero,estado) values(:unique_Id,:nombre,:email,:clave,:img,:rol,:deporte,:fNacimiento,:municipio,:genero,:estado)";
@@ -215,6 +216,19 @@ require_once("conexion.php");
             $f[]=$resultado;           
         }
         return $f;
+    }
+    public function consultasBusqueda($buscar){
+        $f=null;
+        $objetoConexion= new conexion();
+        $conexion=$objetoConexion->get_conexion();
+        $listar="SELECT * FROM users WHERE nombre LIKE LOWER('%".$buscar."%') OR deporte LIKE LOWER ('%".$buscar."%') OR rol LIKE LOWER ('%".$buscar."%') "; 
+        $statement=$conexion->prepare ($listar);
+        $statement ->execute();
+        while ($resultado=$statement->fetch()) {
+            $f[]=$resultado;           
+        } 
+        return $f;
+
     }
 
 

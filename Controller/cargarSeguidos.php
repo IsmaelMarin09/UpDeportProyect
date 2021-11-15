@@ -3,10 +3,12 @@
 
         if (isset($_GET['id_user2'])) {
             $id=($_GET['id_user2']);
+            $tenerS="esta";
           
             
           }else{
-            $id=($_SESSION['unique_Id']);   
+            $id=($_SESSION['unique_Id']); 
+            $tenerS="estas";  
           
           }
 
@@ -16,7 +18,7 @@
         //verifica si sigo a alguien y si es asi carga sus unique_id
   
         if (!isset($result)) {        
-          echo '<h2>Todavia no estás siguiendo a nadie</h2>';
+          echo '<h2>Todavia no '.$tenerS.' siguiendo a nadie</h2>';
         }else{
             foreach ($result as $f) {  
                 //despues de cargados, busca en otra tabla su informacion        

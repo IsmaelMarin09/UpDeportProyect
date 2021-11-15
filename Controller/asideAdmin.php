@@ -333,7 +333,7 @@ foreach($result as $f){
           </li>
           
           <li class="nav-item">
-            <a href="pages/search/enhanced.php" class="nav-link" id="menu-m">
+            <a href="busqueda.php" class="nav-link" id="menu-m">
               <i class="nav-icon fas fa-search"></i>
               <p>
                 Busqueda 

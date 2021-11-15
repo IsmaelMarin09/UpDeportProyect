@@ -2,10 +2,12 @@
     function cargarSeguidores(){
         if (isset($_GET['id_user2'])) {
             $id=($_GET['id_user2']);
+            $tenerS="tiene";
           
             
           }else{
             $id=($_SESSION['unique_Id']);
+            $tenerS="tienes";
         
           }
         $objetoConsultas= new consultasAdmin();
@@ -13,7 +15,7 @@
         $result=$objetoConsultas->listarSeguidores($id,"tablaseguimiento","unique_IdB");
   
         if (!isset($result)) {        
-          echo '<h2>Todavia no tienes seguidores</h2>';
+          echo '<h2>Todavia no '.$tenerS.' seguidores</h2>';
         }else{
             foreach ($result as $f) {          
                 $result2=$objetoConsultas->listarSeguidores($f['unique_IdA'],"users","unique_Id");

@@ -1,13 +1,6 @@
 <?php
     function cargarConoserUsers(){
-        if (isset($_GET['id_user2'])) {
-            $id=($_GET['id_user2']);
-          
-            
-          }else{
-            $id=($_SESSION['unique_Id']);
         
-          }
         $objetoConsultas= new consultasAdmin();
         
         $result=$objetoConsultas->listarUsers();
@@ -19,41 +12,47 @@
                   
                 $result2=$objetoConsultas->selecUser($f['unique_Id'],"tablaprofile");
                     foreach ($result2 as $f3){
+                        if ($_SESSION['unique_Id']==$f['unique_Id']) {
+                            continue;
+                        }else {
+                            echo' 
+                            <div class=" d-flex align-items-stretch flex-column" style="max-width: 400px;" 
+                            ;">
+                                <div class="card bg-light d-flex flex-fill">
+                                <div class="card-header text-muted border-bottom-0">
+                                ' .$f['rol'].' 
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="lead"><b>'.$f['nombre'].'</b></h2>
+                                        <p class="text-muted text-sm"><b>Deporte  </b>'  .$f['deporte'].' </p>
+                                        <ul class="ml-4 mb-0 fa-ul text-muted">
+                                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>' .$f['municipio'].'</li>
+                                        
+                                        <li class="small"><span class="fa-li"><i class="fas fa-user nav-icon"></i></span> Descripcion: ' .$f3['descripcion'].'</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-5 text-center">
+                                        <img src="../Assets/img/perfil_img/'.$f['img'].'" alt="user-avatar" class="img-circle img-fluid" style="width:140px;">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+                                    ';
+                                    echo " <a href='profile.php?id_user2=".$f['unique_Id']."'>Ver Perfil";
+                                       echo'
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                        
+                        }
             
                         
-                        echo' 
-                        <div class=" d-flex align-items-stretch flex-column" style="max-width: 400px;" 
-                        ;">
-                            <div class="card bg-light d-flex flex-fill">
-                            <div class="card-header text-muted border-bottom-0">
-                            ' .$f['rol'].' 
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="row">
-                                <div class="col-7">
-                                    <h2 class="lead"><b>'.$f['nombre'].'</b></h2>
-                                    <p class="text-muted text-sm"><b>Deporte  </b>'  .$f['deporte'].' </p>
-                                    <ul class="ml-4 mb-0 fa-ul text-muted">
-                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>' .$f['municipio'].'</li>
-                                    
-                                    <li class="small"><span class="fa-li"><i class="fas fa-user nav-icon"></i></span> Descripcion: ' .$f3['descripcion'].'</li>
-                                    </ul>
-                                </div>
-                                <div class="col-5 text-center">
-                                    <img src="../Assets/img/perfil_img/'.$f['img'].'" alt="user-avatar" class="img-circle img-fluid" style="width:140px;">
-                                </div>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <div class="text-right">
-                                ';
-                                echo " <a href='profile.php?id_user2=".$f['unique_Id']."'>Ver Perfil";
-                                   echo'
-                                </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>';
+                        
                     }                
                 }
             }   

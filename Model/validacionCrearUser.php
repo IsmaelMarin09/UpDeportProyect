@@ -14,15 +14,27 @@ $estado= $_POST['estado'];
 $municipio= $_POST['municipio'];
 $fNacimiento= $_POST['fNacimiento'];
 $genero= $_POST['genero'];
-if((strlen($nombre)>0) && (strlen($email)>0)&&  strlen($deporte)>0 && strlen($deporte)>0 && strlen($municipio)>0 && strlen($fNacimiento)>0 && strlen($genero)>0){
-    $consultas= new consultasAdmin();
-    $mensaje= $consultas->crearUser($numero,$nombre,$email,$fUser,$rol,$deporte,$fNacimiento,$municipio,$genero,$estado);
-    $mensaje2= $consultas->crearUser2($numero);
+$objetoconexion = new conexion ();    
+$conexion = $objetoconexion->get_conexion();
+$consulta = "SELECT * FROM users WHERE email=:email";
+$result = $conexion->prepare($consulta);
+$result->bindParam(':email',$email);
+$result->execute(); 
+$array = $result->fetch(); 
+if ($array) {
+    echo '<script>alert(" email ya esta registrado , Porfavor verifique información")</script>';
+    echo "<script>location.href='../views/Admin/crearUser.php'</script>";
+}else {
+    if((strlen($nombre)>0) && (strlen($email)>0)&&  strlen($deporte)>0 && strlen($deporte)>0 && strlen($municipio)>0 && strlen($fNacimiento)>0 && strlen($genero)>0){
+        $consultas= new consultasAdmin();
+        $mensaje= $consultas->crearUser($numero,$nombre,$email,$fUser,$rol,$deporte,$fNacimiento,$municipio,$genero,$estado);
+        $mensaje2= $consultas->crearUser2($numero);
 
-    echo "<script type='text/javascript'>alert('$mensaje');window.location.href ='../views/Admin/crearUser.php'</script>";
+        echo "<script type='text/javascript'>alert('$mensaje');window.location.href ='../views/Admin/crearUser.php'</script>";
 
-}else{
-    echo "Por favor completa todos los campos";
+    }else{
+        echo "Por favor completa todos los campos";
+    }
 }
  
     

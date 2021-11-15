@@ -43,7 +43,7 @@
                                   <div class="col-md-6">
                                     <!-- Profile Image -->
                                     <div class="card card-primary card-outline">
-                                      <div class="card-body box-profile">
+                                      <div class="card-body box-profile" >
                                         <div class="text-center">
                                           <img
                                             class="
@@ -56,8 +56,14 @@
                                             src="../Assets/img/perfil_img/'.$f['img'].'"
                                             alt="User profile picture"
                                           />
+                                         
                                         </div>
-
+                                        <form action="../../Model/vModPerfil.php" method="POST" enctype="multipart/form-data">
+                                            <div class="profile-username text-center d-flex"  style="flex-direction:column ;">
+                                              <label for="imagen" class="text-center" style="display: ;">Cambiar foto de perfil</label>
+                                              <input  type="file" name="imagen" accept=".jpg, .png, .gif, .jpeg" class="text-center"  style="font-size:15px ;margin:0 auto;"> 
+                                            </div>
+                                       
                                         <h3 class="profile-username text-center">
                                         '.$f['nombre'].'
                                         </h3>
@@ -99,7 +105,7 @@
                                     </div>
                                     <!-- /.card-header -->
                                     
-                                    <form action="../../Model/vModPerfil.php" method="POST">
+                                    
                                       <textarea name="idEnviar"  style="display:none;">'.$f2['unique_Id'].'</textarea>
                                       <div class="card-body">
                                         <strong
