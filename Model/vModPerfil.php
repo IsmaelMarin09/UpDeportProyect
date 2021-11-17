@@ -30,19 +30,20 @@ if ($_FILES['imagen']["error"] > 0) {
     $_FILES['imagen']['name']=$unique_Id.".jpg";
     if ($traerImg=="user.jpg") {
         $new_img_name = $traerImg;    
-    }else{
-       
-        unlink("../views/Assets/img/perfil_img/".$_FILES['imagen']['name']);
-    }
-    echo($traerImg.$_FILES['imagen']['name']);
-    if ($traerImg=="user.jpg") {
+    }else{ 
         if (in_array($_FILES['imagen']['type'], $PERMITIDOS) ) {
             $imagen = "../views/Assets/img/perfil_img/" . $_FILES['imagen']['name'];
+            unlink("../views/Assets/img/perfil_img/".$_FILES['imagen']['name']);
             if (!file_exists($imagen)) {
                 $new_img_name = move_uploaded_file($_FILES["imagen"]["tmp_name"], $imagen); 
                 $new_img_name = $_FILES['imagen']['name'];}
-        }else{echo "error araid"; }
+        }else{echo "error araid";
+            $new_img_name = $traerImg;
+        }
+       
+        
     }
+    
     
     
 }
