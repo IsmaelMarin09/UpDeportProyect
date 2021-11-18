@@ -54434,6 +54434,9 @@ a.text-muted:hover {
 .content div form .btnDisplay {
     display: none !important;
 }
+body form .dNone{
+    display: none !important;
+  }
 
 
 /* Fin Juan Pablo*/

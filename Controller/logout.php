@@ -7,12 +7,12 @@
             $status = "Offline now";
             session_unset();
             session_destroy();
-            header("location: ../views/Extras2Prueba/login.php");
+            header("location: ../views/Extras/login.php");
             
         }else{
             header("location: ../index.php");
         }
     }else{  
-        header("location: ../views/Extras2Prueba/login.php");
+        header("location: ../views/Extras/login.php");
     }
 ?>

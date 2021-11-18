@@ -1,0 +1,13 @@
+body form .dNone{
+    display: none !important;
+    transition: .4s;
+}
+#text1{
+    transition: .4s;
+}
+body form .centrar{
+      margin: 0 auto !important;
+}
+label{
+      padding: 20px 20px 5px 20px!important;
+}

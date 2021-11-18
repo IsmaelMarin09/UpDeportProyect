@@ -28,7 +28,32 @@
     />
     <!-- Theme style -->
     <link rel="stylesheet" href="../assets/css/adminlte.min.css" />
+    <link rel="stylesheet" href="../Assets/css/styleRegistrer.css">
   </head>
+  <script>
+    const button = document.querySelector('button');
+    button.disabled = false;
+    function formRegistrer(){
+      var seleccion=document.getElementById('select1');
+      if (seleccion.selectedIndex==2) {
+        document.getElementById("text1").classList.remove('dNone'); 
+      }else{
+        document.getElementById("text1").classList.add('dNone');
+      }
+    }
+    function formTerminos(){
+      const button = document.querySelector('button');
+      if (button.disabled==true) {
+          button.disabled = false
+      }else{
+        button.disabled = true
+      }
+      
+    
+        
+    
+    }
+</script>
   <body class="hold-transition register-page ">
     <div class="box-m">
       <div class="register-logo">
@@ -1203,10 +1228,7 @@
                                         </select>
 
                 </div>
-                <div class="input-group mb-6" style="padding-left: 75px;">
-                  <input  type="file" 
-                  name="imagen" accept=".jpg, .png, .gif, .jpeg"> 
-                </div>
+                
               </div>
               <div class="col-lg-6">
                 <div class="input-group mb-3">
@@ -1236,20 +1258,39 @@
                 </select>
                 <select
                   class="form-select mb-3"
-                  id="op-m"
+                 
                   aria-label="Default select example"
                   name="rol"
+                  id="select1" onChange="formRegistrer()"
                 >
                   <option selected>Rol</option>
                   <option value="Deportista">Deportista</option>
-                  <option value="Entranador">Entranador</option>
+                  <option value="Hunter">Hunter</option>
                   
                 </select>
+              
+            
               </div>
+            </div>
+            <div class="input-group mb-12 " style="margin: 0 auto;">
+                  <label for="" class="centrar">Ingrese foto de perfil</label>
+                  <input  type="file" 
+                  name="imagen" accept=".jpg, .png, .gif, .jpeg"  class="centrar"> 
+                </div>
+            <div id="text1" class="dNone">
+                  <label for="" class="centrar">Ingrese su documento de identidad</label>
+                  <input  type="file" name="cc" accept=".pdf"> 
+                  <label for="" class="centrar">Hoja de vida </label>
+                  <input  type="file" name="hv" accept=".pdf"> 
+                  <label for="" class="centrar">Certificación laboral</label>
+                  <input  type="file" name="cl" accept=".pdf"> <br>
+                  <small for="" class="centrar">Toda la información solicitada es netamente para la empresa UpDeport</small>
+                  
+                  
             </div>
 
             <div class="row">
-              <div class="col-7">
+              <div class="col-6">
                 <div class="icheck-primary">
                   <input
                     type="checkbox"
@@ -1257,14 +1298,14 @@
                     name="terms"
                     value="agree"
                   />
-                  <label for="agreeTerms">
+                  <label for="agreeTerms" onclick="formTerminos()">
                     Aceptar los <a href="#">terminos</a>
                   </label>
                 </div>
               </div>
               <!-- /.col -->
               <div class="col-5">
-                <button type="submit" class="btn btn-primary btn-block">
+                <button type="submit" id="botonRegistrarse" class="btn btn-primary btn-block" disabled> 
                   Registrarse
                 </button>
               </div>

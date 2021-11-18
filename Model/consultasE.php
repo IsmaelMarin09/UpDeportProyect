@@ -4,18 +4,13 @@
 class consultasE {
 
         public function registraUsersE($unique_Id, $nombre, $email, $clavemd, $img, $rol, $deporte, $fNacimiento, $municipio, $genero, $estado){
-
         $objetoconexion = new conexion ();    
         $conexion = $objetoconexion->get_conexion();
-
         $consulta = "SELECT * FROM users WHERE email=:email";
         $result = $conexion->prepare($consulta);
         $result->bindParam(':email',$email);
-
         $result->execute(); 
-
         $array = $result->fetch(); 
-    
         if ($array) {
             echo '<script>alert("Su email ya esta registrado , Porfavor verifique su información")</script>';
             echo "<script>location.href='../views/extras/register.php'</script>";
@@ -73,6 +68,42 @@ public function crearUser2($unique_Id){
         $mensaje= "Se creo el registro con exito";
         return $mensaje ;
     }
+}
+public function validaciones($valor,$column){
+    $f=null;
+    $objetoConexion=new conexion();
+    $conexion=$objetoConexion->get_conexion();
+    $listar="SELECT * FROM  users WHERE $column=:correo";
+    $statement=$conexion->prepare ($listar);
+    $statement ->bindParam(':correo',$valor);
+    $statement ->execute();   
+    while ($resultado=$statement->fetch()) {
+        $f[]=$resultado;         
+   }return $f;  
+
+
+}
+public function soliHunter($unique_Id,$cedula,$hojaDeVida,$certificacionLaboral){
+    $estado="En espera";
+    $objetoConexion=new conexion();
+    $conexion=$objetoConexion->get_conexion();
+    $sql="insert into documentosHunters (unique_Id,cedula,hojaDeVida,certificacionLaboral,estado) values(:unique_Id,:cedula,:hojaDeVida,:certificacionLaboral,:estado)";
+    $statement =$conexion->prepare($sql);
+    $statement-> bindParam(':unique_Id', $unique_Id);
+    $statement-> bindParam(':cedula', $cedula);
+    $statement-> bindParam(':hojaDeVida', $hojaDeVida);
+    $statement-> bindParam(':certificacionLaboral', $certificacionLaboral);
+    $statement-> bindParam(':estado', $estado);
+    if (!$statement) {
+        $mensaje="Error en crear el registro";
+        return $mensaje ;         
+    }else{
+        $statement-> execute();
+        $mensaje= "Se creo el registro con exito";
+        return $mensaje ;
+    }
+
+
 }
 }
 

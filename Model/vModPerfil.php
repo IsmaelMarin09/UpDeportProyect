@@ -30,7 +30,7 @@ if ($_FILES['imagen']["error"] > 0) {
     $_FILES['imagen']['name']=$unique_Id.".jpg";
     if ($traerImg=="user.jpg") {
         $new_img_name = $traerImg;    
-    }else{ 
+    }
         if (in_array($_FILES['imagen']['type'], $PERMITIDOS) ) {
             $imagen = "../views/Assets/img/perfil_img/" . $_FILES['imagen']['name'];
             unlink("../views/Assets/img/perfil_img/".$_FILES['imagen']['name']);
@@ -41,8 +41,8 @@ if ($_FILES['imagen']["error"] > 0) {
             $new_img_name = $traerImg;
         }
        
-        
-    }
+      
+    
     
     
     
