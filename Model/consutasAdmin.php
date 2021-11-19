@@ -36,6 +36,7 @@ require_once("conexion.php");
         $statement->bindParam(':unique_id', $unique_id);
         $statement->bindParam(':nombre', $nombre);
         $statement->bindParam(':email', $email);
+        $statement->bindParam(':clave', $clave);
         $statement->bindParam(':rol', $rol);
         $statement->bindParam(':deporte', $deporte);
         $statement->bindParam(':fNacimiento', $fNacimiento);
