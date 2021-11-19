@@ -1241,7 +1241,6 @@ function cargarUser(){
                   
                   <option value="'.$f['rol'].'">'.$f['rol'].'</option>
                   <option value="Deportista">Deportista</option>
-                  <option value="Entranador">Entranador</option>
                   <option value="Hunter">Hunter</option>
                 </select>
                 <select
@@ -1251,8 +1250,8 @@ function cargarUser(){
                   name="estado"
                 >
                   <option  value="'.$f['estado'].'" >'.$f['estado'].'</option>
-                  <option value="futbol">Activo</option>
-                  <option value="basketball">Inactivo</option>
+                  <option value="Habilitado">Activo</option>
+                  <option value="Inhabilitado">Inactivo</option>
                   
                 </select>
               </div>

@@ -3,7 +3,7 @@
 require_once ("../../Model/conexion.php");
 require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
-require_once ("../../Controller/listarUsersAdmin.php");
+require_once ("../../Controller/listarSoliHunters.php");
 
 session_start();
 
@@ -70,9 +70,11 @@ session_start();
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-               <form action="" method="post">
-
-               </form>
+              <table id="example1" class="table table-bordered table-striped">
+               <?php
+                cargarUsers();
+               ?>
+                 </table>
               </div>
               <!-- /.card-body -->
             </div>
