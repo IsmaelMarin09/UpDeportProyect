@@ -2,7 +2,7 @@
 
 function publicacionesCrear(){
 
-echo'<form action="" method="post" enctype="multipart/form-data">
+echo'<form action="../../Controller/subirPublicaciones.php" method="post" enctype="multipart/form-data">
 <div class="input-group mb-3">
 <input
 type="text"
@@ -29,7 +29,7 @@ name="descripcionP"
 <input  type="file" name="imagen3" accept=".jpg, .png, .gif, .jpeg"> 
 </div>
   <div class="col-5">
-    <button type="submit" class="btn btn-primary btn-block">Registrarse
+    <button type="submit" class="btn btn-primary btn-block">Publicar
     </button> 
   </div>
 </form>';}
