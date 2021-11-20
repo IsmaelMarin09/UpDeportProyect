@@ -11826,6 +11826,15 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 }
 
 
+/* imagenes publicaciones */
+
+#fotosPublicaciones {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+
 /* Chat Area CSS Start */
 
 .chat-area header {
@@ -54434,9 +54443,16 @@ a.text-muted:hover {
 .content div form .btnDisplay {
     display: none !important;
 }
-body form .dNone{
+
+body form .dNone {
     display: none !important;
-  }
+}
+
+
+/* Fin Juan Pablo*/
+
+
+/* Fin Juan Pablo*/
 
 
 /* Fin Juan Pablo*/

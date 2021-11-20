@@ -290,11 +290,21 @@ require_once("conexion.php");
         return $f;
       
         
-
     }
+    public function listarPublicaciones(){
+        $f=null;
+        $objetoConexion=new conexion();
+        $conexion=$objetoConexion->get_conexion();
+        $listar="SELECT * FROM publicaciones";
+        $statement=$conexion->prepare($listar);
+        $statement->execute();
+        while ($resultado=$statement->fetch()) {
+            $f[]=$resultado;
+        }
+        return $f;
         
-}
 
+    } 
 
 
 

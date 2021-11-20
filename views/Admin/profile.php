@@ -6,6 +6,7 @@ require_once ("../../Model/consutasAdmin.php");
 require_once ("../../Controller/listarUsersAdmin.php");
 require_once ("../../Controller/profileAdmin.php");
 require_once ("../../Controller/crearPublicaciones.php");
+require_once ("../../Controller/cargarPublicaciones.php");
 
 
 session_start();
@@ -113,6 +114,9 @@ session_start();
                             <div class="tab-pane" id="activity">
                               <!-- Post -->
                               <div class="post">
+                              <?php
+                                        cargarPublicaciones()
+                              ?>
                                 <div class="user-block">
                                   <img
                                     class="img-circle img-bordered-sm"
