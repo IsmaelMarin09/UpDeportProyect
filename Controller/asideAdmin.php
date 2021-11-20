@@ -203,6 +203,25 @@ foreach($result as $f){
           
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
+           <li class="nav-item">
+            <a href="busqueda.php" class="nav-link" id="menu-m">
+              <i class="nav-icon fas fa-search"></i>
+              <p>
+                Busqueda 
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+                <a
+                  href="crearPublicacion.php"
+                  id="menu-m"
+                  class="nav-link"
+                >
+                  <i class="far fa-comments nav-icon"></i>
+                  <p>Mensajes</p>
+                </a>
+              </li>
+          <li class="nav-item">
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
@@ -272,17 +291,7 @@ foreach($result as $f){
                 </a>
               </li>
           <li class="nav-item">
-          <li class="nav-item">
-                <a
-                  href="crearPublicacion.php"
-                  id="menu-m"
-                  class="nav-link"
-                >
-                  <i class="far fa-comments nav-icon"></i>
-                  <p>Mensajes</p>
-                </a>
-              </li>
-          <li class="nav-item">
+          
           <li class="nav-item">
                 <a
                   href="#"
@@ -305,17 +314,7 @@ foreach($result as $f){
                 </a>
               </li>
           <li class="nav-item">
-          <li class="nav-item">
-                <a
-                  href="tipsEntrenamiento.php"
-                  id="menu-m"
-                  class="nav-link"
-                >
-                  <i class="fas fa-running nav-icon"></i>
-                  <p>Tips de Entrenamiento</p>
-                </a>
-              </li>
-          <li class="nav-item">
+          
           <li class="nav-item">
                 <a
                   href="conoserUsers.php"
@@ -332,14 +331,7 @@ foreach($result as $f){
             
           </li>
           
-          <li class="nav-item">
-            <a href="busqueda.php" class="nav-link" id="menu-m">
-              <i class="nav-icon fas fa-search"></i>
-              <p>
-                Busqueda 
-              </p>
-            </a>
-          </li>
+          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

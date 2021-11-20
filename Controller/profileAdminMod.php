@@ -112,7 +112,7 @@
                                           ><i class="fas fa-book mr-1"></i>MI
                                           DESARROLLO</strong
                                         >
-
+                                        <br>
                                         <textarea name="desarrollo" rows="2" cols="55">'.$f2['desarrollo'].'</textarea>
 
                     

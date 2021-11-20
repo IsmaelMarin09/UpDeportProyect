@@ -332,17 +332,42 @@ require_once("conexion.php");
         }else {$estado= "Me gusta";
         }
         return $estado ;
-        
+    }
+    public function insertarDenuncias($unique_IdS,$unique_IdD,$tipo,$descripcion,$IdP,$estado){
 
+        $objetoConexion = new conexion();
+        $conexion= $objetoConexion ->get_conexion();
+        $query="INSERT INTO denuncias (unique_IdS,unique_IdD,IdP,tipo,descripcion,estado) VALUES (:unique_IdS,:unique_IdD,:IdP,:tipo,:descripcion,:estado)";
+        $statement=$conexion->prepare($query);
+        $statement->bindParam(':unique_IdS', $unique_IdS);
+        $statement->bindParam(':unique_IdD',$unique_IdD);
+        $statement->bindParam(':IdP',$IdP);
+        $statement->bindParam(':tipo',$tipo);
+        $statement->bindParam(':descripcion',$descripcion);
+        $statement->bindParam(':estado',$estado);
+        if(!$statement){
+            $mensaje="Error la insertar";
+            return $mensaje;
 
-
-
+        }else{
+            $statement->execute();
+            $mensaje="Se inserto los datos con exito";
+            return $mensaje;
+        }
     }
 
 
 
 
-        
+
+
+
+
+
+
+
+
+
 
 
 

@@ -99,9 +99,10 @@
                                   <div class="card card-primary col-md-6">
                                     <div class="card-header" style="display:block">
                                       <h3 class="card-title">Sobre Mi</h3>
+                                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Denunciar</button>
                                       <form action="profileMod.php" method="POST" style="position:relative; right:-60%;display:'.$classDisplayNoGet.';">
                                       <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
-                                      <button  class="btn btn-primary"  ><img src="../Assets/img/perfil_img/lapiz.png" alt="MDN"></button>    
+                                      <button  class="btn btn-primary"  ><img src="../Assets/img/perfil_img/lapiz.png" alt="MDN">Modificar prefil</button>    
                                       </form>
                                     </div>
                                     <!-- /.card-header -->
@@ -152,6 +153,32 @@
                                   </div>
                                 </div>
                               </div>
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Denunciar</h5>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body">
+      <form action="../../Controller/solicitudDenuncia.php" method="POST" onsubmit="return validar()">
+      <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
+                                        
+      <input name="id_Usr2" style="display:none;" value="'.$id.'" >
+      <input name="tipo" style="display:none;" value="Persona" >
+      <label>Por que deseas denunciar a este usuario ?</label>
+      <textarea name="descripcion" id="descripcion"  rows="2" cols="55" placeholder="Escribe el motivo de tu solicitud"></textarea>
+      <div id="aviso"></div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-envio"  class="btn btn-primary">Enviar</button>
+     
+        
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
 
                             
                            
