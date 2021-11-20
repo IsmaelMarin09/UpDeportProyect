@@ -7,6 +7,7 @@ require_once ("../../Controller/listarUsersAdmin.php");
 require_once ("../../Controller/profileAdmin.php");
 require_once ("../../Controller/crearPublicaciones.php");
 require_once ("../../Controller/cargarPublicaciones.php");
+require_once ("../../Controller/miPerfil.php");
 
 
 session_start();
@@ -93,8 +94,7 @@ session_start();
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#settings" data-toggle="tab"
-                                >Mis Publicaciones</a
-                              >
+                                >Mis Publicaciones</a>
                             </li>
                             
                             
@@ -105,17 +105,18 @@ session_start();
                         <div class="card-body">
                           <div class="tab-content">
                           <div class="tab-pane" id="settings">
-                            <?php
-                                      publicacionesCrear()
-                                      
-                            ?>
-
+                            <div class="post">
+                              <?php
+                                    misPublicaciones();
+                              ?>
+                            </div>
                           </div>
                             <div class="tab-pane" id="activity">
                               <!-- Post -->
                                 <div class="post">
                                     <?php
-                                              cargarPublicaciones()
+                                              publicacionesCrear();
+                                              cargarPublicaciones();
                                     ?>
                                 </div>
                             </div>

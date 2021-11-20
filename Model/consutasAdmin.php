@@ -235,7 +235,8 @@ require_once("conexion.php");
         
         $objetoConexion=new conexion();
         $conexion=$objetoConexion->get_conexion();
-        $sql="insert into publicaciones (unique_Id,descripcion,des_Video,img1,img2,img3,estado) values(:unique_Id,:descripcion,:des_Video,:img1,:img2,:img3,:estado)";
+        $likes=0;
+        $sql="insert into publicaciones (unique_Id,descripcion,des_Video,img1,img2,img3,likes,estado) values(:unique_Id,:descripcion,:des_Video,:img1,:img2,:img3,:likes,:estado)";
         $statement =$conexion->prepare($sql);
         $statement-> bindParam(':unique_Id', $unique_Id);
         $statement-> bindParam(':descripcion', $descripcion);
@@ -243,7 +244,7 @@ require_once("conexion.php");
         $statement-> bindParam(':img1', $img1);
         $statement-> bindParam(':img2', $img2);
         $statement-> bindParam(':img3', $img3);
-        
+        $statement->bindParam(':likes', $likes);
         $statement-> bindParam(':estado', $estado);
         
 
@@ -305,8 +306,38 @@ require_once("conexion.php");
         
 
     } 
+    
+    public function verificacionLike($id1,$id2){
+        $estado=null;
+        $f=null;
+        $objetoConexion=new conexion();
+        $conexion=$objetoConexion->get_conexion();
+        $listar="SELECT * FROM  tablalikes WHERE unique_idA=:id1";
+        $statement=$conexion->prepare ($listar);
+        $statement ->bindParam(':id1',$id1);
+        $statement ->execute();       
+        while ($resultado=$statement->fetch()) {
+            $f[]=$resultado;           
+        }
+        if (isset($f)) {
+            foreach($f as $f1 ){
+                if ($f1['idP'] == $id2) {
+                    $estado= "Ya no me gusta";
+                    break;
+                }
+                else{        
+                    $estado="Me gusta";         
+                }
+             }
+        }else {$estado= "Me gusta";
+        }
+        return $estado ;
+        
 
 
+
+
+    }
 
 
 

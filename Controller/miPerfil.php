@@ -1,23 +1,29 @@
 <?php
 
-
-
-function cargarPublicaciones(){
-    if (isset($_GET['id_user2'])&& ($_GET['id_user2']!=$_SESSION['unique_Id'])) {
-      $id=($_GET['id_user2']);
-      
-  }else{
-      $id=($_SESSION['unique_Id']);
-      
-  }
-    $objetoConsulta=new consultasAdmin();
-    $result=$objetoConsulta->listarPublicaciones();
+function misPublicaciones(){
+      if (isset($_GET['id_user2'])&& ($_GET['id_user2']!=$_SESSION['unique_Id'])) {
+          $id=($_GET['id_user2']);
+          $varseg="Seguir";
+          $classDisplay=null;
+          $classDisplayNoGet="none";
+          $objetoConsultas= new consultasAdmin;
+          
+          
+        
+      }else{
+          $id=($_SESSION['unique_Id']);
+          $varseg="miPerfil";
+          $classDisplay="none";
+          $classDisplayNoGet=null;
+          $result3=null;
+      }$objetoConsulta=new consultasAdmin();
+    $result=$objetoConsulta->listarSeguidores($id,"publicaciones","unique_Id");
     if (!isset($result)) {
         echo'<h1>no hay publicaciones</h1>';
     }else {
       $rResult=array_reverse($result);
         foreach ($rResult as $f) {
-          $result3=$objetoConsulta-> verificacionLike($_SESSION['unique_Id'],$f['id']);
+            $result3=$objetoConsulta-> verificacionLike($_SESSION['unique_Id'],$f['id']);
             $result2=$objetoConsulta->selecUser($f['unique_Id'],"users");
            foreach ($result2 as $f2) {
             
@@ -32,10 +38,9 @@ function cargarPublicaciones(){
                     <span class="username">
                         <a href="profile.php?id_user2='.$f2['unique_Id'].'">'.$f2['nombre'].'</a>
                     </span>
-                    <span class="description"
-                        >'.$f['f_Publicacion'].'</span>
+                    <span class="description">'.$f['f_Publicacion'].'</span>
 </div>
-<p>
+<p style="margin-top:1px">
   ';if ($f['des_Video']=='none') {
     
   }else {
@@ -121,13 +126,6 @@ function cargarPublicaciones(){
 
     
 
+
 }
-
-
-
-
-
-
-
-
-?>
+?>      
