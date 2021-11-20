@@ -6,6 +6,8 @@ require_once ("../../Model/consutasAdmin.php");
 require_once ("../../Controller/listarUsersAdmin.php");
 require_once ("../../Controller/profileAdminMod.php");
 
+
+
 session_start();
 
 ?>
@@ -23,6 +25,7 @@ session_start();
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../Assets/plugins/fontawesome-free/css/all.min.css">
   <!-- DataTables -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="../Assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="../Assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="../Assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
@@ -75,6 +78,10 @@ session_start();
                 
                 ?>
                 
+              
+              
+
+                
               </div>
               <!-- /.card-body -->
             </div>
@@ -107,6 +114,8 @@ session_start();
 <!-- jQuery -->
 <script src="../Assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->
 <script src="../Assets/plugins/datatables/jquery.dataTables.min.js"></script>

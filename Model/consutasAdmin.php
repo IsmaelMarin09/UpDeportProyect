@@ -257,7 +257,38 @@ require_once("conexion.php");
             return $mensaje ;
         
 
+        }}
+    public function insertarEstadistica($id, $unique_Id,$descripcion,$valor){
+        $objetoConexion = new conexion();
+        $conexion= $objetoConexion ->get_conexion();
+        $query="INSERT INTO estadisticas1 (id,unique_Id,descripcion,valor) VALUES (:id, :unique_Id,:descripcion,:valor)";
+        $statement=$conexion->prepare($query);
+        $statement->bindParam(':id', $id);
+        $statement->bindParam(':unique_Id',$unique_Id);
+        $statement->bindParam(':descripcion',$descripcion);
+        $statement->bindParam(':valor',$valor);
+        if(!$statement){
+            $mensaje="Error la insertar los valores de las estadisticas";
+            return $mensaje;
+
+        }else{
+            $statement->execute();
+            $mensaje="Se inserto los datos con exito";
+            return $mensaje;
         }
+    }
+    public function listarEstadisticas ($unique_Id){
+        $objetoConexion= new conexion();
+        $conexion=$objetoConexion ->get_conexion();
+        $query="SELECT * FROM estadisticas1 WHERE unique_Id=:unique_Id";
+        $statement=$conexion->prepare($query);
+        $statement->bindParam('unique_Id',$unique_Id);
+        $statement->execute();
+        while ($resultado=$statement->fetch()) {
+            $f[]=$resultado;           
+        }
+        return $f;
+      
         
     }
     public function listarPublicaciones(){
@@ -279,7 +310,6 @@ require_once("conexion.php");
 
 
 
-}
 
         
 
@@ -287,7 +317,7 @@ require_once("conexion.php");
 
 
 
- 
+}
 
 
 
