@@ -997,12 +997,14 @@ session_start();
                     <div class="tab-content">
                       <div class="active tab-pane" id="#timeline">
                         <!-- Post -->
-                        <div class="post">
-                            <?php
-                                      cargarPublicaciones()
-                            ?>
-                        <!-- /.post -->
-                      </div>
+                        <div id="containerPublicaciones">
+                            <div class="post">
+                                <?php
+                                          cargarPublicaciones()
+                                ?>
+                            <!-- /.post -->
+                          </div>
+                        </div>  
                       <!-- /.tab-pane -->
                       <div class="tab-pane" id="timeline">
                         <!-- The timeline -->

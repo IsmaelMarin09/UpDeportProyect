@@ -14,7 +14,7 @@
     }else {
         $descripcionP="none";
     }
-    $f_Publicacion=date('d-m-Y H:i:s');
+
     $estado="Habilitado";
         define('LIMITE', 2000);
         define('ARREGLO', serialize(array('image/jpg', 'image/png', 'image/gif', 'image/jpeg')));
@@ -59,7 +59,7 @@
                 echo "<script type='text/javascript'>alert('porfavor llene un campo');</script>";
             }else{
                 $objetoConsultas = new consultasAdmin();
-                $result = $objetoConsultas->insertarPublicacion($unique_Id, $descripcionP, $descripcionV, $img1, $img2, $img3, $f_Publicacion, $estado);
+                $result = $objetoConsultas->insertarPublicacion($unique_Id,  $descripcionP, $descripcionV, $img1, $img2, $img3, $estado);
                 
                 echo "<script type='text/javascript'>alert('Publicacion creada con exito');</script>";
             }    

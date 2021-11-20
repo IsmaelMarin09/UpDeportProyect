@@ -230,12 +230,12 @@ require_once("conexion.php");
         return $f;
 
     }
-    public function insertarPublicacion($unique_Id, $descripcion, $descripcionV, $img1, $img2, $img3, $f_Publicacion, $estado){
+    public function insertarPublicacion($unique_Id, $descripcion, $descripcionV, $img1, $img2, $img3, $estado){
        
         
         $objetoConexion=new conexion();
         $conexion=$objetoConexion->get_conexion();
-        $sql="insert into publicaciones (unique_Id,descripcion,des_Video,img1,img2,img3,f_Publicacion,estado) values(:unique_Id,:descripcion,:des_Video,:img1,:img2,:img3,:f_Publicacion,:estado)";
+        $sql="insert into publicaciones (unique_Id,descripcion,des_Video,img1,img2,img3,estado) values(:unique_Id,:descripcion,:des_Video,:img1,:img2,:img3,:estado)";
         $statement =$conexion->prepare($sql);
         $statement-> bindParam(':unique_Id', $unique_Id);
         $statement-> bindParam(':descripcion', $descripcion);
@@ -243,7 +243,7 @@ require_once("conexion.php");
         $statement-> bindParam(':img1', $img1);
         $statement-> bindParam(':img2', $img2);
         $statement-> bindParam(':img3', $img3);
-        $statement-> bindParam(':f_Publicacion', $f_Publicacion);
+        
         $statement-> bindParam(':estado', $estado);
         
 

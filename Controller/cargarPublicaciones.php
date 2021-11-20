@@ -6,25 +6,24 @@ function cargarPublicaciones(){
 
     $objetoConsulta=new consultasAdmin();
     $result=$objetoConsulta->listarPublicaciones();
-    $result2=$objetoConsulta->listarUsers();
     if (!isset($result)) {
         echo'<h1>no hay publicaciones</h1>';
     }else {
         foreach ($result as $f) {
-            $result2=$objetoConsulta->listarUsers();
+            $result2=$objetoConsulta->selecUser($f['unique_Id'],"users");
            foreach ($result2 as $f2) {
-            $result2=$objetoConsulta->listarUsers();
+            
            
         
-        echo'
-        <div class="user-block">
+        echo'<div style="border: solid 1px #000;; padding: 15px;">
+        <div class="user-block"  >
             <img
             class="img-circle img-bordered-sm"
-            src="../Assets/img/user6-128x128.jpg"
+            src="../Assets/img/perfil_img/'.$f2['img'].'"
             alt="User Image"/>
                     <span class="username">
                         <a href="#">'.$f2['nombre'].'</a>
-                    <i class="fas fa-times"></i></a>
+                    
                     </span>
                     <span class="description"
                         >'.$f['f_Publicacion'].'</span>
@@ -76,13 +75,14 @@ function cargarPublicaciones(){
 </p>
 
 <input
+  style="margin-bottom: 25px";
   class="form-control form-control-sm"
   type="text"
   placeholder="Type a comment"
 />
 
 
-';
+</div>';
             }
         }
     }
