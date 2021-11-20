@@ -5,8 +5,8 @@ require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
 require_once ("../../Controller/listarUsersAdmin.php");
 require_once ("../../Controller/profileAdminMod.php");
-require_once("../../Controller/actualizarEstadisticas.php");
-require_once("../../Controller/insertarEstadistica.php");
+
+
 
 session_start();
 
@@ -77,10 +77,7 @@ session_start();
                   profileAdminMod();
                 
                 ?>
-                <?php
-                actualizarEstadisticas();
                 
-                ?>
               
               
 

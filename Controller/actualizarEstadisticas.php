@@ -8,7 +8,7 @@ function cargarUser(){
             echo ' <div class="container">
             <h3>SELECCIONA DEL 1 AL 10,  SIENDO  1 DEFICIENTE Y 10 EXCELENTE EN LAS DIFERENTES CAPACIDADES FISICAS</h3>
             <div class="row">
-            <form action="../Controller/insertarEstadistica.php" method="post">
+            <form action="" method="post">
               <div class="col-md-6">
                           
                           <select class="form-select" aria-label="Default select example" name="resistencia">
