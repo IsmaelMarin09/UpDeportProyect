@@ -32,7 +32,7 @@ function cargarPublicaciones(){
                     <span class="username">
                         <a href="profile.php?id_user2='.$f2['unique_Id'].'">'.$f2['nombre'].'</a>
                     </span>
-                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Denunciar</button>
+                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Denunciar</button>
                     <span class="description"
                         >'.$f['f_Publicacion'].'</span>
 </div>
@@ -117,7 +117,32 @@ function cargarPublicaciones(){
 
 </div>
 
-
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Denunciar</h5>
+      <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+    </div>
+    <div class="modal-body">
+    <form action="../../Controller/solicitudDenuncia.php" method="POST" onsubmit="return validar()">
+    <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
+    <input name="id_Usr3" style="display:none;" value="'.$f['unique_Id'].'" >                                   
+    <input name="id_Usr2" style="display:none;" value="'.$f['id'].'" >
+    <input name="tipo" style="display:none;" value="Publicación" >
+    <label>Por que deseas denunciaresa publicación ?</label>
+    <textarea name="descripcion" id="descripcion"  rows="2" cols="55" placeholder="Escribe el motivo de tu solicitud"></textarea>
+    <div id="aviso"></div>
+    </div>
+    <div class="modal-footer">
+      <button id="btn-envio"  class="btn btn-primary">Enviar</button>
+   
+      
+    </div>
+    </form>
+  </div>
+</div>
+</div>
 
 ';
             }

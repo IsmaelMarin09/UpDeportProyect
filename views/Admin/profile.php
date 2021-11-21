@@ -163,6 +163,7 @@ session_start();
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+ 
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
     
@@ -188,11 +189,20 @@ session_start();
         }
         return true;
     }
+    function validar1() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        let miCampoTexto = document.getElementById("descripcion").value;
+        let aviso        = document.getElementById("aviso")
+        if (miCampoTexto.length == 0 || /^\s+$/.test(miCampoTexto)) {
+          aviso.innerHTML = `Por favor llene el motivo de su solicitud.`
+            return false;
+        }
+        return true;
+    }
        
       
         
     </script>
-
 <!-- jQuery -->
 <script src="../Assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
