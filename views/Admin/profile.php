@@ -140,31 +140,7 @@ session_start();
 
 
 
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-  <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalLabel">Denunciar</h5>
-    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
-  </div>
-  <div class="modal-body">
-  <form action="../../Controller/solicitudDenuncia.php" method="POST" onsubmit="return validar()">
-  <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
-                                    
-  <input name="id_Usr2" style="display:none;" value="'.$id.'" >
-  <input name="tipo" style="display:none;" value="Persona" >
-  <label>Por que deseas denunciar a este usuario ?</label>
-  <textarea name="descripcion" id="descripcion"  rows="2" cols="55" placeholder="Escribe el motivo de tu solicitud"></textarea>
-  <div id="aviso"></div>
-  </div>
-  <div class="modal-footer">
-    <button id="btn-envio"  class="btn btn-primary">Enviar</button>
- 
-    
-  </div>
-  </form>
-</div>
-</div>
-</div>
+
 
 <!-- /.tab-pane -->
 
