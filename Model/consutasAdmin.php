@@ -354,6 +354,21 @@ require_once("conexion.php");
             $mensaje="Se inserto los datos con exito";
             return $mensaje;
         }
+    } 
+    public function modSolicitarPqrs($id){
+        $estado="Revisado";
+        $objetoConexion2=new conexion();
+        $conexion3=$objetoConexion2->get_conexion();
+        $sql="update denuncias set estado =:estado where id=:id";
+        $stm = $conexion3->prepare($sql);
+        $stm->bindParam(":estado",$estado);
+        $stm->bindParam(":id",$id);
+        if (!$stm) {
+            $msk= "Error al modificar campo";
+        }else{
+            $stm->execute();   
+           
+        }
     }
 
 

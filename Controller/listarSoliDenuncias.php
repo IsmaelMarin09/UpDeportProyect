@@ -33,8 +33,8 @@
    
             
     ';
-   
-    foreach ($result as $f) {
+    $rResult=array_reverse($result);
+    foreach ($rResult as $f) {
  
       
        
@@ -47,7 +47,7 @@
        
         echo "<td>" .$f['estado']."</td>";
         echo " <td><a href='profile.php?id_user2='>Ver</td>"; 
-        echo "<td><button>Aceptar</button><button>Modificar</button></td>";     
+        echo "<td><a href='../../controller/modSolicitarPqrs.php?id=".$f["id"]."'>Aceptar</a>";     
         echo' <tr class="expandable-body">';
         echo'  <td colspan="8">';
         echo"<p>";

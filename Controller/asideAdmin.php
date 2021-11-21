@@ -292,17 +292,7 @@ foreach($result as $f){
               </li>
           <li class="nav-item">
           
-          <li class="nav-item">
-                <a
-                  href="#"
-                  id="menu-m"
-                  class="nav-link"
-                >
-                  <i class="fas fa-keyboard nav-icon"></i>
-                  <p>Crear Publicación</p>
-                </a>
-              </li>
-          <li class="nav-item">
+          
           <li class="nav-item">
                 <a
                   href="crearUser.php"
