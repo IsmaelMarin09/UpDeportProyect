@@ -11829,8 +11829,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 /* imagenes publicaciones */
 
 #fotosPublicaciones {
-    width: 200px;
-    height: 200px;
+    height: 300px;
     border-radius: 5px;
 }
 
@@ -36770,11 +36769,6 @@ a.disabled.mailbox-attachment-close {
     color: #666;
 }
 
-.login-card-body .input-group .form-control,
-.register-card-body .input-group .form-control {
-    border-right: 0;
-}
-
 .login-card-body .input-group .form-control:focus,
 .register-card-body .input-group .form-control:focus {
     box-shadow: none;
@@ -54454,4 +54448,4 @@ body form .dNone {
 /* Fin Juan Pablo*/
 
 
-/* Fin Juan Pablo*/
+/* Fin Juan Pablo*

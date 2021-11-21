@@ -23,7 +23,7 @@ function cargarPublicaciones(){
             
            
         
-        echo'<div style="border: solid 1px #000;; padding: 15px;">
+        echo'<div style="border: solid 1px #e6e8eb;; padding: 15px;">
         <div class="user-block"  >
             <img
             class="img-circle img-bordered-sm"

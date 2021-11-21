@@ -57,7 +57,7 @@
     
     }
 </script>
-  <body class="hold-transition register-page ">
+  <body class="hold-transition register-page" style="padding-top: 0;">
     <div class="box-m">
       <div class="register-logo">
         <a href="../../index.html"><b>UP</b>DEPORT</a>
@@ -66,25 +66,21 @@
       <div class="card">
         <div class="card-body register-card-body">
           <p class="login-box-msg">Crea una cuenta!</p>
-
           <form action="../../Controller/insertarUserE.php" method="POST" enctype="multipart/form-data">
             <div class="row">
               <div class="col-sm-6">
+              <small id="emailHelp" class="form-text text-muted" style="margin: 0;">ingrese su nombre completo</small>
                 <div class="input-group mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Nombre"
-                    name="nombre"
-                  />
+                <input type="text" class="form-control" placeholder="Nombre" name="nombre"/>
                   <div class="input-group-append">
                     <div class="input-group-text">
                       <span class="fas fa-user"></span>
                     </div>
                   </div>
                 </div>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">ingrese su correo</small>
                 <div class="input-group mb-3">
-                  <input
+                <input
                     type="email"
                     class="form-control"
                     placeholder="Correo"
@@ -96,6 +92,7 @@
                     </div>
                   </div>
                 </div>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">ingrese una contraseña</small>
                 <div class="input-group mb-3">
                   <input
                     type="password"
@@ -106,8 +103,9 @@
                   
                   
                 </div>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su residencia</small>
                 <div class="input-group mb-3"> 
-                                      <select class="form-control" id="city" required name="municipio">
+                              <select class="form-control" id="city" required name="municipio">
                                             <option value="">Municipio</option>
                                             <option value="Abejorral">Abejorral</option>
                                             <option value="Abrego">Abrego</option>
@@ -1231,12 +1229,13 @@
                                         </select>
 
                 </div>
-                
               </div>
               <div class="col-lg-6">
+              <small id="emailHelp" class="form-text text-muted">seleccione fecha de naciemiento</small>
                 <div class="input-group mb-3">
                   <input type="date" class="form-control" placeholder="fecha de nacimieto" name="fNacimiento" />
                 </div>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su genero</small>
                 <select
                   class="form-select mb-3"
                   id="op-m"
@@ -1248,6 +1247,7 @@
                   <option value="Femenino">Femenino</option>
                   <option value="Otro">Otro</option>
                 </select>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su deporte favorito</small>
                 <select
                   class="form-select mb-3"
                   id="op-m"
@@ -1259,6 +1259,7 @@
                   <option value="basketball">basketball</option>
                   <option value="voleiball">voleiball</option>
                 </select>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su rol</small>
                 <select
                   class="form-select mb-3"
                  
@@ -1275,11 +1276,7 @@
             
               </div>
             </div>
-            <div class="input-group mb-12 " style="margin: 0 auto;">
-                  <label for="" class="centrar">Ingrese foto de perfil</label>
-                  <input  type="file" 
-                  name="imagen" accept=".jpg, .png, .gif, .jpeg"  class="centrar"> 
-                </div>
+            
             <div id="text1" class="dNone">
                   <label for="" class="centrar">Ingrese su documento de identidad</label>
                   <input  type="file" name="cc" accept=".pdf"> 
@@ -1291,7 +1288,15 @@
                   
                   
             </div>
-
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="margin-left: 20px; border-left: groove;" id="inputGroupFileAddon01">Cargar</span>
+              </div>
+                <div class="custom-file">
+                  <input type="file" name="imagen" accept=".jpg, .png, .gif, .jpeg"  class="centrar" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                  <label  style="padding:5px!important;" class="custom-file-label" for="inputGroupFile01">elegir foto de perfil</label>
+                </div>
+              </div>
             <div class="row">
               <div class="col-6">
                 <div class="icheck-primary">
