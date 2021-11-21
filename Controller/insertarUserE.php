@@ -15,7 +15,7 @@
     $rol=$_POST['rol'];
     
 
-    echo $rol;
+  
     $objetoConsultas = new consultasE();
     $verifC= $objetoConsultas->validaciones($email,"email");
     $verifN= $objetoConsultas->validaciones($numero,"unique_Id");
@@ -90,13 +90,16 @@
                 $objetoConsultas = new consultasE();
                 $result = $objetoConsultas->registraUsersE($numero, $nombre, $email, $clavemd, $new_img_name, $rol, $deporte, $fNacimiento, $municipio, $genero, $estado);
                 $result2 = $objetoConsultas->crearUser2($numero);
+                $result3= $objetoConsultas->insertEstadisticas($numero);
+               
                 if ($rol=="Hunter") {
                     $soliHunter = $objetoConsultas->soliHunter($numero,$cc,$hv,$cl);
                 }
-                echo "<script type='text/javascript'>alert('Usuario creado con exito');</script>";
-                echo"<script> window.location.replace('../views/Extras/register.php'); </script>";
+                //echo "<script type='text/javascript'>alert('Usuario creado con exito');</script>";
+                //echo"<script> window.location.replace('../views/Extras/register.php'); </script>";
             
         }
+        
     }
 
 

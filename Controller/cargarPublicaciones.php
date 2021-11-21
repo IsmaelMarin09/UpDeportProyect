@@ -32,6 +32,7 @@ function cargarPublicaciones(){
                     <span class="username">
                         <a href="profile.php?id_user2='.$f2['unique_Id'].'">'.$f2['nombre'].'</a>
                     </span>
+                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Denunciar</button>
                     <span class="description"
                         >'.$f['f_Publicacion'].'</span>
 </div>
@@ -114,12 +115,16 @@ function cargarPublicaciones(){
 
 
 
-</div>';
+</div>
+
+
+
+';
             }
         }
     }
 
-    
+   
 
 }
 
