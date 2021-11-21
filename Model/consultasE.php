@@ -84,6 +84,15 @@ public function validaciones($valor,$column){
 
 }
 public function soliHunter($unique_Id,$cedula,$hojaDeVida,$certificacionLaboral){
+    
+    $resistencia=10;
+    $fuerza=9;
+    $velocidad=8;
+    $flexibilidad=7;
+    $coordinacion=6;
+    $equilibrio=5;
+    $agilidad=4;
+    $reaccion=3;
     $estado="En espera";
     $objetoConexion=new conexion();
     $conexion=$objetoConexion->get_conexion();
@@ -96,13 +105,47 @@ public function soliHunter($unique_Id,$cedula,$hojaDeVida,$certificacionLaboral)
     $statement-> bindParam(':estado', $estado);
     if (!$statement) {
         $mensaje="Error en crear el registro";
-        return $mensaje ;         
+             
     }else{
         $statement-> execute();
         $mensaje= "Se creo el registro con exito";
-        return $mensaje ;
+      
     }
+    
 
+
+}
+public function insertEstadisticas($unique_Id){
+    $resistencia=10;
+    $fuerza=9;
+    $velocidad=8;
+    $flexibilidad=7;
+    $coordinacion=6;
+    $equilibrio=5;
+    $agilidad=4;
+    $reaccion=3;
+    $objetoConexion=new conexion();
+    
+    $conexion=$objetoConexion->get_conexion();
+    $sql="INSERT INTO  estadisticas1 (unique_Id,resistencia,fuerza, velocidad,flexibilidad,coordinacion,equilibrio,agilidad,reaccion) values(:unique_Id,:resistencia,:fuerza,:velocidad,:flexibilidad,:coordinacion,:equilibrio,:agilidad,:reaccion)";
+    $statement =$conexion->prepare($sql);
+    $statement-> bindParam(':unique_Id', $unique_Id);
+    $statement-> bindParam(':resistencia', $resistencia);
+    $statement-> bindParam(':fuerza', $fuerza);
+    $statement-> bindParam(':velocidad', $velocidad);
+    $statement-> bindParam(':flexibilidad', $flexibilidad);
+    $statement-> bindParam(':coordinacion', $coordinacion);
+    $statement-> bindParam(':equilibrio', $equilibrio);
+    $statement-> bindParam(':agilidad', $agilidad);
+    $statement-> bindParam(':reaccion', $reaccion);
+    if (!$statement) {
+        $mensaje="Error al insertar los dato de las estadisticas ";
+             
+    }else{
+        $statement-> execute();
+        $mensaje= "Se añadio los datos correctamente";
+      
+    }
 
 }
 }
