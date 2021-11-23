@@ -278,12 +278,12 @@ require_once("conexion.php");
             return $mensaje;
         }
     }
-    public function listarEstadisticas ($unique_Id){
+    public function listarEstadisticas ($id){
         $objetoConexion= new conexion();
         $conexion=$objetoConexion ->get_conexion();
-        $query="SELECT * FROM estadisticas1 WHERE unique_Id=:unique_Id";
+        $query="SELECT * FROM estadisticas1 WHERE unique_Id=$id";
         $statement=$conexion->prepare($query);
-        $statement->bindParam('unique_Id',$unique_Id);
+        $statement->bindParam('id',$id);
         $statement->execute();
         while ($resultado=$statement->fetch()) {
             $f[]=$resultado;           
@@ -370,6 +370,20 @@ require_once("conexion.php");
            
         }
     }
+    public function eliminarPublicacion($unique_Id,$db){
+        $modelo= new Conexion();
+        $conexion= $modelo->get_conexion();
+        $sql="delete from $db where unique_Id=:unique_Id";
+        $statement= $conexion-> prepare($sql);
+        $statement-> bindParam(':unique_Id',$unique_Id);
+        if(!$statement){ 
+            return"Error al eliminar Publicacion";
+        }else{
+            $statement->execute(); 
+            return "Publicacion eliminado correctamente";           
+            }
+    }
+    
 
 
 

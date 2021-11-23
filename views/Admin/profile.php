@@ -8,6 +8,7 @@ require_once ("../../Controller/profileAdmin.php");
 require_once ("../../Controller/crearPublicaciones.php");
 require_once ("../../Controller/cargarPublicaciones.php");
 require_once ("../../Controller/miPerfil.php");
+require_once("../../Controller/cargarEstadisticasDefa.php");
 
 
 session_start();
@@ -272,6 +273,7 @@ series.ticks.template.set("location", 0.6);
 
 // Set data
 // https://www.amcharts.com/docs/v5/charts/percent-charts/sliced-chart/#Setting_data
+
 series.data.setAll([
   { value: 8, category: "prueba" },
   { value: 6, category: "Two" },
@@ -279,7 +281,8 @@ series.data.setAll([
   { value: 2, category: "Four" },
   { value: 6, category: "Five" },
   { value: 2, category: "Six" },
-  { value: 4, category: "Seven" }
+  { value: 4, category: "Seven" },
+  { value: 4, category: "Seveee" }
 ]);
 
 

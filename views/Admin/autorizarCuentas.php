@@ -76,6 +76,17 @@ session_start();
                ?>
                  </table>
               </div>
+              <div class="card-header">
+                <h3 class="card-title">Listado de información de hunters</h3>
+              </div>
+              <div class="card-body">
+                
+              <table id="example3" class="table table-bordered table-striped">
+               <?php
+                cargarUsers2();
+               ?>
+                 </table>
+              </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
@@ -133,6 +144,21 @@ session_start();
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+  $(function () {
+    $("#example3").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example3_wrapper .col-md-6:eq(0)');
+    $('#example4').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": false,

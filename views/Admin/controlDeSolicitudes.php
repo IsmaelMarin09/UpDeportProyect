@@ -72,11 +72,12 @@ session_start();
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <table class="table table-bordered table-striped">
+              <table class="table table-bordered table-striped" id="example1">
                 <?php
                        cargarDenuncias();
                 ?>
               </table>
+              
               </div>
               <!-- /.card-body -->
             </div>
@@ -125,9 +126,9 @@ session_start();
 <script src="../Assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../Assets/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../Assets/js/demo.js"></script>
+-<script src="../Assets/js/demo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="../Assets/js/demo.js"></script>/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!-- Page specific script -->
 <script>
   $(function () {

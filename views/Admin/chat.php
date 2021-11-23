@@ -84,7 +84,7 @@ session_start();
                     ?>
                       <a href="../Admin/crearPublicacion.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
                       <img src="../Assets/img/perfil_img/<?php echo $row['img']?>" alt="">
-                      <div class="details">
+                      <div class="details  ">
                         <span> <?php echo $row['nombre']?></span>
                         <p><?php echo $row['online']?></p>
                       </div>

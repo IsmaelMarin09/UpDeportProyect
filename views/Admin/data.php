@@ -111,8 +111,6 @@ session_start();
 
 <!-- jQuery -->
 <script src="../Assets/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->
 <script src="../Assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../Assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -133,7 +131,7 @@ session_start();
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!-- Page specific script -->
 <script>
-  $(function () {
+ $(function () {
     $("#example1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
@@ -150,6 +148,6 @@ session_start();
   });
 </script>
 <!-- Chat ventana flotante -->
-<script src="../Assets/js/asdasdasd.js"></script>
+
 </body>
 </html>
