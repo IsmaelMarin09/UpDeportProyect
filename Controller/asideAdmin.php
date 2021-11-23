@@ -257,12 +257,12 @@ foreach($result as $f){
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a
-                  href="#"
+                  href="listaPublicaciones.php"
                   id="menu-m"
                   class="nav-link"
                 >
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tablas 2</p>
+                  <p>Lista de publicaciones</p>
                 </a>
               </li>
               <li class="nav-item">
