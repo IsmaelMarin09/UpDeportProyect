@@ -32,7 +32,7 @@ session_start();
   <!-- Theme style -->
   <link rel="stylesheet" href="../Assets/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini" style="overflow-x: hidden;">
 <div class="wrapper">
 
   <!-- Main Sidebar Container -->
@@ -100,7 +100,7 @@ session_start();
     <div class="float-right d-none d-sm-block">
     
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="">UpDeport</a>.</strong>.
+    <strong>UP DEPORT&copy; 2020-2021 <a href="">UP DEPORT</a>.</strong>.
   </footer>
 
   <!-- Control Sidebar -->

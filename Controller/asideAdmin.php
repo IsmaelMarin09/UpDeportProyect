@@ -20,7 +20,7 @@ foreach($result as $f){
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="../index.php" class="nav-link">Home</a>
+      <a href="profile.php" class="nav-link">Home</a>
     </li>
   
   </ul>
@@ -162,7 +162,7 @@ foreach($result as $f){
 
     echo '<aside class="main-sidebar sidebar-dark-primary elevation-4" id="barra-m">
     <!-- Brand Logo -->
-    <a href="index.php" class="brand-link">
+    <a href="profile.php" class="brand-link">
       <img
         src="../Assets/img/AdminLTELogo.png"
         alt="AdminLTE Logo"

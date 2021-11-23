@@ -28,6 +28,7 @@
           echo '
           
                               <!-- The timeline -->
+                              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
                               <div class=" timeline-inverse">
                                 <!-- INICIO DE PERFIL -->
                                 <div class="row ">
@@ -97,14 +98,18 @@
                                     <!-- /.card -->
                                   </div>
                                   <div class="card card-primary col-md-6">
-                                    <div class="card-header" style="display:block">
-                                      <h3 class="card-title">Sobre Mi</h3>
-                                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Denunciar</button>
-                                      <form action="profileMod.php" method="POST" style="position:relative; right:-60%;display:'.$classDisplayNoGet.';">
+                                    <div class="card-header" style="display:block; padding: 0px 15px 0px 15px;">
+
+                                    
+                                      <h3 class="card-title" style="margin-top: 30px">Sobre Mi</h3>
+                                      <button type="button" class="bi bi-exclamation-triangle-fill" style="color:#f5f4ff;margin: 27px 10px 14px 20px; background:  000; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">Denunciar</button>
+                                      <form action="profileMod.php" method="POST" style="position:relative; right: -60%;top:-40px;'.$classDisplayNoGet.';">
                                       <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
-                                      <button  class="btn btn-primary"  ><img src="../Assets/img/perfil_img/lapiz.png" alt="MDN">Modificar prefil</button>    
+                                      <button  style="color: #fff; border: none; background: #007bff;" class="bi bi-pencil-square">Modificar prefil</button>    
                                       </form>
                                     </div>
+
+                                    
                                     <!-- /.card-header -->
                                     <div class="card-body">
                                       <strong

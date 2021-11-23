@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AdminLTE 3 | Registration Page</title>
+    <title>UP DEPORT-REGISTRO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -57,55 +57,58 @@
     
     }
 </script>
-  <body class="hold-transition register-page" style="padding-top: 0;">
+  <body class="hold-transition register-page" style=" height: auto; padding-top: 0; background: linear-gradient(#fff, #3f87a6); background-attachment: fixed;">
     <div class="box-m">
-      <div class="register-logo">
+      <div class="register-logo" style="margin-bottom: 15px !importan; margin-top: 25px;">
         <a href="../../index.html"><b>UP</b>DEPORT</a>
       </div>
 
-      <div class="card">
+      <div class="card" style="border: 2px solid #9d7832;">
         <div class="card-body register-card-body">
           <p class="login-box-msg">Crea una cuenta!</p>
-          <form action="../../Controller/insertarUserE.php" method="POST" enctype="multipart/form-data">
+          <form action="../../Controller/insertarUserE.php" style="margin-bottom: 10px;" method="POST" enctype="multipart/form-data">
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-6" style="padding-top: 4px;">
               <small id="emailHelp" class="form-text text-muted" style="margin: 0;">ingrese su nombre completo</small>
-                <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Nombre" name="nombre"/>
+                <div class="input-group mb-3" style="margin-bottom: 0rem !important; ">
+                <input style="border-color: #9d7832;" type="text" class="form-control" placeholder="Nombre" name="nombre"/>
                   <div class="input-group-append">
-                    <div class="input-group-text">
+                    <div class="input-group-text" style="border-color: #9d7832;">
                       <span class="fas fa-user"></span>
                     </div>
                   </div>
                 </div>
                 <small id="emailHelp" class="form-text text-muted" style="margin: 0;">ingrese su correo</small>
-                <div class="input-group mb-3">
+                <div class="input-group mb-3" style="margin-bottom: 0rem !important;">
                 <input
                     type="email"
                     class="form-control"
                     placeholder="Correo"
                     name="email"
+                    style="border-color: #9d7832;"
                   />
                   <div class="input-group-append">
-                    <div class="input-group-text">
+                    <div class="input-group-text"  style="border-color: #9d7832;">
                       <span class="fas fa-envelope"></span>
                     </div>
                   </div>
                 </div>
                 <small id="emailHelp" class="form-text text-muted" style="margin: 0;">ingrese una contraseña</small>
-                <div class="input-group mb-3">
+                <div class="input-group mb-3" style="margin-bottom: 0rem !important; border-color: #9d7832;">
                   <input
                     type="password"
                     class="form-control"
                     placeholder="Password"
                     name="clave"
+                    style="border-color: #9d7832;"
+                    
                   />
                   
                   
                 </div>
                 <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su residencia</small>
-                <div class="input-group mb-3"> 
-                              <select class="form-control" id="city" required name="municipio">
+                <div class="input-group mb-3" style="margin-bottom: 0rem !important; border-color: #9d7832;"> 
+                              <select style="border-color: #9d7832;"  class="form-control" id="city" required name="municipio">
                                             <option value="">Municipio</option>
                                             <option value="Abejorral">Abejorral</option>
                                             <option value="Abrego">Abrego</option>
@@ -1232,8 +1235,8 @@
               </div>
               <div class="col-lg-6">
               <small id="emailHelp" class="form-text text-muted">seleccione fecha de naciemiento</small>
-                <div class="input-group mb-3">
-                  <input type="date" class="form-control" placeholder="fecha de nacimieto" name="fNacimiento" />
+                <div class="input-group mb-3" style="margin-bottom: 0rem !important;">
+                  <input style="border-color: #9d7832;"  type="date" class="form-control" placeholder="fecha de nacimieto" name="fNacimiento" />
                 </div>
                 <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su genero</small>
                 <select
@@ -1241,6 +1244,7 @@
                   id="op-m"
                   aria-label="Default select example"
                   name="genero"
+                  style="margin-bottom: 0rem !important; border-color: #9d7832;"
                 >
                   <option selected>Genero</option>
                   <option value="Masculino">Masculino</option>
@@ -1253,6 +1257,7 @@
                   id="op-m"
                   aria-label="Default select example"
                   name="deporte"
+                  style="margin-bottom: 0rem !important; border-color: #9d7832;"
                 >
                   <option selected>Deporte Favorito</option>
                   <option value="futbol">futbol</option>
@@ -1266,6 +1271,7 @@
                   aria-label="Default select example"
                   name="rol"
                   id="select1" onChange="formRegistrer()"
+                  style="margin-bottom: 0rem !important; border-color: #9d7832;"
                 >
                   <option selected>Rol</option>
                   <option value="Deportista">Deportista</option>
@@ -1278,28 +1284,51 @@
             </div>
             
             <div id="text1" class="dNone">
-                  <label for="" class="centrar">Ingrese su documento de identidad</label>
-                  <input  type="file" name="cc" accept=".pdf"> 
-                  <label for="" class="centrar">Hoja de vida </label>
-                  <input  type="file" name="hv" accept=".pdf"> 
-                  <label for="" class="centrar">Certificación laboral</label>
-                  <input  type="file" name="cl" accept=".pdf"> <br>
-                  <small for="" class="centrar">Toda la información solicitada es netamente para la empresa UpDeport</small>
-                  
-                  
-            </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" style="margin-left: 20px; border-left: groove;" id="inputGroupFileAddon01">Cargar</span>
-              </div>
-                <div class="custom-file">
-                  <input type="file" name="imagen" accept=".jpg, .png, .gif, .jpeg"  class="centrar" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                  <label  style="padding:5px!important;" class="custom-file-label" for="inputGroupFile01">elegir foto de perfil</label>
+            <small id="emailHelp" class="form-text text-muted">seleccione documento de identidad</small>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" style="margin-left: 20px; border-left: groove; border-color: #9d7832;"        id="inputGroupFileAddon01">Cargar</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" name="cc" accept=".pdf"  class="centrar" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label  style="padding:5px!important; margin-right: 30px; border-color: #9d7832;" class="custom-file-label" for="inputGroupFile01">documento de identidad</label>
+                  </div>
                 </div>
-              </div>
+                <small id="emailHelp" class="form-text text-muted">seleccione Hoja de vida</small>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" style="margin-left: 20px; border-left: groove; border-color: #9d7832;"        id="inputGroupFileAddon01">Cargar</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" name="hv" accept=".pdf"  class="centrar" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label  style="padding:5px!important; margin-right: 30px; border-color: #9d7832;" class="custom-file-label" for="inputGroupFile01">Hoja de vida</label>
+                  </div>
+                </div>
+                <small id="emailHelp" class="form-text text-muted">seleccione certificación laboral</small>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" style="margin-left: 20px; border-left: groove; border-color: #9d7832;"        id="inputGroupFileAddon01">Cargar</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" name="cl" accept=".pdf"  class="centrar" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label  style="padding:5px!important; margin-right: 30px; border-color: #9d7832;" class="custom-file-label" for="inputGroupFile01">Certificación laboral</label>
+                  </div>
+                </div>
+            </div>
+            <small id="emailHelp" class="form-text text-muted">seleccione foto de perfil</small>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" style="margin-left: 20px; border-left: groove; border-color: #9d7832;" id="inputGroupFileAddon01">Cargar</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" name="imagen" accept=".jpg, .png, .gif, .jpeg"  class="centrar" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label  style="padding:5px!important; margin-right: 30px; border-color: #9d7832;" class="custom-file-label" for="inputGroupFile01">elegir foto de perfil</label>
+                  </div>
+                </div>
+                <small for="" class="centrar">Toda la información solicitada es netamente para la empresa UpDeport</small>
             <div class="row">
               <div class="col-6">
-                <div class="icheck-primary">
+                <div class="icheck-primary" style="margin-left: 30px !important; margin-top: -8px !important;">
                   <input
                     type="checkbox"
                     id="agreeTerms"

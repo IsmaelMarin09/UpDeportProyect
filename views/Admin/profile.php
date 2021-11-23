@@ -41,7 +41,7 @@ session_start();
 </style>
   
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini" style="overflow-x: hidden;">
 <div class="wrapper">
 
   <!-- Main Sidebar Container -->

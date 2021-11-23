@@ -59,10 +59,13 @@
                                          
                                         </div>
                                         <form action="../../Model/vModPerfil.php" method="POST" enctype="multipart/form-data">
-                                            <div class="profile-username text-center d-flex"  style="flex-direction:column ;">
-                                              <label for="imagen" class="text-center" style="display: ;">Cambiar foto de perfil</label>
-                                              <input  type="file" name="imagen" accept=".jpg, .png, .gif, .jpeg" class="text-center"  style="font-size:15px ;margin:0 auto;"> 
-                                            </div>
+                                        <small id="emailHelp" class="form-text text-muted" style="text-align:center;">cambiar foto de perfil</small>
+                                        <div class="custom-file">
+                                        <input name="imagen" accept=".jpg, .png, .gif, .jpeg" type="file" class="custom-file-input" id="customFileLangHTML">
+                                        <label class="custom-file-label" for="customFileLangHTML" data-browse="Archivo">seleciona nueva foto</label>
+                                      </div>
+                                      
+                                        
                                        
                                         <h3 class="profile-username text-center">
                                         '.$f['nombre'].'
@@ -113,7 +116,7 @@
                                           DESARROLLO</strong
                                         >
                                         <br>
-                                        <textarea name="desarrollo" rows="2" cols="55">'.$f2['desarrollo'].'</textarea>
+                                        <textarea name="desarrollo" style="width: 310px;" rows="2" cols="55">'.$f2['desarrollo'].'</textarea>
 
                     
                                         </tex>
@@ -1250,7 +1253,7 @@
                                           ><i class="fas fa-pencil-alt mr-1"></i
                                           >RECONOCIMIENTOS</strong>
                                         <p class="text-muted">
-                                        <textarea name="reconocimientos"  rows="2" cols="55">'.$f2['reconocimientos'].'</textarea>                         
+                                        <textarea name="reconocimientos"  style="width: 310px;" rows="2" cols="55">'.$f2['reconocimientos'].'</textarea>                         
                                         </p>
                                         <hr />
                                         <strong
@@ -1258,7 +1261,7 @@
                                           >DESCRIPCION</strong
                                         >
                                         <p class="text-muted">
-                                        <textarea name="descripcion" rows="3" cols="55">'.$f2['descripcion'].'</textarea>
+                                        <textarea style="width: 310px;" name="descripcion" rows="3" cols="55">'.$f2['descripcion'].'</textarea>
                                         </p>
 
                                         <button  class="btn btn-primary">Cambiar datos</button>
