@@ -24,6 +24,11 @@
             }
             if ($estado==1) {
                 session_start();
+                $online="En linea";
+                $actu="UPDATE users SET online = '{$online}'   WHERE email=:correo";
+                $statement=$conexion->prepare ($actu);
+                $statement ->bindParam(':correo',$correo);
+                $statement ->execute();
                 $_SESSION['unique_Id']=$f1['unique_Id'];
                 echo "<script>location.href='../Admin/profile.php'</script>";
                 
