@@ -44,7 +44,7 @@
             echo "<td>" .$f['likes']."</td>";
             echo "<td>" .$f['estado']."</td>";
             echo " <td><a href='profile.php?id_user2=".$f['unique_Id']."'>Ver perfil </td>";
-            echo " <td><a href='../../Controller/elimanarPublicacion.php?id_eliminar=".$f['unique_Id']."'>Eliminar </td>";
+            echo " <td><a href='../../Controller/elimanarPublicacion.php?id_eliminar=".$f['id']."'>Eliminar </td>";
             echo "</tr>";
     
     

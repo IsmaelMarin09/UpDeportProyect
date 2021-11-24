@@ -377,12 +377,12 @@ require_once("conexion.php");
            
         }
     }
-    public function eliminarPublicacion($unique_Id,$db){
+    public function eliminarPublicacion($id,$db){
         $modelo= new Conexion();
         $conexion= $modelo->get_conexion();
-        $sql="delete from $db where unique_Id=:unique_Id";
+        $sql="delete from $db where id=:id";
         $statement= $conexion-> prepare($sql);
-        $statement-> bindParam(':unique_Id',$unique_Id);
+        $statement-> bindParam(':id',$id);
         if(!$statement){ 
             return"Error al eliminar Publicacion";
         }else{
