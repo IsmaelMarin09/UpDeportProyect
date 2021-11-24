@@ -36,7 +36,7 @@ require_once ("../../Model/seguridadAdmin.php");
 
   <!-- Main Sidebar Container -->
   <?php
-    include'../../controller/asideAdmin.php'
+    include'../../controller/asideHunter.php'
   ?>
   
  
