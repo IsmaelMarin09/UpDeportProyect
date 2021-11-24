@@ -57,15 +57,15 @@ if((strlen($unique_Id)>0) && (strlen($desarrollo)>0)&&  strlen($municipio)>0 && 
     $mensaje= $consultas->ModInfoPerfil("descripcion",$descripcion,$unique_Id,"tablaprofile");
   
     
-    
+    session_start();
     if ($_SESSION['rol']=="Administrador") {
         echo "<script type='text/javascript'>window.location.href ='../views/Admin/profile.php'</script>";
     }
     if ($_SESSION['rol']=="Hunter") {
-        echo "<script type='text/javascript'>window.location.href ='../views/Admin/profile.php'</script>";
+        echo "<script type='text/javascript'>window.location.href ='../views/Hunter/profile.php'</script>";
     }
     if ($_SESSION['rol']=="Deportista") {
-        echo "<script type='text/javascript'>window.location.href ='../views/Admin/profile.php'</script>";
+        echo "<script type='text/javascript'>window.location.href ='../views/Deportista/profile.php'</script>";
     } 
 
 }else{
