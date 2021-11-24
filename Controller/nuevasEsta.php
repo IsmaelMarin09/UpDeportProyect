@@ -19,8 +19,17 @@
     $result =$objetoConsultas->actualizarEstadisticas($id,$resistencia, $fuerza,$velocidad,$flexibilidad,$coordinacion,$equilibrio,$agilidad,$reaccion);
     
  }else{
-     echo  "<script> alert('Por favor ingrese todos los campos') </script>";
-     echo "<script>location.href='../views/Admin/profileMod.php"  ;
-    
+
+     
+     session_start();
+     if ($_SESSION['rol']=="Administrador") {
+         echo "<script type='text/javascript'>window.location.href ='../views/Admin/profile.php'</script>";
+     }
+     if ($_SESSION['rol']=="Hunter") {
+         echo "<script type='text/javascript'>window.location.href ='../views/Hunter/profile.php'</script>";
+     }
+     if ($_SESSION['rol']=="Deportista") {
+         echo "<script type='text/javascript'>window.location.href ='../views/Deportista/profile.php'</script>";
+     } 
  }
 ?>

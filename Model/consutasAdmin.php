@@ -281,8 +281,16 @@ require_once("conexion.php");
             if (!$statement) {
                 echo '<script>alert("puta erro") </script>';
         }else{
-            echo "<script>alert('ESTADISTICAS ACTUL')</script> ";
-            echo "<script>location.href='../views/Admin/profileMod.php '</script>" ;
+            session_start();
+            if ($_SESSION['rol']=="Administrador") {
+                echo "<script type='text/javascript'>window.location.href ='../views/Admin/profile.php'</script>";
+            }
+            if ($_SESSION['rol']=="Hunter") {
+                echo "<script type='text/javascript'>window.location.href ='../views/Hunter/profile.php'</script>";
+            }
+            if ($_SESSION['rol']=="Deportista") {
+                echo "<script type='text/javascript'>window.location.href ='../views/Deportista/profile.php'</script>";
+            }  ;
         }
         }
     public function listarEstadisticas ($id){

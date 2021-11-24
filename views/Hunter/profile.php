@@ -9,7 +9,7 @@ require_once ("../../Controller/crearPublicaciones.php");
 require_once ("../../Controller/cargarPublicaciones.php");
 require_once ("../../Controller/miPerfil.php");
 require_once("../../Controller/cargarEstadisticasDefa.php");
-require_once ("../../Model/seguridadAdmin.php");
+require_once ("../../Model/seguridadHunter.php");
 
 session_start();
 
