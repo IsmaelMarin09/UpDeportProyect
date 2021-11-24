@@ -3,8 +3,8 @@
 require_once ("../../Model/conexion.php");
 require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
-require_once ("../../Controller/listarUsersAdmin.php");
-
+require_once ("../../Controller/cargarConoserUsers.php");
+require_once ("../../Model/seguridadAdmin.php");
 session_start();
 
 ?>
@@ -15,7 +15,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Entrenamiento</title>
+  <title>Conoce nuevas personas.</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -30,7 +30,7 @@ session_start();
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
- 
+
   <!-- Main Sidebar Container -->
   <?php
     include'../../controller/asideAdmin.php'
@@ -46,12 +46,12 @@ session_start();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tips de Entrenamiento</h1>
+            <h1>Personas</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Tips de entrenamiento</li>
+              <li class="breadcrumb-item active">Conocer</li>
             </ol>
           </div>
         </div>
@@ -65,19 +65,46 @@ session_start();
           <div class="col-12">
           <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Cree una recomendación para los deportistas</h3>
+                <h3 class="card-title">Conoce otros deportistas con tus mismos gustos</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                 <?php
-                 cargarUsers();
+              <section class="content">
 
-                 ?>
-                
+<!-- Default box -->
+<div class="card card-solid">
+<div class="card-body d-flex" style="flex-wrap:wrap;" >
+  <?php
+  
+  
+  
+  cargarConoserUsers();
+  ?>
+  </div>
+  <!-- /.card-body -->
+  <div class="card-footer">
+    <nav aria-label="Contacts Page Navigation">
+      <ul class="pagination justify-content-center m-0">
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item"><a class="page-link" href="#">6</a></li>
+        <li class="page-item"><a class="page-link" href="#">7</a></li>
+        <li class="page-item"><a class="page-link" href="#">8</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- /.card-footer -->
+</div>
+<!-- /.card -->
+
+</section>
 
 
-                </table>
+
+
               </div>
               <!-- /.card-body -->
             </div>
@@ -94,9 +121,9 @@ session_start();
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.1.0
+    
     </div>
-    <strong>Copyright &copy; 2021 <a href="">UpDeport</a>.</strong>
+    <strong>Copyright &copy; 2014-2021 <a href="">UpDeport</a>.</strong>.
   </footer>
 
   <!-- Control Sidebar -->

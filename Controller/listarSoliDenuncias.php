@@ -76,42 +76,44 @@ echo '<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="e
     </div>
     <div class="modal-body">';
     $objetoConsulta=new consultasAdmin();
+   
   $result=$objetoConsulta->listarSeguidores($f['IdP'],"publicaciones","id");
-  foreach ($result as $f) {
-    $result2=$objetoConsulta->selecUser($f['unique_Id'],"users");
-    foreach ($result2 as $f2) 
+
+  foreach ($result as $f5) {
+    $result2=$objetoConsulta->selecUser($f5['unique_Id'],"users");
+    foreach ($result2 as $f2){ 
       echo'<div>
     
       <br>
           <span class="username"><a href="profile.php?id_user2='.$f2['unique_Id'].'">'.$f2['nombre'].'</a></span>
-          <span class="description">'.$f['f_Publicacion'].'</span>
+          <span class="description">'.$f5['f_Publicacion'].'</span>
     
       <p style="margin-top:1px">';
-      if ($f['des_Video']=='none') {
+      if ($f5['des_Video']=='none') {
       }else {
-        echo'link:'.$f['des_Video'].'';
+        echo'link:'.$f5['des_Video'].'';
       }echo'</p><p>';
-      if ($f['descripcion']=='none') {
-      } else {echo $f['descripcion'];
+      if ($f5['descripcion']=='none') {
+      } else {echo $f5['descripcion'];
       }echo'</p><div class="container">  
       <div class="row align-items-start">';                 
-      if ($f['img1']=='none') {
+      if ($f5['img1']=='none') {
       }else {
       echo'<div class="col" style="justify-content: center;
       display: flex;">
       <img id="fotosPublicaciones"class="img-fluid"
-      src="../Assets/img/img_publicaciones/'.$f['img1'].'"alt="Photo"/></div>';
-      }if ($f['img2']=='none') {
+      src="../Assets/img/img_publicaciones/'.$f5['img1'].'"alt="Photo"/></div>';
+      }if ($f5['img2']=='none') {
       }else {                
       echo'<div class="col" style="justify-content: center;
       display: flex;"><img id="fotosPublicaciones"class="img-fluid"
-      src="../Assets/img/img_publicaciones/'.$f['img2'].'"alt="Photo"/></div>';
+      src="../Assets/img/img_publicaciones/'.$f5['img2'].'"alt="Photo"/></div>';
       }
-      if ($f['img3']=='none') {                  
+      if ($f5['img3']=='none') {                  
       }else {
       echo'<div class="col" style="justify-content: center;display: flex;">
       <img id="fotosPublicaciones"class="img-fluid"
-      src="../Assets/img/img_publicaciones/'.$f['img3'].'"alt="Photo"/></div>';
+      src="../Assets/img/img_publicaciones/'.$f5['img3'].'"alt="Photo"/></div>';
       }echo '</p>
   
   </div>
@@ -122,7 +124,7 @@ echo '<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="e
  } ;
 };
 }
-
+ }
 }
 
   
