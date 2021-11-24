@@ -5,6 +5,9 @@ require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
 require_once ("../../Controller/listarUsersAdmin.php");
 require_once ("../../Controller/profileAdminMod.php");
+require_once ("../../Controller/actualizarEstadisticas.php");
+require_once ("../../Controller/cargarEstadisticasDefa.php");
+
 
 
 
@@ -76,6 +79,9 @@ session_start();
                 <?php
                   profileAdminMod();
                 
+                ?>
+                <?php
+                cargarEstadisticas2();
                 ?>
                 
               

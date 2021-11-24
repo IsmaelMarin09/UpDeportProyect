@@ -259,31 +259,38 @@ require_once("conexion.php");
         
 
         }}
-    public function insertarEstadistica($id, $unique_Id,$descripcion,$valor){
-        $objetoConexion = new conexion();
-        $conexion= $objetoConexion ->get_conexion();
-        $query="INSERT INTO estadisticas1 (id,unique_Id,descripcion,valor) VALUES (:id, :unique_Id,:descripcion,:valor)";
-        $statement=$conexion->prepare($query);
-        $statement->bindParam(':id', $id);
-        $statement->bindParam(':unique_Id',$unique_Id);
-        $statement->bindParam(':descripcion',$descripcion);
-        $statement->bindParam(':valor',$valor);
-        if(!$statement){
-            $mensaje="Error la insertar los valores de las estadisticas";
-            return $mensaje;
+        public function actualizarEstadisticas($id,$resistencia, $fuerza,$velocidad,$flexibilidad,$coordinacion,$equilibrio,$agilidad,$reaccion){
 
+            $objetoConexion=new conexion();
+            $conexion=$objetoConexion->get_conexion();
+            $actualizar= "UPDATE estadisticas1 SET  id=:id,resistencia=:resistencia, fuerza=:fuerza, velocidad=:velocidad, flexibilidad=:flexibilidad, coordinacion=:coordinacion, equilibrio=:equilibrio, agilidad=:agilidad, reaccion=:reaccion WHERE id=:id";
+            $statement= $conexion->prepare($actualizar); 
+            $statement->bindParam(':id', $id);
+            $statement->bindParam(':resistencia', $resistencia);
+            $statement->bindParam(':fuerza', $fuerza);
+            $statement->bindParam(':velocidad', $velocidad);
+            $statement->bindParam(':flexibilidad', $flexibilidad);
+            $statement->bindParam(':coordinacion', $coordinacion);
+            $statement->bindParam(':equilibrio', $equilibrio);
+            $statement->bindParam(':agilidad', $agilidad);
+            $statement->bindParam(':municipio', $municipio);
+            $statement->bindParam(':reaccion', $reaccion);
+            
+            $statement->execute(); 
+            
+            if (!$statement) {
+                echo '<script>alert("puta erro") </script>';
         }else{
-            $statement->execute();
-            $mensaje="Se inserto los datos con exito";
-            return $mensaje;
+            echo "<script>alert('ESTADISTICAS ACTUL')</script> ";
+            echo "<script>location.href='../views/Admin/profileMod.php '</script>" ;
         }
-    }
+        }
     public function listarEstadisticas ($id){
         $objetoConexion= new conexion();
         $conexion=$objetoConexion ->get_conexion();
-        $query="SELECT * FROM estadisticas1 WHERE unique_Id=$id";
+        $query="SELECT * FROM estadisticas1 WHERE unique_Id=:id";
         $statement=$conexion->prepare($query);
-        $statement->bindParam('id',$id);
+        $statement->bindParam(':id',$id);
         $statement->execute();
         while ($resultado=$statement->fetch()) {
             $f[]=$resultado;           

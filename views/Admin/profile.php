@@ -129,9 +129,35 @@ session_start();
                                       
                                       ?>
                                       <!-- Inicio de estadisticas -->
-                                      <div id="chartdiv">
+                                      <div class="card">
+                                          <div class="card-header">
+                                            <h3 class="card-title">
+                                              <i class="far fa-chart-bar"></i>
+                                              Estadisticas personales
+                                            </h3>
 
-                                      </div>
+                                            <div class="card-tools">
+                                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                <i class="fas fa-minus"></i>
+                                              </button>
+                                              <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                                <i class="fas fa-times"></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <!-- /.card-header -->
+                                          <div class="card-body">
+                                            <?php
+                                            cargarEstadisticas();
+                                            ?>
+                                            <!-- /.row -->
+                                          </div>
+                                          <!-- /.card-body -->
+                                         </div>
+                                      
+                                      
+
+                                   
 
 
                                       <!-- Fin estadisticas -->
@@ -201,8 +227,7 @@ session_start();
         return true;
     }
        
-      
-        
+     
     </script>
 <!-- jQuery -->
 <script src="../Assets/plugins/jquery/jquery.min.js"></script>
@@ -228,70 +253,90 @@ session_start();
     <script src="../Assets/js/demo.js"></script>
 
     <!-- ESTADITICAS -->
-    <!-- Resources -->
-<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.esm.min.js" integrity="sha512-jZzg6pScDaxwQMIYigQwhPoykbqFDJ2HgeXkeMAQtKKEUbjAYZvtlSyTZdovoqKFbDG58S60zUdLlQDW6pwF7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/helpers.esm.min.js" integrity="sha512-1b6IKdJzKvjUfXuATUJs0a4ti8sBZHY0DKZ1O1UCj3cpw+IEKxUwG2UtXNOjS5/JkqxQ2v5GUMFn62mtZyXAfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+  $(function () {
+    /* jQueryKnob */
 
-<!-- Chart code -->
-<script>
-am5.ready(function() {
+    $('.knob').knob({
+      /*change : function (value) {
+       //console.log("change : " + value);
+       },
+       release : function (value) {
+       console.log("release : " + value);
+       },
+       cancel : function () {
+       console.log("cancel : " + this.value);
+       },*/
+      draw: function () {
 
-// Create root element
-// https://www.amcharts.com/docs/v5/getting-started/#Root_element
-var root = am5.Root.new("chartdiv");
+        // "tron" case
+        if (this.$.data('skin') == 'tron') {
 
+          var a   = this.angle(this.cv)  // Angle
+            ,
+              sa  = this.startAngle          // Previous start angle
+            ,
+              sat = this.startAngle         // Start angle
+            ,
+              ea                            // Previous end angle
+            ,
+              eat = sat + a                 // End angle
+            ,
+              r   = true
 
-// Set themes
-// https://www.amcharts.com/docs/v5/concepts/themes/
-root.setThemes([
-  am5themes_Animated.new(root)
-]);
+          this.g.lineWidth = this.lineWidth
 
+          this.o.cursor
+          && (sat = eat - 0.3)
+          && (eat = eat + 0.3)
 
-// Create chart
-// https://www.amcharts.com/docs/v5/charts/percent-charts/sliced-chart/
-var chart = root.container.children.push(am5percent.SlicedChart.new(root, {
-  layout: root.verticalLayout
-}));
+          if (this.o.displayPrevious) {
+            ea = this.startAngle + this.angle(this.value)
+            this.o.cursor
+            && (sa = ea - 0.3)
+            && (ea = ea + 0.3)
+            this.g.beginPath()
+            this.g.strokeStyle = this.previousColor
+            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false)
+            this.g.stroke()
+          }
 
+          this.g.beginPath()
+          this.g.strokeStyle = r ? this.o.fgColor : this.fgColor
+          this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false)
+          this.g.stroke()
 
-// Create series
-// https://www.amcharts.com/docs/v5/charts/percent-charts/sliced-chart/#Series
-var series = chart.series.push(am5percent.PictorialStackedSeries.new(root, {
-  alignLabels: true,
-  orientation: "vertical",
-  valueField: "value",
-  categoryField: "category",
-  svgPath: "M53.5,476c0,14,6.833,21,20.5,21s20.5-7,20.5-21V287h21v189c0,14,6.834,21,20.5,21 c13.667,0,20.5-7,20.5-21V154h10v116c0,7.334,2.5,12.667,7.5,16s10.167,3.333,15.5,0s8-8.667,8-16V145c0-13.334-4.5-23.667-13.5-31 s-21.5-11-37.5-11h-82c-15.333,0-27.833,3.333-37.5,10s-14.5,17-14.5,31v133c0,6,2.667,10.333,8,13s10.5,2.667,15.5,0s7.5-7,7.5-13 V154h10V476 M61.5,42.5c0,11.667,4.167,21.667,12.5,30S92.333,85,104,85s21.667-4.167,30-12.5S146.5,54,146.5,42 c0-11.335-4.167-21.168-12.5-29.5C125.667,4.167,115.667,0,104,0S82.333,4.167,74,12.5S61.5,30.833,61.5,42.5z"
-}));
+          this.g.lineWidth = 2
+          this.g.beginPath()
+          this.g.strokeStyle = this.o.fgColor
+          this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false)
+          this.g.stroke()
 
-series.labelsContainer.set("width", 100);
-series.ticks.template.set("location", 0.6);
+          return false
+        }
+      }
+    })
+    /* END JQUERY KNOB */
 
+    //INITIALIZE SPARKLINE CHARTS
+    var sparkline1 = new Sparkline($('#sparkline-1')[0], { width: 240, height: 70, lineColor: '#92c1dc', endColor: '#92c1dc' })
+    var sparkline2 = new Sparkline($('#sparkline-2')[0], { width: 240, height: 70, lineColor: '#f56954', endColor: '#f56954' })
+    var sparkline3 = new Sparkline($('#sparkline-3')[0], { width: 240, height: 70, lineColor: '#3af221', endColor: '#3af221' })
 
-// Set data
-// https://www.amcharts.com/docs/v5/charts/percent-charts/sliced-chart/#Setting_data
+    sparkline1.draw([1000, 1200, 920, 927, 931, 1027, 819, 930, 1021])
+    sparkline2.draw([515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921])
+    sparkline3.draw([15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21])
 
-series.data.setAll([
-  { value: 8, category: "prueba" },
-  { value: 6, category: "Two" },
-  { value: 8, category: "Three" },
-  { value: 2, category: "Four" },
-  { value: 6, category: "Five" },
-  { value: 2, category: "Six" },
-  { value: 4, category: "Seven" },
-  { value: 4, category: "Seveee" }
-]);
+  })
 
-
-// Play initial series animation
-// https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
-chart.appear(1000, 100);
-
-}); // end am5.ready()
 </script>
+ 
+   
 
 </body>
 </html>
