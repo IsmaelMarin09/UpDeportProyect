@@ -7,7 +7,7 @@ require_once ("../../Controller/listarUsersAdmin.php");
 require_once ("../../Controller/profileAdminMod.php");
 require_once ("../../Controller/actualizarEstadisticas.php");
 require_once ("../../Controller/cargarEstadisticasDefa.php");
-require_once ("../../Model/seguridadAdmin.php");
+require_once ("../../Model/seguridadDeportista.php");
 
 
 
@@ -40,7 +40,7 @@ session_start();
 
   <!-- Main Sidebar Container -->
   <?php
-    include'../../controller/asideAdmin.php'
+    include'../../controller/asideDeportista.php'
   ?>
   
  

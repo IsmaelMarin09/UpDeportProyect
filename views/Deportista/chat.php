@@ -4,7 +4,7 @@ require_once ("../../Model/conexion.php");
 require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
 require_once ("../../Controller/listarUsersAdmin.php");
-require_once ("../../Model/seguridadAdmin.php");
+require_once ("../../Model/seguridadDeportista.php");
 session_start();
 
 ?>
@@ -34,7 +34,7 @@ session_start();
 
   <!-- Main Sidebar Container -->
   <?php
-    include'../../controller/asideAdmin.php'
+    include'../../controller/asideDeportista.php'
   ?>
   
  

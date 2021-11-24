@@ -9,7 +9,7 @@ require_once ("../../Controller/crearPublicaciones.php");
 require_once ("../../Controller/cargarPublicaciones.php");
 require_once ("../../Controller/miPerfil.php");
 require_once("../../Controller/cargarEstadisticasDefa.php");
-require_once ("../../Model/seguridadAdmin.php");
+require_once ("../../Model/seguridadDeportista.php");
 
 session_start();
 
@@ -47,7 +47,7 @@ session_start();
 
   <!-- Main Sidebar Container -->
   <?php
-    include'../../controller/asideAdmin.php'
+    include'../../controller/asideDeportista.php'
   ?>
   
  

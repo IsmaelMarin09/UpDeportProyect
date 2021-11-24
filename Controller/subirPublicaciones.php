@@ -64,6 +64,15 @@
                 echo "<script type='text/javascript'>alert('Publicacion creada con exito');</script>";
             }    
        
-        echo"<script> window.location.replace('../views/Admin/profile.php'); </script>";
+        if ($_SESSION['rol']=="Administrador") {
+            echo "<script>location.href='../views/Admin/profile.php'</script>";
+        }
+        if ($_SESSION['rol']=="Hunter") {
+            echo "<script>location.href='../views/Hunter/profile.php'</script>";
+        }
+        if ($_SESSION['rol']=="Deportista") {
+            echo "<script>location.href='../views/deportista/profile.php'</script>";
+        } 
+    
        
                       
