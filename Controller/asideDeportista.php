@@ -35,7 +35,7 @@ foreach($result as $f){
               href="../../Controller/logout.php?logout_id='.$f['img'].'"
               role="button"
             >
-              <i class="fas fa-sign-out-alt"></i>
+              <i class="fas fa-sign-out-alt"></i>Cerrar sesion
             </a>
             
           </li>
@@ -45,11 +45,7 @@ foreach($result as $f){
         <i class="fas fa-expand-arrows-alt"></i>
       </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-        <i class="fas fa-th-large"></i>
-      </a>
-    </li>
+    
   </ul>
 </nav>';
 // ACA TERMINA LA PARTE DE NAV
