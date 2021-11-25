@@ -70,8 +70,8 @@ session_start();
                 <h3 class="card-title">La información de las diferentes publicaciones estan en la siguiente tabla</h3>
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+              <div class="card-body table-responsive">
+                <table id="example1" class="table table-striped">
                  <?php
                  listarPublicaciones();
 

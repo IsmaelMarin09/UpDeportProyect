@@ -383,6 +383,31 @@ require_once("conexion.php");
             return "Publicacion eliminado correctamente";           
             }
     }
+    public function soliHunter($unique_Id,$cedula,$hojaDeVida,$certificacionLaboral){
+    
+        
+        $estado="En espera";
+        $objetoConexion=new conexion();
+        $conexion=$objetoConexion->get_conexion();
+        $sql="insert into documentosHunters (unique_Id,cedula,hojaDeVida,certificacionLaboral,estado) values(:unique_Id,:cedula,:hojaDeVida,:certificacionLaboral,:estado)";
+        $statement =$conexion->prepare($sql);
+        $statement-> bindParam(':unique_Id', $unique_Id);
+        $statement-> bindParam(':cedula', $cedula);
+        $statement-> bindParam(':hojaDeVida', $hojaDeVida);
+        $statement-> bindParam(':certificacionLaboral', $certificacionLaboral);
+        $statement-> bindParam(':estado', $estado);
+        if (!$statement) {
+            $mensaje="Error en crear el registro";
+                 
+        }else{
+            $statement-> execute();
+            $mensaje= "Se creo el registro con exito";
+          
+        }
+        
+    
+    
+    }
     
 
 

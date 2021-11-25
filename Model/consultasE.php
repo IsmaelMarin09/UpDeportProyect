@@ -139,7 +139,7 @@ public function insertEstadisticas($unique_Id){
     $statement-> bindParam(':agilidad', $agilidad);
     $statement-> bindParam(':reaccion', $reaccion);
     if (!$statement) {
-        $mensaje="Error al insertar los dato de las estadisticas ";
+        $mensaje="Error al insertar los datos de las estadisticas ";
              
     }else{
         $statement-> execute();

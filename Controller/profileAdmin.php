@@ -98,12 +98,12 @@
                                     <!-- /.card -->
                                   </div>
                                   <div class="card card-primary col-md-6">
-                                    <div class="card-header" style="display:block; padding: 0px 15px 0px 15px;">
+                                    <div class="card-header" style="display:block; padding: 0px 15px 30px 15px;">
 
                                     
                                       <h3 class="card-title" style="margin-top: 30px">Sobre Mi</h3>
-                                      <button type="button" class="bi bi-exclamation-triangle-fill" style="color:#f5f4ff;margin: 27px 10px 14px 20px; background:  000; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">Denunciar</button>
-                                      <form action="profileMod.php" method="POST" style="position:relative; right: -60%;top:-40px;'.$classDisplayNoGet.';">
+                                      <button type="button" class="bi bi-exclamation-triangle-fill" style="display:'.$classDisplay.'; color:#f5f4ff;margin: 27px 10px 14px 20px; background:  000; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">Denunciar</button>
+                                      <form action="profileMod.php" method="POST" style="position:relative; right: -39%; top: 25px; display:'.$classDisplayNoGet.';">
                                       <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
                                       <button  style="color: #fff; border: none; background: #007bff;" class="bi bi-pencil-square">Modificar prefil</button>    
                                       </form>

@@ -81,7 +81,7 @@ session_start();
                               <div class="input-group">
                               <input onkeyup="buscar_ahora($('#buscar_1').val());" type="text" class="form-control" id="buscar_1" name="buscar_1">
                                   <div class="input-group-append">
-                                      <button type="submit" class="btn btn-lg btn-default">
+                                      <button type="submit"  class="btn btn-lg btn-default">
                                           <i class="fa fa-search"></i>
                                       </button>
                                   </div>

@@ -29,8 +29,13 @@ function misPublicaciones(){
             
            
         
-        echo'<div style="border: solid 1px #000;; padding: 15px;">
-        <div class="user-block"  >
+        echo'<div style="border: solid 1px #9d7832; padding: 15px;">
+        <form action="../../Controller/eliminarPublicacion.php" method="POST">
+        <input name="id_eliminar"style="display:none;" value="'.$f['id'].'">
+        </inpunt>
+        <button type="input" class="bi bi-exclamation-triangle-fill btn btn-danger float-right" style="display:'.$classDisplayNoGet.'" >Eliminar</button>
+        </form>
+        <div class="user-block" style="width: 85%;">
             <img
             class="img-circle img-bordered-sm"
             src="../Assets/img/perfil_img/'.$f2['img'].'"
@@ -39,8 +44,10 @@ function misPublicaciones(){
                         <a href="profile.php?id_user2='.$f2['unique_Id'].'">'.$f2['nombre'].'</a>
                     </span>
                     <span class="description">'.$f['f_Publicacion'].'</span>
+                    
 </div>
-<p style="margin-top:1px">
+
+<p style="margin-top:1px; display: inline-block;">
   ';if ($f['des_Video']=='none') {
     
   }else {

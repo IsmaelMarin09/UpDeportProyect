@@ -12,13 +12,13 @@ function crearUser(){
             
 
             <label>NOMBRE</label>
-            <input type="text" name="nombre" placeholder="Nombre"  class="form-control">
+            <input style="border-color: #9d7832;" type="text" name="nombre" placeholder="Nombre"  class="form-control">
 
             <label>Email</label>
-            <input type="text" name="email" placeholder="Up@Deport.com"  class="form-control">
+            <input style="border-color: #9d7832;" type="text" name="email" placeholder="Up@Deport.com"  class="form-control">
 
             <label>deporte</label>
-            <select class="form-control" id="deporte" required name="deporte">
+            <select style="border-color: #9d7832;" class="form-control" id="deporte" required name="deporte">
                                             <option >Deporte</option>
                                             <option value="Futbol">Futbol</option>
                                             <option value="Voleyball">Voleyball</option>
@@ -29,14 +29,33 @@ function crearUser(){
 
             <label>rol</label>
            
-            <select class="form-control" id="rol" required name="rol">
-                <option >Rol</option>
-                <option value="Deportista">Deportista</option>
-                <option value="Hunter">Hunter</option>
-                <option value="Administrador">Administrador</option>
-            </select>
+            <select
+                class="form-control"
+                  style="border-color: #9d7832;"
+                  aria-label="Default select example"
+                  name="rol"
+                  id="select1" onChange="formRegistrer()"
+                  
+                >
+                  <option selected>Rol</option>
+                  <option value="Deportista">Deportista</option>
+                  <option value="Hunter">Hunter</option>
+                  <option value="Administrador">Administrador</option>
+
+                </select>
+            <div id="text1" class="dNone">
+            <small style="margin-top:  10px;" id="emailHelp" class="form-text text-muted text-center">seleccione documento de identidad</small>
+                  <label for="" style="padding:10px 0px 5px 20px!important;"class="centrar">documento de identidad</label>
+                  <input type="file" name="cc" accept=".pdf">
+                <small style="margin-top:  10px;" id="emailHelp" class="form-text text-muted text-center">seleccione Hoja de vida</small>
+                  <label for="" style="padding:10px 87px 5px 20px!important;" class="centrar">Hoja de vida </label>
+                  <input type="file" name="hv" accept=".pdf">
+                <small style="margin-top:  10px;" id="emailHelp" class="form-text text-muted text-center">seleccione certificación laboral</small>
+                  <label for="" style="padding:10px 30px 5px 20px!important;" class="centrar">Certificación laboral</label>
+                  <input type="file" name="cl" accept=".pdf"> <br>
+            </div>
             <label>estado</label>
-            <select class="form-control" id="city" required name="estado">
+            <select style="border-color: #9d7832;" class="form-control" id="city" required name="estado">
                                             <option >Estado</option>
                                             <option value="Habilitado">Habilitado</option>
                                             <option value="Deshabilitado">Deshabilitado</option>
@@ -45,7 +64,7 @@ function crearUser(){
         
             
             <label>Lugar</label> 
-            <select class="form-control" id="city" required name="municipio">
+            <select style="border-color: #9d7832;" class="form-control" id="city" required name="municipio">
                                             <option > Municipio</option>
                                             <option value="Abejorral">Abejorral</option>
                                             <option value="Abrego">Abrego</option>
@@ -1170,9 +1189,9 @@ function crearUser(){
 
              
             <label>Fecha De Nacimiento</label>
-            <input type="date" name="fNacimiento"  placeholder="Valor neto" class="form-control">
+            <input style="border-color: #9d7832;" type="date" name="fNacimiento"  placeholder="Valor neto" class="form-control">
             <label>Genero</label>
-            <select class="form-control" id="city" required name="genero">
+            <select style="border-color: #9d7832;" class="form-control" id="city" required name="genero">
                 <option >Genero</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
@@ -1180,7 +1199,7 @@ function crearUser(){
             </select>
 
 
-            <br><button type="submit" class="btn btn-success">Crear</button>	
+            <br><button style="background-color: #9d7832;border-color: #9d7832;" type="submit" class="btn btn-success">Crear</button>	
 
         </div>
             </form>

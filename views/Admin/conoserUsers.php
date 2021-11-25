@@ -72,15 +72,15 @@ session_start();
               <section class="content">
 
 <!-- Default box -->
-<div class="card card-solid">
-<div class="card-body d-flex" style="flex-wrap:wrap;" >
+
+<div class="card-body d-flex">
+
   <?php
-  
-  
-  
   cargarConoserUsers();
   ?>
-  </div>
+</div>
+
+
   <!-- /.card-body -->
   <div class="card-footer">
     <nav aria-label="Contacts Page Navigation">

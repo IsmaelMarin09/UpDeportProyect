@@ -1,41 +1,87 @@
 <?php 
 
-require_once ("conexion.php");
-require_once ("consutasAdmin.php");
+    require_once("conexion.php");
+    require_once("consultasE.php");
+    
+    $numero=mt_rand(100000000,999999999);
+    $nombre=$_POST["nombre"];
+    $email=$_POST['email'];
+    
+    $municipio=$_POST['municipio'];
+    $fNacimiento=$_POST['fNacimiento'];
+    $genero=$_POST['genero'];
+    $deporte=$_POST['deporte'];
+    $rol=$_POST['rol'];
+    $estado=$_POST['estado'];
 
-$fUser="user.jpg";
-$numero=mt_rand(100000000,999999999);
-$mensaje=null;
-$nombre= $_POST['nombre'];
-$rol= $_POST['rol'];
-$email= $_POST['email'];
-$deporte= $_POST['deporte'];
-$estado= $_POST['estado'];
-$municipio= $_POST['municipio'];
-$fNacimiento= $_POST['fNacimiento'];
-$genero= $_POST['genero'];
-$objetoconexion = new conexion ();    
-$conexion = $objetoconexion->get_conexion();
-$consulta = "SELECT * FROM users WHERE email=:email";
-$result = $conexion->prepare($consulta);
-$result->bindParam(':email',$email);
-$result->execute(); 
-$array = $result->fetch(); 
-if ($array) {
-    echo '<script>alert(" email ya esta registrado , Porfavor verifique información")</script>';
-    echo "<script>location.href='../views/Admin/crearUser.php'</script>";
-}else {
-    if((strlen($nombre)>0) && (strlen($email)>0)&&  strlen($deporte)>0 && strlen($deporte)>0 && strlen($municipio)>0 && strlen($fNacimiento)>0 && strlen($genero)>0){
-        $consultas= new consultasAdmin();
-        $mensaje= $consultas->crearUser($numero,$nombre,$email,$fUser,$rol,$deporte,$fNacimiento,$municipio,$genero,$estado);
-        $mensaje2= $consultas->crearUser2($numero);
+  
+    $objetoConsultas = new consultasE();
+    $verifC= $objetoConsultas->validaciones($email,"email");
+    $verifN= $objetoConsultas->validaciones($numero,"unique_Id");
+    if (isset($verifC)) {
+        echo "<script type='text/javascript'>alert('Email ya registrado');</script>";
+        echo"<script> window.location.replace('../views/Extras/register.php'); </script>";
+    }else {
+        if (isset($verifN)) {
+            $numero=mt_rand(100000000,999999999);
+        }else{
 
-        echo "<script type='text/javascript'>alert('$mensaje');window.location.href ='../views/Admin/crearUser.php'</script>";
-
-    }else{
-        echo "Por favor completa todos los campos";
+            if ($rol=="Hunter") {
+                
+                if ($_FILES['cc']["error"] >0 or  $_FILES['hv']["error"] >0 or $_FILES['cl']["error"] > 0 ){
+                    echo "<script type='text/javascript'>alert('Cargue todos los campos');</script>";
+                    echo"<script> window.location.replace('../views/Extras/register.php'); </script>";
+                }else {
+                    
+                    define('ARREGLOH', serialize(array('application/pdf')));
+                    $PERMITIDOS2 = unserialize(ARREGLOH);
+                    $_FILES['cc']['name']=$numero."cc".".pdf";  
+                    $_FILES['hv']['name']=$numero."hv".".pdf";  
+                    $_FILES['cl']['name']=$numero."cl".".pdf";  
+                    if (in_array($_FILES['cc']['type'], $PERMITIDOS2)&& in_array($_FILES['hv']['type'], $PERMITIDOS2)&& in_array($_FILES['cl']['type'], $PERMITIDOS2) ) {
+                        $imagencc = "../views/Assets/img/documentos_hunters/" . $_FILES['cc']['name'];
+                        $imagenhv = "../views/Assets/img/documentos_hunters/" . $_FILES['hv']['name'];
+                        $imagencl = "../views/Assets/img/documentos_hunters/" . $_FILES['cl']['name'];
+                        if (!file_exists($imagencc) && !file_exists($imagenhv) && !file_exists($imagencl)) {
+                            $cc = move_uploaded_file($_FILES["cc"]["tmp_name"], $imagencc); 
+                            $cc = $_FILES['cc']['name']; 
+                            $hv = move_uploaded_file($_FILES["hv"]["tmp_name"], $imagenhv); 
+                            $hv = $_FILES['hv']['name']; 
+                            $cl = move_uploaded_file($_FILES["cl"]["tmp_name"], $imagencl); 
+                            $cl = $_FILES['cl']['name'];   
+                              
+                              
+        
+                        }else {
+                            echo "<script type='text/javascript'>alert('Error documentación ya enviada');</script>";
+                            echo"<script> window.location.replace('../views/Extras/profile.php'); </script>";
+                        }
+                    }else{
+                        echo "<script type='text/javascript'>alert('Todos los archivos deben ser pdf');</script>";
+                    echo"<script> window.location.replace('../views/Extras/profile.php'); </script>";
+                    }
+                }
+            }else {
+                
+               
+            }   
+                $clave=12345;
+                $clavemd=md5($clave);
+                $new_img_name = "user.jpg";
+                $objetoConsultas = new consultasE();
+                $result = $objetoConsultas->registraUsersE($numero, $nombre, $email, $clavemd, $new_img_name, $rol, $deporte, $fNacimiento, $municipio, $genero, $estado);
+                $result2 = $objetoConsultas->crearUser2($numero);
+                $result3= $objetoConsultas->insertEstadisticas($numero);
+               
+                if ($rol=="Hunter") {
+                    $soliHunter = $objetoConsultas->soliHunter($numero,$cc,$hv,$cl);
+                }
+                echo "<script type='text/javascript'>alert('Usuario creado con exito');</script>";
+                echo"<script> window.location.replace('../views/Admin/profile.php'); </script>";
+            
+        }
+        
     }
-}
  
     
    

@@ -12,7 +12,7 @@
     $objetoConsulta=new consultasAdmin();
     $result=$objetoConsulta->insertarDenuncias($id_Usr1,$id_Usr2,$tipo,$descripcion,$idP,$estado);
 
-    echo"<script> window.location.replace('../views/Admin/index.php'); </script>";
+    echo"<script> window.location.replace('../views/Admin/profile.php'); </script>";
             
      
     

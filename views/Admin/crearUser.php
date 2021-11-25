@@ -28,6 +28,18 @@ session_start();
   <!-- Theme style -->
   <link rel="stylesheet" href="../Assets/css/adminlte.min.css">
 </head>
+<script>
+    const button = document.querySelector('button');
+    button.disabled = false;
+    function formRegistrer(){
+      var seleccion=document.getElementById('select1');
+      if (seleccion.selectedIndex==2) {
+        document.getElementById("text1").classList.remove('dNone'); 
+      }else{
+        document.getElementById("text1").classList.add('dNone');
+      }
+    }
+</script>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 

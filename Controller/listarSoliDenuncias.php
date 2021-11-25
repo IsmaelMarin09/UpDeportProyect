@@ -12,17 +12,17 @@
 
    }
    else{
-    echo '
+    echo '<div>
     <thead>
     <tr>
-      <th>ID</th>
-      <th>Id Solicitado</th>
-      <th>Id Denunciado</th>
-      <th>Id de Persona o publicación</th>
-      <th>Tipo</th>
-      <th>Estado</th>
-      <th>Ver</th>
-      <th>Interacciones</th>
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">ID</th>
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Id Solicitado</th> 
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Id Denunciado</th>
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Id de Persona o publicación</th>
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Tipo</th>
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Estado</th>
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Ver</th>
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Interacciones</th>
       
       
     </tr>

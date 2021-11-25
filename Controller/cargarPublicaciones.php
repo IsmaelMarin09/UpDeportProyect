@@ -5,10 +5,8 @@
 function cargarPublicaciones(){
     if (isset($_GET['id_user2'])&& ($_GET['id_user2']!=$_SESSION['unique_Id'])) {
       $id=($_GET['id_user2']);
-      
   }else{
-      $id=($_SESSION['unique_Id']);
-      
+      $id=($_SESSION['unique_Id']); 
   }
     $objetoConsulta=new consultasAdmin();
     $result=$objetoConsulta->listarPublicaciones();
@@ -19,7 +17,12 @@ function cargarPublicaciones(){
         foreach ($rResult as $f) {
           $result3=$objetoConsulta-> verificacionLike($_SESSION['unique_Id'],$f['id']);
             $result2=$objetoConsulta->selecUser($f['unique_Id'],"users");
-           foreach ($result2 as $f2) {
+            if ($_SESSION['unique_Id']==$f['unique_Id']) {
+              $classDisplayNoGet="none";
+            }else {
+              $classDisplayNoGet=null;
+            }
+            foreach ($result2 as $f2) {
             
            
         
@@ -32,8 +35,9 @@ function cargarPublicaciones(){
                     <span class="username">
                         <a href="profile.php?id_user2='.$f2['unique_Id'].'">'.$f2['nombre'].'</a>
                     </span>
-                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Denunciar</button>
+                    <button type="button" class="bi bi-exclamation-triangle-fill btn btn-danger float-right" style="margin-top:-15px; display:'.$classDisplayNoGet.';" data-bs-toggle="modal" data-bs-target="#exampleModal2"> Reportar </button>
                     <span class="description"
+                    
                         >'.$f['f_Publicacion'].'</span>
 </div>
 <p>
@@ -94,6 +98,7 @@ function cargarPublicaciones(){
                           class="img-fluid"
                           src="../Assets/img/img_publicaciones/'.$f['img3'].'"alt="Photo"/></div>';
                         }
+                        
                         echo'
                         
   </div>
@@ -136,7 +141,7 @@ function cargarPublicaciones(){
     </div>
     <div class="modal-footer">
       <button id="btn-envio"  class="btn btn-primary">Enviar</button>
-   
+                        
       
     </div>
     </form>

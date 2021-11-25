@@ -16,41 +16,36 @@
                             continue;
                         }else {
                             echo' 
-                            <div class=" d-flex align-items-stretch flex-column" style="max-width: 400px;" 
-                            ;">
-                                <div class="card bg-light d-flex flex-fill">
-                                <div class="card-header text-muted border-bottom-0">
-                                ' .$f['rol'].' 
-                                </div>
-                                <div class="card-body pt-0">
-                                    <div class="row">
-                                    <div class="col-7">
-                                        <h2 class="lead"><b>'.$f['nombre'].'</b></h2>
-                                        <p class="text-muted text-sm"><b>Deporte  </b>'  .$f['deporte'].' </p>
-                                        <ul class="ml-4 mb-0 fa-ul text-muted">
-                                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>' .$f['municipio'].'</li>
-                                        
-                                        <li class="small"><span class="fa-li"><i class="fas fa-user nav-icon"></i></span> Descripcion: ' .$f3['descripcion'].'</li>
-                                        </ul>
+                        <div class="d-flex align-items-stretch flex-column " style="max-width: 400px;">
+                          <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters" style="flex-wrap: inherit;">
+                              <div class="col-md-4" style="max-width: 180px;">
+                                <h3 style="text-align: center;" class="lead"><b>'.$f['rol'].'</b></h3>	
+                                <img style="width: 184px; border-radius: 27px;" src="../Assets/img/perfil_img/'.$f['img'].'" alt="user-avatar">
+                              </div>
+                              <div class="col-md-8" style="max-width: 240px;">
+                                <div class="card-body" style="padding: 20px;">
+                                  <h5 class="card-title"><b>'.$f['nombre'].'</b></h5>
+                                  <p class="card-text">Descripcion: ' .$f3['descripcion'].'</p>
+                                  <p class="card-text"><small class="text-muted">' .$f['municipio'].'</small></p>
+                                    <div class="card-footer">
+                                      <div class="text-right">
+                                        ';
+                                        echo "<a href='profile.php?id_user2=".$f['unique_Id']."'>Ver Perfil";
+                                          echo'
+                                        </a>
+                                      </div>
                                     </div>
-                                    <div class="col-5 text-center">
-                                        <img src="../Assets/img/perfil_img/'.$f['img'].'" alt="user-avatar" class="img-circle img-fluid" style="width:140px;">
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="text-right">
-                                    ';
-                                    echo " <a href='profile.php?id_user2=".$f['unique_Id']."'>Ver Perfil";
-                                       echo'
-                                    </a>
-                                    </div>
-                                </div>
+                                  </div>
+                                </div>  
+                              </div>
                             </div>
+                          </div>
                         </div>';
                         
                         }
-            
+                        
+                          
                         
                         
                     }                
