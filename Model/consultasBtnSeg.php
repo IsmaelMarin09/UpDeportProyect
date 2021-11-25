@@ -110,7 +110,17 @@ if ($estado==1) {
  $definirSeguidos=definirEstadoDS($estado,$id1,"seguidos");
  $modificar1=modificarestados("seguidores",$definir,$id2);
  $modificar2=modificarestados("seguidos",$definirSeguidos,$id1);
- echo "<script type='text/javascript'>window.location.href ='../views/Admin/profile.php?id_user2=".$id2."'</script>";
+
+ if ($_SESSION['rol']=="Administrador") {
+    echo "<script type='text/javascript'>window.location.href ='../views/Admin/profile.php?id_user2=".$id2."'</script>";
+}
+if ($_SESSION['rol']=="Hunter") {
+    echo "<script type='text/javascript'>window.location.href ='../views/Hunter/profile.php?id_user2=".$id2."'</script>";
+}
+if ($_SESSION['rol']=="Deportista") {
+    echo "<script type='text/javascript'>window.location.href ='../views/Deportista/profile.php?id_user2=".$id2."'</script>";
+} 
+
           
          
            

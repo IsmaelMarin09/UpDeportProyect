@@ -109,7 +109,17 @@ if ($estado==1) {
 }
  $definir=definirEstadoDS($estado,$id2,"likes");
  $modificar1=modificarestados("likes",$definir,$id2);
- echo "<script type='text/javascript'>window.location.href ='../views/Admin/profile.php?id_user2=".$id3."'</script>";
+ session_start();
+ if ($_SESSION['rol']=="Administrador") {
+    echo "<script type='text/javascript'>window.location.href ='../views/Admin/profile.php?id_user2=".$id3."'</script>";
+}
+if ($_SESSION['rol']=="Hunter") {
+    echo "<script type='text/javascript'>window.location.href ='../views/Hunter/profile.php?id_user2=".$id3."'</script>";
+}
+if ($_SESSION['rol']=="Deportista") {
+    echo "<script type='text/javascript'>window.location.href ='../views/Deportista/profile.php?id_user2=".$id3."'</script>";
+} 
+
           
          
            

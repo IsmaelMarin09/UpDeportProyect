@@ -5,8 +5,8 @@ require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
 require_once ("../../Controller/modificarUser.php");
 require_once ("../../Controller/listarUsersAdmin.php");
-
-
+require_once ("../../Model/seguridadAdmin.php");
+require_once ("../../Model/seguridadAdmin.php");
 ?>
 
 

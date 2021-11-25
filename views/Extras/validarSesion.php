@@ -30,7 +30,28 @@
                 $statement ->bindParam(':correo',$correo);
                 $statement ->execute();
                 $_SESSION['unique_Id']=$f1['unique_Id'];
-                echo "<script>location.href='../Admin/profile.php'</script>";
+                $_SESSION['rol']=$f1['rol'];
+                $_SESSION['estado']=$f1['estado'];
+                $_SESSION['autenticado']="si";
+                if ($_SESSION['estado']=="Habilitado") {
+                    if ($_SESSION['rol']=="Administrador") {
+                        echo '<script>alert("BIENVENIDO USUARIO ADMINISTRADOR")</script>';
+                        echo "<script>location.href='../Admin/profile.php'</script>";
+                    }
+                    if ($_SESSION['rol']=="Hunter") {
+                        echo '<script>alert("BIENVENIDO USUARIO HUNTER")</script>';
+                        echo "<script>location.href='../Hunter/profile.php'</script>";
+                    }
+                    if ($_SESSION['rol']=="Deportista") {
+                        echo '<script>alert("BIENVENIDO USUARIO DEPORTISTA")</script>';
+                        echo "<script>location.href='../deportista/profile.php'</script>";
+                    }
+                    
+                }else {
+                    echo '<script>alert("SU PERFIL SE ENCUENTRA INACTIVO - CONTACTESE CON UN ADMINISTRADOR")</script>';
+                    echo "<script>location.href='login.php'</script>";
+                }
+                
                 
             }else {
                 echo '<script>alert("Clave de usuario Incorrecta")</script>';

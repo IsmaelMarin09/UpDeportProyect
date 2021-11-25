@@ -4,7 +4,7 @@ require_once ("../../Model/conexion.php");
 require_once ("../../Model/consultasAsideUsuarios.php");
 require_once ("../../Model/consutasAdmin.php");
 require_once ("../../Controller/listarUsersAdmin.php");
-
+require_once ("../../Model/seguridadHunter.php");
 session_start();
 
 ?>
@@ -15,7 +15,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Entrenamiento</title>
+  <title>Crear Publicación</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -31,9 +31,10 @@ session_start();
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
  
+
   <!-- Main Sidebar Container -->
   <?php
-    include'../../controller/asideAdmin.php'
+    include'../../controller/asideHunter.php'
   ?>
   
  
@@ -46,12 +47,12 @@ session_start();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tips de Entrenamiento</h1>
+            <h1>Crear Publicación</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Tips de entrenamiento</li>
+              <li class="breadcrumb-item active">Crear Publicación</li>
             </ol>
           </div>
         </div>
@@ -65,20 +66,48 @@ session_start();
           <div class="col-12">
           <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Cree una recomendación para los deportistas</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                 <?php
-                 cargarUsers();
+                <div class="wrapper">
+                  <section class="chat-area">
+                    <header>
+                    <?php 
+                      include_once "../../Model/config.php";
+                      $id =mysqli_real_escape_string($conn, $_GET['id']);
+                      $sql=mysqli_query($conn,"SELECT * FROM users WHERE unique_Id={$id}");
+                      if (mysqli_num_rows($sql) > 0) {
+                          $row = mysqli_fetch_assoc($sql);
+                      }
 
-                 ?>
+                    
+
+                  
+                        
+                    ?>
+                      <a href="../Admin/crearPublicacion.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+                      <img src="../Assets/img/perfil_img/<?php echo $row['img']?>" alt="">
+                      <div class="details  ">
+                        <span> <?php echo $row['nombre']?></span>
+                        <p><?php echo $row['online']?></p>
+                      </div>
+                    </header>
+                    <div class="chat-box">
+                      
+                        
+                    </div>
+                    <form action="" class="typing-area" autocomplete="off">
+                      <input type="text" name="outgoing_id" value="  <?php echo $_SESSION['unique_Id']; ?>   "hidden>
+                      <input type="text" name="incoming_id"   value="  <?php echo $id; ?>   "hidden>
+                      <input type="text" name="message" class="input-field" placeholder="Escribe un mensaje">
+                      <button><i class="fab fa-telegram-plane"></i></button>
+
+                    </form>
+                  </section>
+                </div>
                 
 
 
-                </table>
               </div>
+              <!-- /.card-header -->
+              
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
@@ -94,7 +123,7 @@ session_start();
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.1.0
+  
     </div>
     <strong>Copyright &copy; 2021 <a href="">UpDeport</a>.</strong>
   </footer>
@@ -112,6 +141,7 @@ session_start();
 <!-- Bootstrap 4 -->
 <script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->
+<script src="../Assets/js/chat.js"></script>
 <script src="../Assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../Assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="../Assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
