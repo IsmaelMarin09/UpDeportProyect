@@ -96,7 +96,7 @@ public function soliHunter($unique_Id,$cedula,$hojaDeVida,$certificacionLaboral)
     $estado="En espera";
     $objetoConexion=new conexion();
     $conexion=$objetoConexion->get_conexion();
-    $sql="insert into documentosHunters (unique_Id,cedula,hojaDeVida,certificacionLaboral,estado) values(:unique_Id,:cedula,:hojaDeVida,:certificacionLaboral,:estado)";
+    $sql="insert into documentoshunters (unique_Id,cedula,hojaDeVida,certificacionLaboral,estado) values(:unique_Id,:cedula,:hojaDeVida,:certificacionLaboral,:estado)";
     $statement =$conexion->prepare($sql);
     $statement-> bindParam(':unique_Id', $unique_Id);
     $statement-> bindParam(':cedula', $cedula);

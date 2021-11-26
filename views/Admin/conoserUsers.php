@@ -63,62 +63,46 @@ session_start();
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-          <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Conoce otros deportistas con tus mismos gustos</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-              <section class="content">
-
-<!-- Default box -->
-
-<div class="card-body d-flex">
-
-  <?php
-  cargarConoserUsers();
-  ?>
-</div>
-
-
-  <!-- /.card-body -->
-  <div class="card-footer">
-    <nav aria-label="Contacts Page Navigation">
-      <ul class="pagination justify-content-center m-0">
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
-        <li class="page-item"><a class="page-link" href="#">5</a></li>
-        <li class="page-item"><a class="page-link" href="#">6</a></li>
-        <li class="page-item"><a class="page-link" href="#">7</a></li>
-        <li class="page-item"><a class="page-link" href="#">8</a></li>
-      </ul>
-    </nav>
-  </div>
-  <!-- /.card-footer -->
-</div>
-<!-- /.card -->
-
-</section>
-
-
-
-
-              </div>
-              <!-- /.card-body -->
+            <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Conoce otros deportistas con tus mismos gustos</h3>
+                </div>
+                <!-- /.card-header -->
+              <div class="card-body" style="padding: 10px 0px 0px 25%;">
+                <section class="content1">
+                    <!-- Default box -->
+                    <div>
+                      <?php
+                      cargarConoserUsers();
+                      ?>
+                    </div>
+                   
+                </section>    
+              </div>      
             </div>
             <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
+          </div>      
+        </div>        
       </div>
-      <!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+
+
+
+
+                            </div>
+                            <!-- /.card-body -->
+                          </div>
+                          <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.row -->
+                    </div>
+                    <!-- /.container-fluid -->
+                  </section>
+                  <!-- /.content -->
+                </div>
+                <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
     

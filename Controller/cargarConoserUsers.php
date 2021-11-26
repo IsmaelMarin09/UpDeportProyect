@@ -16,8 +16,8 @@
                             continue;
                         }else {
                             echo' 
-                        <div class="d-flex align-items-stretch flex-column " style="max-width: 400px;">
-                          <div class="card mb-3" style="max-width: 540px;">
+                        <div class="d-flex align-items-stretch flex-column " style="max-width: 410px;">
+                          <div class="card mb-3" style="max-width: 540px; margin-left: 3%; border: 1px solid #9d7832;">
                             <div class="row no-gutters" style="flex-wrap: inherit;">
                               <div class="col-md-4" style="max-width: 180px;">
                                 <h3 style="text-align: center;" class="lead"><b>'.$f['rol'].'</b></h3>	
@@ -26,22 +26,25 @@
                               <div class="col-md-8" style="max-width: 240px;">
                                 <div class="card-body" style="padding: 20px;">
                                   <h5 class="card-title"><b>'.$f['nombre'].'</b></h5>
-                                  <p class="card-text">Descripcion: ' .$f3['descripcion'].'</p>
-                                  <p class="card-text"><small class="text-muted">' .$f['municipio'].'</small></p>
-                                    <div class="card-footer">
+                                  <p class="card-text">Descripcion: ' .$f3['descripcion'].'
+                                  </p>
+                                  <p style="margin-right: 10px;" class="card-text"><small class="text-muted">'.$f['municipio'].'</small><small class="text-muted float-right">'.$f['deporte'].'</small>
+                                  </p>
+                                    <div class="card-footer" style="width: 195px;
+                                    margin: 0;
+                                    border: 1px solid #9d7832;;
+                                    border-radius: 20px;">
                                       <div class="text-right">
-                                        ';
-                                        echo "<a href='profile.php?id_user2=".$f['unique_Id']."'>Ver Perfil";
-                                          echo'
+                                        ';echo "<a href='profile.php?id_user2=".$f['unique_Id']."'>Ver Perfil";echo'
                                         </a>
                                       </div>
                                     </div>
                                   </div>
-                                </div>  
-                              </div>
-                            </div>
-                          </div>
-                        </div>';
+                               
+                    </div>
+                  </div>
+                </div>
+              </div>';
                         
                         }
                         
