@@ -113,7 +113,7 @@ session_start();
                               ?>
                             </div>
                           </div>
-                            <div class="tab-pane" id="activity">
+                            <div class="tab-pane" style="border-top: 3px solid #007bff;" id="activity">
                               <!-- Post -->
                                 <div class="post">
                                     <?php

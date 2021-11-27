@@ -29,7 +29,7 @@ function misPublicaciones(){
             
            
         
-        echo'<div style="border: solid 1px #9d7832; padding: 15px;">
+        echo'<div style="border: solid 1px #9d7832; padding: 15px; margin-bottom: 10px;">
         <form action="../../Controller/eliminarPublicacion.php" method="POST">
         <input name="id_eliminar"style="display:none;" value="'.$f['id'].'">
         </inpunt>

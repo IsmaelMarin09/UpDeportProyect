@@ -50,7 +50,8 @@
                             $hv = $_FILES['hv']['name']; 
                             $cl = move_uploaded_file($_FILES["cl"]["tmp_name"], $imagencl); 
                             $cl = $_FILES['cl']['name'];   
-                            $estado="Inactivo";   
+                            $estado="Inactivo";
+                            $soliHunter = $objetoConsultas->soliHunter($numero,$cc,$hv,$cl);   
                               
         
                         }else {
