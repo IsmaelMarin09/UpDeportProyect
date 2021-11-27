@@ -458,7 +458,7 @@ require_once("conexion.php");
                 $email_from="ismaelmarinc12@gmail.com";
 
                 $email_message=" Hola ".$f['nombre'].", te habla UPDEPORT y solicitaste cambiar tu contraseña,ingresa al siguiente link  \n\n" ;
-                $email_message .="http://localhost/SENA2021/views/Extras/nuevaContraseña.php?user=".$f['nombre']."&token=".$f['token']. ;
+                $email_message .="http://localhost/SENA2021/views/Extras/nuevaContraseña.php?user=".$f['nombre']."&token=".$f['token'] ;
 
                 echo '<script>alert("EL CORREO EXISTE SIUUUU") </script>';
             }
