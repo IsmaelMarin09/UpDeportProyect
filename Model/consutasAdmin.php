@@ -458,9 +458,16 @@ require_once("conexion.php");
                 $email_from="ismaelmarinc12@gmail.com";
 
                 $email_message=" Hola ".$f['nombre'].", te habla UPDEPORT y solicitaste cambiar tu contraseña,ingresa al siguiente link  \n\n" ;
-                $email_message .="http://localhost/SENA2021/views/Extras/nuevaContraseña.php?user=".$f['nombre']."&token=".$f['token'] ;
+                $email_message .="http:// esperar/nuevaContraseña.php?user=".$f['nombre']."&token=".$token ;
 
-                echo '<script>alert("EL CORREO EXISTE SIUUUU") </script>';
+                $headers= 'From: '.$email_from."\r\n".
+                'Reply-To: '.$email_from."\r\n".
+                'X-Mailer: PHP/' .phpversion();
+                @mail($email_to,$email_subject,$email_message,$headers);
+
+                echo '<script>alert("Te hemos enviado un email para recueperar tu contraseña") </script>';
+            }else{
+                echo '<script>alert("CORREO NO REGISTRADO EN LA PAGINA") </script>';
             }
         }
         
