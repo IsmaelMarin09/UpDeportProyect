@@ -419,32 +419,51 @@ require_once("conexion.php");
             $mensaje= "Se creo el registro con exito";
           
         }
-        
+       
+
     
     
     }
-    
+    public function recuperarContraseña($email){
+        $objetoConexion= new conexion();
+        $conexion= $objetoConexion->get_conexion();
+        $query="SELECT email,nombre  FROM users WHERE email=:email";
+        $statement= $conexion->prepare($query);
+        $statement->bindParam(':email',$email);
 
+        $statement->execute();
+        while ($resultado=$statement->fetch()) {
+            $f[]=$resultado;
+        }
+        if (isset($f)) {
+            foreach($f as $f1){
+                if ($f1['email']==$email) {
+                    $numero=1;
+                    break;
+                }else{
+                    $numero=0;
+                }
+            }
+            if ($numero==1) {
+                $token= uniqid();
+               
+                $sql="UPDATE users SET token =:token WHERE email=:email";
+                $statement= $conexion->prepare($sql);
+                $statement->bindParam(':email',$email);
+                $statement->bindParam(':token',$token);       
+                $statement->execute();
 
+                $email_to=$email;
+                $email_subject ="Cambio de contraseña ";
+                $email_from="ismaelmarinc12@gmail.com";
 
+                $email_message=" Hola ".$f['nombre'].", te habla UPDEPORT y solicitaste cambiar tu contraseña,ingresa al siguiente link  \n\n" ;
+                $email_message .="http://localhost/SENA2021/views/Extras/nuevaContraseña.php?user=".$f['nombre']."&token=".$f['token']. ;
 
+                echo '<script>alert("EL CORREO EXISTE SIUUUU") </script>';
+            }
+        }
+        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
+    } }
 ?>
