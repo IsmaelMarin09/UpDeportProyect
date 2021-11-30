@@ -11,8 +11,16 @@
     $estado='Pendiente';
     $objetoConsulta=new consultasAdmin();
     $result=$objetoConsulta->insertarDenuncias($id_Usr1,$id_Usr2,$tipo,$descripcion,$idP,$estado);
-
-    echo"<script> window.location.replace('../views/Admin/profile.php'); </script>";
+    session_start();
+    if ($_SESSION['rol']=="Administrador") {
+        echo "<script>location.href='../views/Admin/profile.php'</script>";
+    }
+    if ($_SESSION['rol']=="Hunter") {
+        echo "<script>location.href='../views/Hunter/profile.php'</script>";
+    }
+    if ($_SESSION['rol']=="Deportista") {
+        echo "<script>location.href='../views/deportista/profile.php'</script>";
+    } 
             
      
     

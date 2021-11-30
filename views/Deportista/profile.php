@@ -230,31 +230,35 @@ session_start();
      
     </script>
 <!-- jQuery -->
-<script src="../Assets/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../Assets/js/adminlte.min.js"></script>
-    <!-- jQuery Knob -->
-    <script src="../Assets/plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- Sparkline -->
-    <script src="../Assets/plugins/sparklines/sparkline.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../Assets/js/demo.js"></script>
 
-    <!-- SCRIPT PRIMERAS ESTADITICAS -->
-    <!-- FLOT CHARTS -->
-    <script src="../Assets/plugins/flot/jquery.flot.js"></script>
-    <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
-    <script src="../Assets/plugins/flAssets/plugins/jquery.flot.resize.js"></script>
-    <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
-    <script src="../Assets/plugins/flAssets/plugins/jquery.flot.pie.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../Assets/js/demo.js"></script>
+    <!-- Bootstrap 4 -->
+  <script src="../Assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../Assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../Assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../Assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../Assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../Assets/plugins/jszip/jszip.min.js"></script>
+<script src="../Assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../Assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/buttons.php5.min.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../Assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../Assets/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../Assets/js/demo.js"></script>
+
+    
 
     <!-- ESTADITICAS -->
   
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.esm.min.js" integrity="sha512-jZzg6pScDaxwQMIYigQwhPoykbqFDJ2HgeXkeMAQtKKEUbjAYZvtlSyTZdovoqKFbDG58S60zUdLlQDW6pwF7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/helpers.esm.min.js" integrity="sha512-1b6IKdJzKvjUfXuATUJs0a4ti8sBZHY0DKZ1O1UCj3cpw+IEKxUwG2UtXNOjS5/JkqxQ2v5GUMFn62mtZyXAfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -335,6 +339,7 @@ session_start();
   })
 
 </script>
+
  
    
 

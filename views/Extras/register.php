@@ -1323,7 +1323,7 @@
                 </div>
               </div>
               <!-- /.col -->
-              <div class="col-5">
+              <div class="col-6">
                 <button type="submit" id="botonRegistrarse" class="btn btn-primary btn-block" disabled> 
                   Registrarse
                 </button>

@@ -166,7 +166,7 @@
                                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                                   </div>
                                   <div class="modal-body">
-                                  <form action="../../Controller/solicitudDenuncia.php" method="POST" onsubmit="return validar()">
+                                  <form action="../../Controller/solicitudDenuncia.php" method="POST">
                                   <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
                                   <input name="id_Usr3" style="display:none;" value="'.$f2['unique_Id'].'"   >                                
                                   <input name="id_Usr2" style="display:none;" value="'.$id.'" >

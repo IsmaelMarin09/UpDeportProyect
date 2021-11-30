@@ -52,16 +52,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-8"  style="margin-top: 20px;">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Recordar mi contraseña
-              </label>
-            </div>
-          </div>
+         
           <!-- /.col -->
-          <div class="col-4">
+          <div class="col-5">
             <button type="submit" style="max-width: 100%;"class="btn btn-primary btn-block">Siguiente</button>
           </div>
           <!-- /.col -->
