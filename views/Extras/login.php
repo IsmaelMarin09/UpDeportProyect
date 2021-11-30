@@ -62,7 +62,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Siguiente</button>
+            <button type="submit" style="max-width: 100%;"class="btn btn-primary btn-block">Siguiente</button>
           </div>
           <!-- /.col -->
         </div>

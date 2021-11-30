@@ -65,11 +65,11 @@
 
       <div class="card" style="border: 2px solid #9d7832;">
         <div class="card-body register-card-body">
-          <p class="login-box-msg">Crea una cuenta!</p>
+          <p class="login-box-msg">CREA UNA CUENTA</p>
           <form action="../../Controller/insertarUserE.php" style="margin-bottom: 10px;" method="POST" enctype="multipart/form-data">
             <div class="row">
               <div class="col-sm-6" style="padding-top: 4px;">
-              <small id="emailHelp" class="form-text text-muted" style="margin: 0;">ingrese su nombre completo</small>
+              <small id="emailHelp" class="form-text text-muted" style="margin: 0;">Ingrese su nombre completo.</small>
                 <div class="input-group mb-3" style="margin-bottom: 0rem !important; ">
                 <input style="border-color: #9d7832;" type="text" class="form-control" placeholder="Nombre" name="nombre"/>
                   <div class="input-group-append">
@@ -78,7 +78,7 @@
                     </div>
                   </div>
                 </div>
-                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">ingrese su correo</small>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">Ingrese su correo.</small>
                 <div class="input-group mb-3" style="margin-bottom: 0rem !important;">
                 <input
                     type="email"
@@ -93,7 +93,7 @@
                     </div>
                   </div>
                 </div>
-                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">ingrese una contraseña</small>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">Ingrese una contraseña.</small>
                 <div class="input-group mb-3" style="margin-bottom: 0rem !important; border-color: #9d7832;">
                   <input
                     type="password"
@@ -106,7 +106,7 @@
                   
                   
                 </div>
-                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su residencia</small>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">Seleccione su residencia.</small>
                 <div class="input-group mb-3" style="margin-bottom: 0rem !important; border-color: #9d7832;"> 
                               <select style="border-color: #9d7832;"  class="form-control" id="city" required name="municipio">
                                             <option value="">Municipio</option>
@@ -1234,11 +1234,11 @@
                 </div>
               </div>
               <div class="col-lg-6">
-              <small id="emailHelp" class="form-text text-muted">seleccione fecha de naciemiento</small>
+              <small id="emailHelp" class="form-text text-muted">Seleccione fecha de naciemiento.</small>
                 <div class="input-group mb-3" style="margin-bottom: 0rem !important;">
                   <input style="border-color: #9d7832;"  type="date" class="form-control" placeholder="fecha de nacimieto" name="fNacimiento" />
                 </div>
-                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su genero</small>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">Seleccione su genero.</small>
                 <select
                   class="form-select mb-3"
                   id="op-m"
@@ -1251,7 +1251,7 @@
                   <option value="Femenino">Femenino</option>
                   <option value="Otro">Otro</option>
                 </select>
-                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su deporte favorito</small>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">Seleccione su deporte favorito.</small>
                 <select
                   class="form-select mb-3"
                   id="op-m"
@@ -1264,7 +1264,7 @@
                   <option value="basketball">basketball</option>
                   <option value="voleiball">voleiball</option>
                 </select>
-                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">seleccione su rol</small>
+                <small id="emailHelp" class="form-text text-muted" style="margin: 0;">Seleccione su rol.</small>
                 <select
                   class="form-select mb-3"
                  
@@ -1284,29 +1284,29 @@
             </div>
           <div>  
             <div id="text1" class="dNone">
-                <small style="margin-top:  10px;" id="emailHelp" class="form-text text-muted">seleccione documento de identidad</small>
-                  <label for="" style="padding:10px 0px 5px 20px!important;"class="centrar">documento de identidad</label>
+                <small style="margin-top:  10px;" id="emailHelp" class="form-text text-muted">Seleccione documento de identidad.</small>
+                  <label for="" style="padding:10px 0px 5px 20px!important;"class="centrar">Documento de identidad.</label>
                   <input type="file" name="cc" accept=".pdf">
-                <small style="margin-top:  10px;" id="emailHelp" class="form-text text-muted">seleccione Hoja de vida</small>
-                  <label for="" style="padding:10px 87px 5px 20px!important;" class="centrar">Hoja de vida </label>
+                <small style="margin-top:  10px;" id="emailHelp" class="form-text text-muted">Seleccione Hoja de vida.</small>
+                  <label for="" style="padding:10px 87px 5px 20px!important;" class="centrar">Hoja de vida.</label>
                   <input type="file" name="hv" accept=".pdf">
-                <small style="margin-top:  10px;" id="emailHelp" class="form-text text-muted">seleccione certificación laboral</small>
-                  <label for="" style="padding:10px 30px 5px 20px!important;" class="centrar">Certificación laboral</label>
+                <small style="margin-top:  10px;" id="emailHelp" class="form-text text-muted">Seleccione certificación laboral.</small>
+                  <label for="" style="padding:10px 30px 5px 20px!important;" class="centrar">Certificación laboral.</label>
                   <input type="file" name="cl" accept=".pdf"> <br>
             </div>
           </div>  
               <div>
-                <small id="emailHelp" class="form-text text-muted">seleccione foto de perfil</small>
+                <small id="emailHelp" class="form-text text-muted">Seleccione foto de perfil.</small>
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text" style="margin-left: 20px; border-left: groove; border-color: #9d7832;" id="inputGroupFileAddon01">Cargar</span>
                       </div>
                       <div class="custom-file" accept=".png, .jpg, .jpeg;">
                         <input type="file" name="imagen" accept=".png, .jpg, .jpeg;"  class="centrar" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                        <label  style="padding:5px!important; margin-right: 30px; border-color: #9d7832;" class="custom-file-label" for="inputGroupFile01">elegir foto de perfil</label>
+                        <label  style="padding:5px!important; margin-right: 30px; border-color: #9d7832;" class="custom-file-label" for="inputGroupFile01">Elegir foto de perfil.</label>
                       </div>
                     </div>
-                <small for="" class="centrar">Toda la información solicitada es netamente para la empresa UpDeport</small>
+                <small for="" class="centrar">Toda la información solicitada es netamente para la empresa UpDeport.</small>
               </div>            
                 <div class="row" style="margin-top: 10px;">
               <div class="col-6">
@@ -1334,7 +1334,7 @@
 
          
 
-          <a href="login.php" class="text-center">Ya tengo una cuenta</a>
+          <a href="login.php" class="text-center">Ya tengo una cuenta.</a>
         </div>
         <!-- /.form-box -->
       </div>
