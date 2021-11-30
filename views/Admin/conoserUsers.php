@@ -68,10 +68,10 @@ session_start();
                   <h3 class="card-title">Conoce otros deportistas con tus mismos gustos</h3>
                 </div>
                 <!-- /.card-header -->
-              <div class="card-body" style="padding: 10px 0px 0px 25%;">
+              <div class="card-body" >
                 <section class="content1">
                     <!-- Default box -->
-                    <div>
+                    <div class="row">
                       <?php
                       cargarConoserUsers();
                       ?>

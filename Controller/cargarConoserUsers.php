@@ -16,7 +16,7 @@
                             continue;
                         }else {
                             echo' 
-                        <div class="d-flex align-items-stretch flex-column " style="max-width: 410px;">
+                        <div class="d-flex align-items-stretch flex-column col-md-4" style="max-width: 510px;">
                           <div class="card mb-3" style="max-width: 540px; margin-left: 3%; border: 1px solid #9d7832;">
                             <div class="row no-gutters" style="flex-wrap: inherit;">
                               <div class="col-md-4" style="max-width: 180px;">
