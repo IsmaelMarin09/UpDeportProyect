@@ -439,7 +439,7 @@ require_once("conexion.php");
             foreach($f as $f1){
                 if ($f1['email']==$email) {
                     $numero=1;
-                    break;
+                    
                 }else{
                     $numero=0;
                 }
@@ -457,8 +457,8 @@ require_once("conexion.php");
                 $email_subject ="Cambio de contraseña ";
                 $email_from="ismaelmarinc12@gmail.com";
 
-                $email_message=" Hola ".$f['nombre'].", te habla UPDEPORT y solicitaste cambiar tu contraseña,ingresa al siguiente link  \n\n" ;
-                $email_message .="http:// esperar/nuevaContraseña.php?user=".$f['nombre']."&token=".$token ;
+                $email_message=" Hola ".$f1['nombre'].", te habla UPDEPORT y solicitaste cambiar tu contraseña,ingresa al siguiente link  \n\n" ;
+                $email_message .="http:// esperar/nuevaContraseña.php?user=".$f1['nombre']."&token=".$token ;
 
                 $headers= 'From: '.$email_from."\r\n".
                 'Reply-To: '.$email_from."\r\n".
@@ -466,7 +466,8 @@ require_once("conexion.php");
                 @mail($email_to,$email_subject,$email_message,$headers);
 
                 echo '<script>alert("Te hemos enviado un email para recueperar tu contraseña") </script>';
-            }else{
+                echo "<script>location.href='../Extras/login.php '</script>" ;
+            }elseif($numero==0){
                 echo '<script>alert("CORREO NO REGISTRADO EN LA PAGINA") </script>';
             }
         }

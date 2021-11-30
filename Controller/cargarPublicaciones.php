@@ -44,7 +44,8 @@ function cargarPublicaciones(){
   ';if ($f['des_Video']=='none') {
     
   }else {
-    echo'link:'.$f['des_Video'].'';
+    echo'Da click aqui para ver mi video: <a target="blank" href="'.$f['des_Video'].'">'.$f['des_Video'].'</a>';
+    //echo'<iframe width="560" height="315" src="'.$f['des_Video'].'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
   }
   echo'
 </p>
