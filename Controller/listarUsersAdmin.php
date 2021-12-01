@@ -17,16 +17,16 @@
     <tr>
       <th>ID</th>
       <th>unique_ID</th>
-      <th>nombre</th>
+      <th>Nombre</th>
       <th>Correo</th>
       <th>Rol</th>
-      <th>deporte</th>
+      <th>Deporte</th>
       <th>Fecha</th>
       <th>lugar</th>
-      <th>Genero</th>
+      <th>Género</th>
       <th>Estado</th>
       <th>Modificar</th>
-      <th>Ver Perfil</th>
+      <th>Ver perfil</th>
       <th>Deshabilitar</th>
   
     </tr>

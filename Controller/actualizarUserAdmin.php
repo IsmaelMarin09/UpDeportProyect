@@ -20,7 +20,7 @@
     $result =$objetoConsultas->actualizarrUsers($id, $unique_id,$nombre,$email,$rol,$deporte,$fNacimiento,$municipio,$genero,$estado);
     
  }else{
-     echo  "<script> alert('Por favor ingrese todos los campos') </script>";
+     echo  "<script> alert('Por favor ingrese todos los campos.') </script>";
      echo "<script>location.href='../views/Admin/modificarUser.php"  ;
     
  }

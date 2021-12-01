@@ -17,7 +17,7 @@
     <tr>
       <th>ID</th>
       <th>unique_ID</th>
-      <th>Cedula</th>
+      <th>Cédula</th>
       <th>Hoja de vida</th>
       <th>Certificación laboral</th>
       <th>Estado</th>
@@ -58,7 +58,7 @@ echo '</tbody>';
  $objetoConsultas= new consultasAdmin();
  $result=$objetoConsultas->listarTablas("documentoshunters");
  if (!isset($result)) {
-   echo '<h2>NO HAY DATOS</h2>';
+   echo '<h2>No hay datos</h2>';
 
 }
 else{
@@ -67,7 +67,7 @@ echo '
 <tr>
  <th>ID</th>
  <th>unique_ID</th>
- <th>Cedula</th>
+ <th>Cédula</th>
  <th>Hoja de vida</th>
  <th>Certificación laboral</th>
  <th>Estado</th>

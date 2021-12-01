@@ -11,7 +11,7 @@ function cargarPublicaciones(){
     $objetoConsulta=new consultasAdmin();
     $result=$objetoConsulta->listarPublicaciones();
     if (!isset($result)) {
-        echo'<h1>no hay publicaciones</h1>';
+        echo'<h2>No hay publicaciones.</h2>';
     }else {
       $rResult=array_reverse($result);
         foreach ($rResult as $f) {
@@ -137,7 +137,7 @@ function cargarPublicaciones(){
     <input name="id_Usr2" style="display:none;" value="'.$f['id'].'" >
     <input name="tipo" style="display:none;" value="Publicación" >
     <label>Por que deseas denunciaresa publicación ?</label>
-    <textarea name="descripcion" id="descripcion"  rows="2" cols="55" placeholder="Escribe el motivo de tu solicitud"></textarea>
+    <textarea name="descripcion" id="descripcion"  rows="2" cols="55" placeholder="Escribe el motivo de tu solicitud."></textarea>
     <div id="aviso"></div>
     </div>
     <div class="modal-footer">

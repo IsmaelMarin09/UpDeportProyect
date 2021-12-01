@@ -20,7 +20,7 @@
     $verifC= $objetoConsultas->validaciones($email,"email");
     $verifN= $objetoConsultas->validaciones($numero,"unique_Id");
     if (isset($verifC)) {
-        echo "<script type='text/javascript'>alert('Email ya registrado');</script>";
+        echo "<script type='text/javascript'>alert('Email ya registrado.');</script>";
         echo"<script> window.location.replace('../views/Extras/register.php'); </script>";
     }else {
         if (isset($verifN)) {
@@ -55,11 +55,11 @@
                               
         
                         }else {
-                            echo "<script type='text/javascript'>alert('Error documentación ya enviada');</script>";
+                            echo "<script type='text/javascript'>alert('Error documentación ya enviada.');</script>";
                             echo"<script> window.location.replace('../views/Extras/register.php'); </script>";
                         }
                     }else{
-                        echo "<script type='text/javascript'>alert('Todos los archivos deben ser pdf');</script>";
+                        echo "<script type='text/javascript'>alert('Todos los archivos deben ser pdf.');</script>";
                     echo"<script> window.location.replace('../views/Extras/register.php'); </script>";
                     }
                 }

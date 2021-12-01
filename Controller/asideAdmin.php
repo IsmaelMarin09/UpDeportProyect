@@ -130,7 +130,7 @@ foreach($result as $f){
               class="nav-link"
             >
               <i class="fas fa-circle  fa-user-check nav-icon"></i>
-              <p>Autorizar Hunters</p>
+              <p>Autorizar hunters</p>
             </a>
           </li>
         
@@ -191,7 +191,7 @@ foreach($result as $f){
                   class="nav-link"
                 >
                   <i class="fas fa-user-plus nav-icon"></i>
-                  <p>Crear User</p>
+                  <p>Crear user</p>
                 </a>
               </li>
           <li class="nav-item">
@@ -203,7 +203,7 @@ foreach($result as $f){
                   class="nav-link"
                 >
                   <i class="fas fa-user-plus nav-icon"></i>
-                  <p>Conocer Usuarios</p>
+                  <p>Conocer usuarios</p>
                 </a>
               </li>
           <li class="nav-item">

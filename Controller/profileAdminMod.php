@@ -59,10 +59,10 @@
                                          
                                         </div>
                                         <form action="../../Model/vModPerfil.php" method="POST" enctype="multipart/form-data">
-                                        <small id="emailHelp" class="form-text text-muted" style="text-align:center;">cambiar foto de perfil</small>
+                                        <small id="emailHelp" class="form-text text-muted" style="text-align:center;">Cambiar foto de perfil</small>
                                         <div class="custom-file">
                                         <input name="imagen" accept=".jpg, .png, .gif, .jpeg" type="file" class="custom-file-input" id="customFileLangHTML">
-                                        <label class="custom-file-label" for="customFileLangHTML" data-browse="Archivo">seleciona nueva foto</label>
+                                        <label class="custom-file-label" for="customFileLangHTML" data-browse="Archivo">Seleciona una nueva foto.</label>
                                       </div>
                                       
                                         
@@ -104,7 +104,7 @@
                                   </div>
                                   <div class="card card-primary col-md-6">
                                     <div class="card-header">
-                                      <h3 class="card-title">Editar Sobre Mi</h3>
+                                      <h3 class="card-title">Editar sobre mi</h3>
                                     </div>
                                     <!-- /.card-header -->
                                     
@@ -112,8 +112,8 @@
                                       <textarea name="idEnviar"  style="display:none;">'.$f2['unique_Id'].'</textarea>
                                       <div class="card-body">
                                         <strong
-                                          ><i class="fas fa-book mr-1"></i>MI
-                                          DESARROLLO</strong
+                                          ><i class="fas fa-book mr-1"></i>Mi
+                                          desarrollo</strong
                                         >
                                         <br>
                                         <textarea name="desarrollo" style="width: 310px;" rows="2" cols="55">'.$f2['desarrollo'].'</textarea>
@@ -124,7 +124,7 @@
                                         <hr />
 
                                         <strong
-                                          ><i class="fas fa-map-marker-alt mr-1"></i>me
+                                          ><i class="fas fa-map-marker-alt mr-1"></i>Me
                                           localizo</strong>
                                         <select class="form-control" id="city" required name="municipio">
                                           <option value="'.$f['municipio'].'" > '.$f['municipio'].'</option>
@@ -1251,14 +1251,14 @@
                                         <hr />
                                         <strong
                                           ><i class="fas fa-pencil-alt mr-1"></i
-                                          >RECONOCIMIENTOS</strong>
+                                          >Reconocimientos</strong>
                                         <p class="text-muted">
                                         <textarea name="reconocimientos"  style="width: 310px;" rows="2" cols="55">'.$f2['reconocimientos'].'</textarea>                         
                                         </p>
                                         <hr />
                                         <strong
                                           ><i class="far fa-file-alt mr-1"></i
-                                          >DESCRIPCION</strong
+                                          >Descripción</strong
                                         >
                                         <p class="text-muted">
                                         <textarea style="width: 310px;" name="descripcion" rows="3" cols="55">'.$f2['descripcion'].'</textarea>

@@ -6,7 +6,7 @@
         $result=$objetoConsultas->listarUsers();
   
         if (!isset($result)) {        
-          echo '<h2>Todavia no tienes seguidores</h2>';
+          echo '<h2>Todavia no tienes seguidores.</h2>';
         }else{
             foreach ($result as $f) {    
                   
@@ -35,7 +35,7 @@
                                     border: 1px solid #9d7832;;
                                     border-radius: 20px;">
                                       <div class="text-right">
-                                        ';echo "<a href='profile.php?id_user2=".$f['unique_Id']."'>Ver Perfil";echo'
+                                        ';echo "<a href='profile.php?id_user2=".$f['unique_Id']."'>Ver perfil";echo'
                                         </a>
                                       </div>
                                     </div>

@@ -8,7 +8,7 @@ function cargarUser(){
             echo '
             <div class="card">
         <div class="card-body register-card-body">
-          <p class="login-box-msg">Crea una cuenta!</p>
+          <p class="login-box-msg">Modifica</p>
 
           <form action="../../Controller/actualizarUserAdmin.php" method="POST">
             <div class="row">

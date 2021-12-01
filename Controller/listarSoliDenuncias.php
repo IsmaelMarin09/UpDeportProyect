@@ -16,9 +16,9 @@
     <thead>
     <tr>
       <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">ID</th>
-      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Id Solicitado</th> 
-      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Id Denunciado</th>
-      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Id de Persona o publicación</th>
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Id solicitado</th> 
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Id denunciado</th>
+      <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Id de persona o publicación</th>
       <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Tipo</th>
       <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Estado</th>
       <th style="text-align: center;border-color: #9d7832;border-top-width: 1px;border-left-width: 1px;">Ver</th>

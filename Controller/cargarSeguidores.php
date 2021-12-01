@@ -15,7 +15,7 @@
         $result=$objetoConsultas->listarSeguidores($id,"tablaseguimiento","unique_IdB");
   
         if (!isset($result)) {        
-          echo '<h2>Todavia no '.$tenerS.' seguidores</h2>';
+          echo '<h2>Todavia no '.$tenerS.' seguidores.</h2>';
         }else{
             foreach ($result as $f) {          
                 $result2=$objetoConsultas->listarSeguidores($f['unique_IdA'],"users","unique_Id");
@@ -33,11 +33,11 @@
                                 <div class="row">
                                 <div class="col-7">
                                     <h2 class="lead"><b>'.$f2['nombre'].'</b></h2>
-                                    <p class="text-muted text-sm"><b>F Nacimiento </b>' .$f2['fNacimiento'].' </p>
+                                    <p class="text-muted text-sm"><b>Fecha de nacimiento: </b>' .$f2['fNacimiento'].' </p>
                                     <ul class="ml-4 mb-0 fa-ul text-muted">
                                     <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>' .$f2['municipio'].'</li>
                                     
-                                    <li class="small"><span class="fa-li"><i class="fas fa-user nav-icon"></i></span> Descripcion: ' .$f3['descripcion'].'</li>
+                                    <li class="small"><span class="fa-li"><i class="fas fa-user nav-icon"></i></span> Descripción: ' .$f3['descripcion'].'</li>
                                     </ul>
                                 </div>
                                 <div class="col-5 text-center">
@@ -50,7 +50,7 @@
                                 echo'<a href="chat.php?id='.$f2["unique_Id"].'" class="btn btn-sm bg-teal">
                                     <i class="fas fa-comments"></i>
                                 </a>';
-                                echo " <a href='profile.php?id_user2=".$f2['unique_Id']."'>Ver Perfil";
+                                echo " <a href='profile.php?id_user2=".$f2['unique_Id']."'>Ver perfil";
                                    echo'
                                 </a>
                                 </div>

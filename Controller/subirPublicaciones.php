@@ -61,7 +61,7 @@
                 $objetoConsultas = new consultasAdmin();
                 $result = $objetoConsultas->insertarPublicacion($unique_Id,  $descripcionP, $descripcionV, $img1, $img2, $img3, $estado);
                 
-                echo "<script type='text/javascript'>alert('Publicacion creada con exito');</script>";
+                echo "<script type='text/javascript'>alert('Publicacion creada con exito.');</script>";
             }    
        
         if ($_SESSION['rol']=="Administrador") {

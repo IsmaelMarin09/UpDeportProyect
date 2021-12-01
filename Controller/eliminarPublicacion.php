@@ -11,10 +11,10 @@ $id=$_POST['id_eliminar'];
     $statement= $conexion-> prepare($sql);
     $statement-> bindParam(':id',$id);
     if(!$statement){ 
-        return"Error al eliminar Publicacion";
+        return"Error al eliminar publicación";
     }else{
         $statement->execute(); 
-        }echo '<script>alert("Publicaion eliminada")</script>';
+        }echo '<script>alert("Publicación eliminada")</script>';
         echo "<script>location.href='../views/Admin/profile.php'</script>";
 
 

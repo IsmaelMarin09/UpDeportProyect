@@ -15,7 +15,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Crear Publicación</title>
+  <title>Chat</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -96,7 +96,7 @@ session_start();
                     <form action="" class="typing-area" autocomplete="off">
                       <input type="text" name="outgoing_id" value="  <?php echo $_SESSION['unique_Id']; ?>   "hidden>
                       <input type="text" name="incoming_id"   value="  <?php echo $id; ?>   "hidden>
-                      <input type="text" name="message" class="input-field" placeholder="Escribe un mensaje">
+                      <input type="text" name="message" class="input-field" placeholder="Escribe un mensaje.">
                       <button><i class="fab fa-telegram-plane"></i></button>
 
                     </form>

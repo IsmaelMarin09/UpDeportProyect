@@ -3,7 +3,7 @@
     $objetoConsultas= new consultasAdmin;
     $result=$objetoConsultas->listarPublicaciones();
     if (!isset($result)) {
-        echo '<h2>NO HAY PUBLICACIONES</h2>';
+        echo '<h2>No hay publicaciones.</h2>';
 
     }else{
         echo '
@@ -11,7 +11,7 @@
         <tr>
             <th>ID</th>
             <th>unique_ID</th>
-            <th>Descripcion</th>
+            <th>Descripción</th>
             <th>Video</th>
             <th>Imagen1</th>
             <th>Imagen2</th>
@@ -19,7 +19,7 @@
             <th>Fecha</th>
             <th>likes</th>
             <th>Estado</th>
-            <th>Ver Perfil</th>
+            <th>Ver perfil</th>
             <th>Deshabilitar</th>
         
         </tr>

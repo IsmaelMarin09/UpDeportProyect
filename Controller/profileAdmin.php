@@ -90,7 +90,7 @@
                                         <button  class="btn btn-primary " style="display:'.$classDisplay.'">'.$result3.'</button>
                                         
                                         </form>
-                                       
+                                      
                                         
                                       </div>
                                       <!-- /.card-body -->
@@ -101,11 +101,11 @@
                                     <div class="card-header" style="display:block; padding: 0px 15px 30px 15px;">
 
                                     
-                                      <h3 class="card-title" style="margin-top: 30px">Sobre Mi</h3>
+                                      <h3 class="card-title" style="margin-top: 30px">Sobre mi</h3>
                                       <button type="button" class="bi bi-exclamation-triangle-fill" style="display:'.$classDisplay.'; color:#f5f4ff;margin: 27px 10px 14px 20px; background:  000; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">Denunciar</button>
                                       <form action="profileMod.php" method="POST" style="position:relative; right: -39%; top: 25px; display:'.$classDisplayNoGet.';">
                                       <input name="id_Usr1" style="display:none;" value="'.$_SESSION['unique_Id'].'" >
-                                      <button  style="color: #fff; border: none; background: #007bff;" class="bi bi-pencil-square">Modificar prefil</button>    
+                                      <button  style="color: #fff; border: none; background: #007bff;" class="bi bi-pencil-square">Modificar perfil</button>    
                                       </form>
                                     </div>
 
@@ -113,8 +113,8 @@
                                     <!-- /.card-header -->
                                     <div class="card-body">
                                       <strong
-                                        ><i class="fas fa-book mr-1"></i>MI
-                                        DESARROLLO</strong
+                                        ><i class="fas fa-book mr-1"></i>Mi desarrollo
+                                    </strong
                                       >
 
                                       <p class="text-muted">
@@ -124,7 +124,7 @@
                                       <hr />
 
                                       <strong
-                                        ><i class="fas fa-map-marker-alt mr-1"></i>me
+                                        ><i class="fas fa-map-marker-alt mr-1"></i>Me
                                         localizo</strong
                                       >
 
@@ -134,7 +134,7 @@
 
                                       <strong
                                         ><i class="fas fa-pencil-alt mr-1"></i
-                                        >RECONOCIMIENTOS</strong
+                                        >Reconocimientos</strong
                                       >
 
                                       <p class="text-muted">
@@ -148,7 +148,7 @@
 
                                       <strong
                                         ><i class="far fa-file-alt mr-1"></i
-                                        >DESCRIPCION</strong
+                                        >Descripción</strong
                                       >
 
                                       <p class="text-muted">
