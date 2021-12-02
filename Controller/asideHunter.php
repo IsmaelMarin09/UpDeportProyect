@@ -20,7 +20,7 @@ foreach($result as $f){
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="profile.php" class="nav-link">Home</a>
+      <a href="profile.php" class="nav-link">Inicio</a>
     </li>
   
   </ul>
@@ -35,7 +35,7 @@ foreach($result as $f){
               href="../../Controller/logout.php?logout_id='.$f['img'].'"
               role="button"
             >
-              <i class="fas fa-sign-out-alt"></i>
+              <i class="fas fa-sign-out-alt"></i>Cerrar sesión
             </a>
             
           </li>
@@ -113,7 +113,7 @@ foreach($result as $f){
             <a href="busqueda.php" class="nav-link" id="menu-m">
               <i class="nav-icon fas fa-search"></i>
               <p>
-                Busqueda 
+                Búsqueda 
               </p>
             </a>
           </li>
@@ -133,7 +133,7 @@ foreach($result as $f){
               <li class="nav-item">
                 <a href="profile.php" class="nav-link" id="menu-m">
                   <i class="fas fa-user nav-icon"></i>
-                  <p>Mi Perfil</p>
+                  <p>Mi perfil</p>
                 </a>
               </li>
             </ul>
@@ -168,7 +168,7 @@ foreach($result as $f){
                   class="nav-link"
                 >
                   <i class="fas fa-user-plus nav-icon"></i>
-                  <p>Conocer Usuarios</p>
+                  <p>Conocer usuarios</p>
                 </a>
               </li>
           <li class="nav-item">

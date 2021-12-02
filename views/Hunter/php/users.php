@@ -6,7 +6,7 @@
     $query = mysqli_query($conn, $sql);
     $output = "";
     if(mysqli_num_rows($query) == 0){
-        $output .= "No existen mensajes en el chat";
+        $output .= "No existen mensajes en el chat.";
     }elseif(mysqli_num_rows($query) > 0){
         include_once "data.php";
     }

@@ -26,7 +26,7 @@
                               <div class="col-md-8" style="max-width: 240px;">
                                 <div class="card-body" style="padding: 20px;">
                                   <h5 class="card-title"><b>'.$f['nombre'].'</b></h5>
-                                  <p class="card-text">Descripcion: ' .$f3['descripcion'].'
+                                  <p class="card-text">Descripción: ' .$f3['descripcion'].'
                                   </p>
                                   <p style="margin-right: 10px;" class="card-text"><small class="text-muted">'.$f['municipio'].'</small><small class="text-muted float-right">'.$f['deporte'].'</small>
                                   </p>

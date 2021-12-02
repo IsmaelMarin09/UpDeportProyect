@@ -15,7 +15,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Crear Publicación</title>
+  <title>Chat</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -47,11 +47,11 @@ session_start();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Crear Publicación</h1>
+            <h1>Chat</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
               <li class="breadcrumb-item active">Crear Publicación</li>
             </ol>
           </div>
@@ -87,11 +87,11 @@ session_start();
                           <p><?php echo $row['online']?></p>
                         </div>
                       </div>
-                      <a href="php/logout.php?logout_id=<?php echo $row['unique_Id'] ?>"class="logout">logout</a>
+                      <a href="php/logout.php?logout_id=<?php echo $row['unique_Id'] ?>"class="logout">Cerrar sesión</a>
                     </header>
                     <div class="search">
-                      <span class="text">Seleccina un usuario</span>
-                      <input type="text" placeholder="Ingresa el nombre de tu amigo">
+                      <span class="text">Seleccina un usuario.</span>
+                      <input type="text" placeholder="Ingresa el nombre de tu amigo.">
                       <button><i class="fas fa-search"></i></button>
                     </div>
                     <div class="users-list">

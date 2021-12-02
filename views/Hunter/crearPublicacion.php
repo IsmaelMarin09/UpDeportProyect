@@ -47,12 +47,12 @@ session_start();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Crear Publicación</h1>
+            <h1>Chat</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Crear Publicación</li>
+              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+              <li class="breadcrumb-item active">Chat</li>
             </ol>
           </div>
         </div>
@@ -87,11 +87,11 @@ session_start();
                           <p><?php echo $row['online']?></p>
                         </div>
                       </div>
-                      <a href="php/logout.php?logout_id=<?php echo $row['unique_Id'] ?>"class="logout">logout</a>
+                      <a href="php/logout.php?logout_id=<?php echo $row['unique_Id'] ?>"class="logout">Cerrar sesión</a>
                     </header>
                     <div class="search">
-                      <span class="text">Seleccina un usuario</span>
-                      <input type="text" placeholder="Ingresa el nombre de tu amigo">
+                      <span class="text">Seleccina un usuario.</span>
+                      <input type="text" placeholder="Ingresa el nombre de tu amigo.">
                       <button><i class="fas fa-search"></i></button>
                     </div>
                     <div class="users-list">

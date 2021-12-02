@@ -28,7 +28,7 @@ if (isset($result)) {
                                 <div class="row">
                                     <div class="col-7">
                                         <h2 class="lead"><b>'.$f1['nombre'].'</b></h2>
-                                        <p class="small"><span><i class="fas fa-user nav-icon"></i></span> Descripcion: ' .$f3['descripcion'].'</p>
+                                        <p class="small"><span><i class="fas fa-user nav-icon"></i></span> Descripción: ' .$f3['descripcion'].'</p>
                                         <p class="small"><span><i class="fas fa-lg fa-building"></i></span>' .$f1['municipio'].'<span class="float-right"><img src="../Assets/img/juegos-olimpicos.png">'.$f1['deporte'].'</span></p>
                                     </div>
                                     
@@ -40,7 +40,7 @@ if (isset($result)) {
                             <div class="card-footer" style="border:1px solid;border-top: none;border-color: #9d7832;">
                                 <div class="text-right">
                                 ';
-                                echo " <a href='profile.php?id_user2=".$f1['unique_Id']."'>Ver Perfil";
+                                echo " <a href='profile.php?id_user2=".$f1['unique_Id']."'>Ver perfil";
                                    echo'
                                 </a>
                                 </div>

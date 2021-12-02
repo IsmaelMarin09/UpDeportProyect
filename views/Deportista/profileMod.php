@@ -57,8 +57,8 @@ session_start();
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Mi perfil</li>
+              <li class="breadcrumb-item"><a href="#">inicio</a></li>
+              <li class="breadcrumb-item active">Modificar mii perfil </li>
             </ol>
           </div>
         </div>

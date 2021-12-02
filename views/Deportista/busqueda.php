@@ -49,12 +49,12 @@ session_start();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Busqueda</h1>
+            <h1>Búsqueda</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Busqueda</li>
+              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+              <li class="breadcrumb-item active">Búsqueda</li>
             </ol>
           </div>
         </div>
@@ -74,7 +74,7 @@ session_start();
               <div class="card-body">
               <section class="content">
               <div class="container-fluid">
-                  <h2 class="text-center display-4">Busqueda</h2>
+                  <h2 class="text-center display-4">Búsqueda</h2>
                   <div class="row">
                       <div class="col-md-8 offset-md-2">
                           <form action="simple-results.html">

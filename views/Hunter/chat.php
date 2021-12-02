@@ -15,7 +15,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Crear Publicación</title>
+  <title>Chat</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -47,12 +47,12 @@ session_start();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Crear Publicación</h1>
+            <h1>Chat</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Crear Publicación</li>
+              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+              <li class="breadcrumb-item active">Chat</li>
             </ol>
           </div>
         </div>
@@ -82,7 +82,7 @@ session_start();
                   
                         
                     ?>
-                      <a href="../Admin/crearPublicacion.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+                      <a href="../Hunter/crearPublicacion.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
                       <img src="../Assets/img/perfil_img/<?php echo $row['img']?>" alt="">
                       <div class="details  ">
                         <span> <?php echo $row['nombre']?></span>
@@ -96,7 +96,7 @@ session_start();
                     <form action="" class="typing-area" autocomplete="off">
                       <input type="text" name="outgoing_id" value="  <?php echo $_SESSION['unique_Id']; ?>   "hidden>
                       <input type="text" name="incoming_id"   value="  <?php echo $id; ?>   "hidden>
-                      <input type="text" name="message" class="input-field" placeholder="Escribe un mensaje">
+                      <input type="text" name="message" class="input-field" placeholder="Escribe un mensaje.">
                       <button><i class="fab fa-telegram-plane"></i></button>
 
                     </form>
