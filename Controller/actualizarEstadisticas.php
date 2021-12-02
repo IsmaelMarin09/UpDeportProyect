@@ -7,7 +7,7 @@ function cargarEstadisticas2(){
         foreach($result as $f){
             echo ' 
         <div class="container">
-            <h3>SELECCIONA DEL 1 AL 10,  SIENDO  1 DEFICIENTE Y 10 EXCELENTE EN LAS DIFERENTES CAPACIDADES FISICAS</h3>
+            <h4>Seleccione del 1 al 10. Siendo  1 deficiente y 10 excelente en las diferentes capacidades físicas</h4>
            
             <form action="../../Controller/nuevasEsta.php" method="post">
 
