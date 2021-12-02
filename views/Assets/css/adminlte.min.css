@@ -11645,6 +11645,13 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 }
 
 
+/*BOTON MODIFICAR EN ESTADISTICAS*/
+
+#botonEsta {
+    margin-top: 20px;
+}
+
+
 /*MENU COLOR HOVER*/
 
 #menu-m {
