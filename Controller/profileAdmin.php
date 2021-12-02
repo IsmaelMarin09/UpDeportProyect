@@ -171,8 +171,8 @@
                                   <input name="id_Usr3" style="display:none;" value="'.$f2['unique_Id'].'"   >                                
                                   <input name="id_Usr2" style="display:none;" value="'.$id.'" >
                                   <input name="tipo" style="display:none;" value="Persona" >
-                                  <label>Por que deseas denunciar a este usuario ?</label>
-                                  <textarea name="descripcion" id="descripcion"  rows="2" cols="55" placeholder="Escribe el motivo de tu solicitud"></textarea>
+                                  <label>¿Por qué desea denunciar a este usuario?</label>
+                                  <textarea name="descripcion" id="descripcion"  rows="2" cols="55" placeholder="Escriba el motivo de su solicitud."></textarea>
                                   <p id="aviso"></p>
                                   </div>
                                   <div class="modal-footer">

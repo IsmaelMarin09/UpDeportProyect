@@ -136,7 +136,7 @@ function cargarPublicaciones(){
     <input name="id_Usr3" style="display:none;" value="'.$f['unique_Id'].'" >                                   
     <input name="id_Usr2" style="display:none;" value="'.$f['id'].'" >
     <input name="tipo" style="display:none;" value="Publicación" >
-    <label>Por que deseas denunciaresa publicación ?</label>
+    <label>¿Por qué desea denunciar la publicación?</label>
     <textarea name="descripcion" id="descripcion"  rows="2" cols="55" placeholder="Escribe el motivo de tu solicitud."></textarea>
     <div id="aviso"></div>
     </div>
