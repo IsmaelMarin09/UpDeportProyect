@@ -256,6 +256,19 @@ session_start();
     
 
     <!-- ESTADITICAS -->
+
+    
+    <!-- jQuery -->
+    
+    <!-- Bootstrap 4 -->
+    <script src="../Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- jQuery Knob -->
+    <script src="../Assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- Sparkline -->
+    <script src="../Assets/plugins/sparklines/sparkline.js"></script>
+
   
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
