@@ -52,7 +52,7 @@
         echo "<td>" .$f['estado']."</td>";
         echo " <td><a href='modificarUser.php?id_modificar=".$f['id']."'>Modificar </td>";
         echo " <td><a href='profile.php?id_user2=".$f['unique_Id']."'>Ver perfil </td>";
-        echo " <td><a href='../../Controller/eliminarUser.php?id_eliminar=".$f['unique_Id']."'>Eliminar </td>";
+        echo " <td><a href='../../Controller/eliminarUser.php?id_eliminar=".$f['unique_Id']."'>Deshabilitar </td>";
        
         echo "</tr>";
 

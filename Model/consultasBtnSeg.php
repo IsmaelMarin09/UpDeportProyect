@@ -2,7 +2,7 @@
 require_once("conexion.php");
 //estado -1, sigue a la persona , pero la va a dejar de seguir
 //estadao 1,no sigue a nadie o no la sigue pero lo va a hacer
-
+session_start();
 //
 //
 $modificar1=null;

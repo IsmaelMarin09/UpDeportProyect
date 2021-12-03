@@ -3,7 +3,7 @@
 
 class consultasE {
 
-        public function registraUsersE($unique_Id, $nombre, $email, $clavemd, $img, $rol, $deporte, $fNacimiento, $municipio, $genero, $estado){
+    public function registraUsersE($unique_Id, $nombre, $email, $clavemd, $img, $rol, $deporte, $fNacimiento, $municipio, $genero, $estado){
         $objetoconexion = new conexion ();    
         $conexion = $objetoconexion->get_conexion();
         $consulta = "SELECT * FROM users WHERE email=:email";
@@ -36,8 +36,8 @@ class consultasE {
                 echo "<script>location.href='../views/extras/register.php'</script>";
             }else{
                 $statement->execute();
-                echo '<script>alert("Usuario registrado con exito")</script>';
-                echo "<script>location.href='../views/extras/login.php'</script>";
+                return;
+               
             }
         }
 

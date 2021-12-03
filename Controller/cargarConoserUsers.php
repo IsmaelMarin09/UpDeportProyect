@@ -12,13 +12,13 @@
                   
                 $result2=$objetoConsultas->selecUser($f['unique_Id'],"tablaprofile");
                     foreach ($result2 as $f3){
-                        if ($_SESSION['unique_Id']==$f['unique_Id']) {
+                        if ($_SESSION['unique_Id']==$f['unique_Id'] or $f['rol']=="Administrador") {
                             continue;
                         }else {
                             echo' 
-                        <div class="d-flex align-items-stretch flex-column col-md-4" style="max-width: 510px;">
-                          <div class="card mb-3" style="max-width: 540px; margin-left: 3%; border: 1px solid #9d7832;">
-                            <div class="row no-gutters" style="flex-wrap: inherit;">
+                        <div class="d-flex align-items-stretch flex-column col-md-4" style="max-width: 510px;height: 320px;">
+                          <div class="card mb-3" style="max-width: 540px;min-height: 280px; margin-left: 3%; border: 1px solid #9d7832;">
+                            <div class="row no-gutters d-flex" style="flex-wrap: inherit; align-items: center;">
                               <div class="col-md-4" style="max-width: 180px;">
                                 <h3 style="text-align: center;" class="lead"><b>'.$f['rol'].'</b></h3>	
                                 <img style="width: 184px; border-radius: 27px;" src="../Assets/img/perfil_img/'.$f['img'].'" alt="user-avatar">

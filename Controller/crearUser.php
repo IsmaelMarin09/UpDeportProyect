@@ -5,7 +5,7 @@ function crearUser(){
         
     
         echo '
-            <form action="../../Mondel/validacionCrearUser.php" method="POST">
+            <form action="../../Model/validacionCrearUser.php" method="POST">
             <div class="container">
 			
             

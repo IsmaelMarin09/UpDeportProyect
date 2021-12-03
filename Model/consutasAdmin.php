@@ -30,13 +30,13 @@ require_once("conexion.php");
 
         $objetoConexion=new conexion();
         $conexion=$objetoConexion->get_conexion();
-        $actualizar= "UPDATE users SET id=:id, unique_Id=:unique_id, nombre=:nombre, email=:email, clave=:clave, rol=:rol, deporte=:deporte, fNacimiento=:fNacimiento, municipio=:municipio, genero=:genero, estado=:estado WHERE id=:id";
+        $actualizar= "UPDATE users SET id=:id, unique_Id=:unique_id, nombre=:nombre, email=:email, rol=:rol, deporte=:deporte, fNacimiento=:fNacimiento, municipio=:municipio, genero=:genero, estado=:estado WHERE id=:id";
         $statement= $conexion->prepare($actualizar); 
         $statement->bindParam(':id', $id);
         $statement->bindParam(':unique_id', $unique_id);
         $statement->bindParam(':nombre', $nombre);
         $statement->bindParam(':email', $email);
-        $statement->bindParam(':clave', $clave);
+       
         $statement->bindParam(':rol', $rol);
         $statement->bindParam(':deporte', $deporte);
         $statement->bindParam(':fNacimiento', $fNacimiento);
@@ -279,7 +279,7 @@ require_once("conexion.php");
             $statement->execute(); 
             
             if (!$statement) {
-                echo '<script>alert("puta erro") </script>';
+                echo '<script>alert("Error") </script>';
         }else{
             session_start();
             if ($_SESSION['rol']=="Administrador") {

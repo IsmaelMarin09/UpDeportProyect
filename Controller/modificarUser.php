@@ -1242,6 +1242,7 @@ function cargarUser(){
                   <option value="'.$f['rol'].'">'.$f['rol'].'</option>
                   <option value="Deportista">Deportista</option>
                   <option value="Hunter">Hunter</option>
+                  <option value="Administrador">Administrador</option>
                 </select>
                 <select
                   class="form-select mb-3 form-control form-control"

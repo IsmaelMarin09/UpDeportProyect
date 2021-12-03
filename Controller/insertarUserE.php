@@ -51,7 +51,7 @@
                             $cl = move_uploaded_file($_FILES["cl"]["tmp_name"], $imagencl); 
                             $cl = $_FILES['cl']['name'];   
                             $estado="Inactivo";
-                            $soliHunter = $objetoConsultas->soliHunter($numero,$cc,$hv,$cl);   
+                             
                               
         
                         }else {
@@ -96,8 +96,8 @@
                 if ($rol=="Hunter") {
                     $soliHunter = $objetoConsultas->soliHunter($numero,$cc,$hv,$cl);
                 }
-                //echo "<script type='text/javascript'>alert('Usuario creado con exito');</script>";
-                //echo"<script> window.location.replace('../views/Extras/register.php'); </script>";
+                echo "<script type='text/javascript'>alert('Usuario creado con exito');</script>";
+                echo"<script> window.location.replace('../views/Extras/login.php'); </script>";
             
         }
         

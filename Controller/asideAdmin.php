@@ -102,41 +102,16 @@ foreach($result as $f){
               </p>
             </a>
           </li>
-          <li class="nav-item">
-                <a
-                  href="crearPublicacion.php"
-                  id="menu-m"
-                  class="nav-link"
-                >
-                  <i class="far fa-comments nav-icon"></i>
-                  <p>Mensajes</p>
-                </a>
-              </li>
-          <li class="nav-item">
           <li class="nav-item menu-open">
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="profile.php" class="nav-link" id="menu-m">
-                  <i class="fas fa-user nav-icon"></i>
-                  <p>Mi perfil</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a
-              href="autorizarCuentas.php"
-              id="menu-m"
-              class="nav-link"
-            >
-              <i class="fas fa-circle  fa-user-check nav-icon"></i>
-              <p>Autorizar hunters</p>
-            </a>
-          </li>
-        
-
-          
-
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="profile.php" class="nav-link" id="menu-m">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Mi perfil</p>
+              </a>
+            </li>
+          </ul>
+        </li>
           <li class="nav-item">
             <a href="#" class="nav-link" id="menu-m">
               <i class="nav-icon fas fa-table"></i>
@@ -163,26 +138,12 @@ foreach($result as $f){
                   class="nav-link"
                 >
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tablas de información</p>
+                  <p>Información usuarios</p>
                 </a>
               </li>
               
             </ul>
           </li>
-          
-          
-          <li class="nav-item">
-                <a
-                  href="controlDeSolicitudes.php"
-                  id="menu-m"
-                  class="nav-link"
-                >
-                  <i class="fas fa-user-cog nav-icon"></i>
-                  <p>PQRS</p>
-                </a>
-              </li>
-          <li class="nav-item">
-          
           
           <li class="nav-item">
                 <a
@@ -194,18 +155,52 @@ foreach($result as $f){
                   <p>Crear user</p>
                 </a>
               </li>
-          <li class="nav-item">
-          
+            <li class="nav-item">
+              <a
+                href="autorizarCuentas.php"
+                id="menu-m"
+                class="nav-link"
+              >
+                <i class="fas fa-circle  fa-user-check nav-icon"></i>
+                <p>Autorizar hunters</p>
+              </a>
+            </li>
           <li class="nav-item">
                 <a
-                  href="conoserUsers.php"
+                  href="controlDeSolicitudes.php"
                   id="menu-m"
                   class="nav-link"
                 >
-                  <i class="fas fa-user-plus nav-icon"></i>
-                  <p>Conocer usuarios</p>
+                  <i class="fas fa-user-cog nav-icon"></i>
+                  <p>PQRS</p>
                 </a>
               </li>
+          <li class="nav-item">
+          <li class="nav-item">
+                <a
+                  href="crearPublicacion.php"
+                  id="menu-m"
+                  class="nav-link"
+                >
+                  <i class="far fa-comments nav-icon"></i>
+                  <p>Mensajes</p>
+                </a>
+              </li>
+          <li class="nav-item">
+         
+          
+        
+
+          
+
+          
+          
+          
+          
+          
+          
+          
+          
           <li class="nav-item">
          
           <li class="nav-item">

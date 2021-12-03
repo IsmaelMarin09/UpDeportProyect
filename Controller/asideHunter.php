@@ -117,6 +117,16 @@ foreach($result as $f){
               </p>
             </a>
           </li>
+          <li class="nav-item menu-open">
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="profile.php" class="nav-link" id="menu-m">
+                  <i class="fas fa-user nav-icon"></i>
+                  <p>Mi perfil</p>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item">
                 <a
                   href="crearPublicacion.php"
@@ -128,34 +138,12 @@ foreach($result as $f){
                 </a>
               </li>
           <li class="nav-item">
-          <li class="nav-item menu-open">
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="profile.php" class="nav-link" id="menu-m">
-                  <i class="fas fa-user nav-icon"></i>
-                  <p>Mi perfil</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+          
          
         
 
           
 
-          <li class="nav-item">
-            <a href="#" class="nav-link" id="menu-m">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Tablas
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              
-              
-            </ul>
-          </li>
           
           
          
@@ -168,7 +156,7 @@ foreach($result as $f){
                   class="nav-link"
                 >
                   <i class="fas fa-user-plus nav-icon"></i>
-                  <p>Conocer usuarios</p>
+                  <p>Posibles Promesas</p>
                 </a>
               </li>
           <li class="nav-item">
